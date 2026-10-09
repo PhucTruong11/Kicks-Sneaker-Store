@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh sửa Sản phẩm - Kicks Admin</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="toast">Thông báo</div>
+
+    <!-- Admin Dynamic Island Navbar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            KICKS ADMIN.
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
+            <li><a href="products.html" class="active"><i class="fas fa-box"></i> Sản phẩm</a></li>
+            <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li>
+            <li class="profile-dropdown">
+                <button class="profile-btn">
+                    <span class="admin-avatar-mono">PT</span>
+                    <span>Phúc Trương</span>
+                    <i class="fas fa-chevron-down" style="font-size: 11px;"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-header">
+                        <h4>Phúc Trương</h4>
+                        <p>phuctruong@kicks.vn</p>
+                    </div>
+                    <a href="profile.html"><i class="fas fa-user"></i> Hồ sơ</a>
+                    <a href="profile.html"><i class="fas fa-cog"></i> Cài đặt</a>
+                    <a href="../login.html" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                </div>
+            </li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-content">
+            <!-- Header Actions -->
+            <div class="admin-header-actions">
+                <div>
+                    <a href="products.html" class="btn-back-link">
+                        <i class="fas fa-arrow-left"></i> Quay lại danh sách sản phẩm
+                    </a>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-top: 10px;">
+                        <h1 class="page-title" style="margin: 0;">Sửa: Nike Air Jordan 1 High</h1>
+                        <span class="status-badge status-success">Đang bán</span>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button type="button" class="btn-outline-danger" onclick="handleDeleteProduct()">
+                        <i class="fas fa-trash-alt"></i> Xóa sản phẩm
+                    </button>
+                    <button type="button" class="btn-solid-primary" onclick="handleUpdateProduct(event)">
+                        <i class="fas fa-save"></i> Cập nhật thay đổi
+                    </button>
+                </div>
+            </div>
+
+            <form onsubmit="handleUpdateProduct(event)">
+                <div class="admin-grid-layout">
+                    <!-- Left Column: Product Information -->
+                    <div>
+                        <div class="admin-card">
+                            <div class="admin-card-header">
+                                <h3><i class="fas fa-edit" style="color: var(--accent);"></i> Cập nhật thông tin chi tiết</h3>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Tên sản phẩm Sneaker *</label>
+                                <input type="text" class="admin-input" value="Nike Air Jordan 1 Retro High" required>
+                            </div>
+
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label>Mã sản phẩm (SKU) *</label>
+                                    <input type="text" class="admin-input" value="NK-AJ1-001" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Thương hiệu hãng *</label>
+                                    <select class="admin-select">
+                                        <option value="nike" selected>Nike</option>
+                                        <option value="adidas">Adidas</option>
+                                        <option value="converse">Converse</option>
+                                        <option value="vans">Vans</option>
+                                        <option value="puma">Puma</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label>Giá bán niêm yết (VNĐ) *</label>
+                                    <input type="number" class="admin-input" value="4500000" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Giá khuyến mãi (Nếu có)</label>
+                                    <input type="number" class="admin-input" placeholder="Để trống nếu không giảm" value="4200000">
+                                </div>
+                            </div>
+
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label>Số lượng trong kho *</label>
+                                    <input type="number" class="admin-input" value="120" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Phân loại đối tượng</label>
+                                    <select class="admin-select">
+                                        <option selected>Unisex (Nam & Nữ)</option>
+                                        <option>Giày Nam</option>
+                                        <option>Giày Nữ</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Các kích cỡ (Size giày có sẵn)</label>
+                                <div class="size-chips">
+                                    <label class="size-chip-label">
+                                        <input type="checkbox" checked>
+                                        <span>Size 38</span>
+                                    </label>
+                                    <label class="size-chip-label">
+                                        <input type="checkbox" checked>
+                                        <span>Size 39</span>
+                                    </label>
+                                    <label class="size-chip-label">
+                                        <input type="checkbox" checked>
+                                        <span>Size 40</span>
+                                    </label>
+                                    <label class="size-chip-label">
+                                        <input type="checkbox" checked>
+                                        <span>Size 41</span>
+                                    </label>
+                                    <label class="size-chip-label">
+                                        <input type="checkbox" checked>
+                                        <span>Size 42</span>
+                                    </label>
+                                    <label class="size-chip-label">
+                                        <input type="checkbox" checked>
+                                        <span>Size 43</span>
+                                    </label>
+                                    <label class="size-chip-label">
+                                        <input type="checkbox">
+                                        <span>Size 44</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label>Mô tả chi tiết sản phẩm</label>
+                                <textarea rows="5" class="admin-textarea">Nike Air Jordan 1 High là biểu tượng bất hủ của nền văn hóa bóng rổ và thời trang đường phố thế giới. Sở hữu chất liệu da cao cấp, đệm khí Air êm ái cùng màu sắc phối kinh điển mang lại sự tự tin cho bất cứ ai sở hữu.</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Images & Status -->
+                    <div>
+                        <!-- Image Upload Card -->
+                        <div class="admin-card">
+                            <div class="admin-card-header">
+                                <h3><i class="fas fa-image" style="color: var(--accent);"></i> Hình ảnh sản phẩm</h3>
+                            </div>
+                            <div class="image-preview-box" onclick="document.getElementById('fileInput').click()">
+                                <img id="previewImg" src="../images/shoe1.jpg" alt="Preview Shoe">
+                                <p style="font-weight: 700; font-size: 14px; color: var(--dark); margin-bottom: 4px;">Nhấn để thay đổi ảnh</p>
+                                <p style="font-size: 12px; color: #94a3b8;">Hỗ trợ PNG, JPG, WEBP chất lượng cao</p>
+                                <input type="file" id="fileInput" style="display:none;" onchange="previewImage(event)">
+                            </div>
+                        </div>
+
+                        <!-- Visibility & Status Card -->
+                        <div class="admin-card">
+                            <div class="admin-card-header">
+                                <h3><i class="fas fa-sliders-h" style="color: var(--accent);"></i> Trạng thái & Phân phối</h3>
+                            </div>
+                            <div class="form-group">
+                                <label>Trạng thái bán</label>
+                                <select class="admin-select">
+                                    <option value="active" selected>Đang bán (Hiển thị)</option>
+                                    <option value="out_of_stock">Hết hàng</option>
+                                    <option value="hidden">Tạm ẩn</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Nhãn nổi bật (Badge)</label>
+                                <select class="admin-select">
+                                    <option selected>Hàng Mới Về (New Arrival)</option>
+                                    <option>Bán Chạy Nhất (Best Seller)</option>
+                                    <option>Phiên Bản Giới Hạn (Limited)</option>
+                                    <option>Không có nhãn</option>
+                                </select>
+                            </div>
+                            <div style="margin-top: 15px; display: flex; align-items: center; gap: 10px;">
+                                <input type="checkbox" id="featured" checked style="width: 18px; height: 18px; cursor: pointer;">
+                                <label for="featured" style="cursor: pointer; font-size: 14px; font-weight: 600; margin: 0;">Ghim hiển thị trên Trang Chủ</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script>
+        function previewImage(event) {
+            const input = event.target;
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('previewImg').src = e.target.result;
+                };
+                reader.readAsDataURL(input.files[0]);
+                showToast('Đã tải hình ảnh xem trước mới!');
+            }
+        }
+
+        function handleUpdateProduct(event) {
+            event.preventDefault();
+            showToast('Đã lưu thông tin sản phẩm thành công!');
+            setTimeout(function() {
+                window.location.href = 'products.html';
+            }, 1200);
+        }
+
+        function handleDeleteProduct() {
+            if(confirm('Bạn có chắc chắn muốn xóa sản phẩm này khỏi hệ thống?')) {
+                showToast('Đã xóa sản phẩm khỏi kho hàng!');
+                setTimeout(function() {
+                    window.location.href = 'products.html';
+                }, 1000);
+            }
+        }
+    </script>
+</body>
+</html>

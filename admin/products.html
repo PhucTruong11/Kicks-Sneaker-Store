@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Sản phẩm - Kicks Admin</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="toast">Thông báo</div>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            KICKS ADMIN.
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
+            <li><a href="products.html" class="active"><i class="fas fa-box"></i> Sản phẩm</a></li>
+            <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li>
+            <li class="profile-dropdown">
+                <button class="profile-btn">
+                    <span class="admin-avatar-mono">PT</span>
+                    <span>Phúc Trương</span>
+                    <i class="fas fa-chevron-down" style="font-size: 11px;"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-header">
+                        <h4>Phúc Trương</h4>
+                        <p>phuctruong@kicks.vn</p>
+                    </div>
+                    <a href="profile.html"><i class="fas fa-user"></i> Hồ sơ</a>
+                    <a href="profile.html"><i class="fas fa-cog"></i> Cài đặt</a>
+                    <a href="../login.html" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                </div>
+            </li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-content">
+            <h1 class="page-title">Quản lý Sản phẩm</h1>
+
+            <div class="data-table-container">
+                <div class="table-header">
+                    <h2>Danh sách tất cả (12 sản phẩm)</h2>
+                    <a href="product-add.html" class="btn-add" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none;">
+                        <i class="fas fa-plus"></i> Thêm sản phẩm
+                    </a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hình ảnh</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Giá bán</th>
+                            <th>Kho hàng</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="cursor:pointer;" onclick="window.location.href='product-edit.html'" title="Bấm để chỉnh sửa sản phẩm">
+                            <td><img src="../images/shoe1.jpg" alt="Shoe 1"></td>
+                            <td><strong style="color: var(--dark);">Nike Air Jordan 1 High</strong></td>
+                            <td>4.500.000đ</td>
+                            <td style="color: var(--success); font-weight:bold;">120</td>
+                            <td><span class="status-badge status-success">Đang bán</span></td>
+                            <td>
+                                <a href="product-edit.html" onclick="event.stopPropagation();" class="btn-action btn-edit">Sửa</a>
+                                <button class="btn-action btn-delete" onclick="event.stopPropagation(); showToast('Đã xóa thành công!')">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr style="cursor:pointer;" onclick="window.location.href='product-edit.html'" title="Bấm để chỉnh sửa sản phẩm">
+                            <td><img src="../images/shoe2.jpg" alt="Shoe 2"></td>
+                            <td><strong style="color: var(--dark);">Nike Air Max 90</strong></td>
+                            <td>3.200.000đ</td>
+                            <td style="color: var(--success); font-weight:bold;">45</td>
+                            <td><span class="status-badge status-success">Đang bán</span></td>
+                            <td>
+                                <a href="product-edit.html" onclick="event.stopPropagation();" class="btn-action btn-edit">Sửa</a>
+                                <button class="btn-action btn-delete" onclick="event.stopPropagation(); showToast('Đã xóa thành công!')">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr style="cursor:pointer;" onclick="window.location.href='product-edit.html'" title="Bấm để chỉnh sửa sản phẩm">
+                            <td><img src="../images/shoe4.jpg" alt="Shoe"></td>
+                            <td><strong style="color: var(--dark);">Converse Chuck 70</strong></td>
+                            <td>1.500.000đ</td>
+                            <td style="color: var(--warning); font-weight:bold;">8</td>
+                            <td><span class="status-badge status-pending">Sắp hết</span></td>
+                            <td>
+                                <a href="product-edit.html" onclick="event.stopPropagation();" class="btn-action btn-edit">Sửa</a>
+                                <button class="btn-action btn-delete" onclick="event.stopPropagation(); showToast('Đã xóa thành công!')">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr style="cursor:pointer;" onclick="window.location.href='product-edit.html'" title="Bấm để chỉnh sửa sản phẩm">
+                            <td><img src="../images/shoe4.jpg" alt="Shoe"></td>
+                            <td><strong style="color: var(--dark);">Nike Air Force 1</strong></td>
+                            <td>2.800.000đ</td>
+                            <td style="color: var(--success); font-weight:bold;">200</td>
+                            <td><span class="status-badge status-success">Đang bán</span></td>
+                            <td>
+                                <a href="product-edit.html" onclick="event.stopPropagation();" class="btn-action btn-edit">Sửa</a>
+                                <button class="btn-action btn-delete" onclick="event.stopPropagation(); showToast('Đã xóa thành công!')">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr style="cursor:pointer;" onclick="window.location.href='product-edit.html'" title="Bấm để chỉnh sửa sản phẩm">
+                            <td><img src="../images/shoe5.jpg" alt="Shoe"></td>
+                            <td><strong style="color: var(--dark);">Vans Old Skool</strong></td>
+                            <td>1.800.000đ</td>
+                            <td style="color: var(--danger); font-weight:bold;">0</td>
+                            <td><span class="status-badge status-danger">Hết hàng</span></td>
+                            <td>
+                                <a href="product-edit.html" onclick="event.stopPropagation();" class="btn-action btn-edit">Sửa</a>
+                                <button class="btn-action btn-delete" onclick="event.stopPropagation(); showToast('Đã xóa thành công!')">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr style="cursor:pointer;" onclick="window.location.href='product-edit.html'" title="Bấm để chỉnh sửa sản phẩm">
+                            <td><img src="../images/shoe6.jpg" alt="Shoe"></td>
+                            <td><strong style="color: var(--dark);">Nike SB Dunk</strong></td>
+                            <td>5.200.000đ</td>
+                            <td style="color: var(--success); font-weight:bold;">34</td>
+                            <td><span class="status-badge status-success">Đang bán</span></td>
+                            <td>
+                                <a href="product-edit.html" onclick="event.stopPropagation();" class="btn-action btn-edit">Sửa</a>
+                                <button class="btn-action btn-delete" onclick="event.stopPropagation(); showToast('Đã xóa thành công!')">Xóa</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="text-align:center; margin-top: 20px;">
+                    <a href="product-add.html" style="color:var(--accent); font-weight:bold; text-decoration:none;">
+                        <i class="fas fa-plus-circle"></i> Thêm sản phẩm mới vào danh sách
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

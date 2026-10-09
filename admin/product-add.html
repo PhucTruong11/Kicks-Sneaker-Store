@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Sản phẩm mới - Kicks Admin</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="toast">Thông báo</div>
+
+    <!-- Admin Dynamic Island Navbar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            KICKS ADMIN.
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
+            <li><a href="products.html" class="active"><i class="fas fa-box"></i> Sản phẩm</a></li>
+            <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li>
+            <li class="profile-dropdown">
+                <button class="profile-btn">
+                    <span class="admin-avatar-mono">PT</span>
+                    <span>Phúc Trương</span>
+                    <i class="fas fa-chevron-down" style="font-size: 11px;"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-header">
+                        <h4>Phúc Trương</h4>
+                        <p>phuctruong@kicks.vn</p>
+                    </div>
+                    <a href="profile.html"><i class="fas fa-user"></i> Hồ sơ</a>
+                    <a href="profile.html"><i class="fas fa-cog"></i> Cài đặt</a>
+                    <a href="../login.html" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                </div>
+            </li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-content">
+            <!-- Header Actions -->
+            <div class="admin-header-actions">
+                <div>
+                    <a href="products.html" class="btn-back-link">
+                        <i class="fas fa-arrow-left"></i> Quay lại danh sách sản phẩm
+                    </a>
+                    <h1 class="page-title" style="margin: 10px 0 0 0;">Thêm Sneaker Mới</h1>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <a href="products.html" class="btn-outline-danger" style="text-decoration:none;">
+                        <i class="fas fa-times"></i> Hủy bỏ
+                    </a>
+                    <button type="button" class="btn-solid-primary" onclick="handleSubmitProduct(event)">
+                        <i class="fas fa-save"></i> Lưu & Đăng bán
+                    </button>
+                </div>
+            </div>
+
+            <form onsubmit="handleSubmitProduct(event)">
+                <div class="admin-grid-layout">
+                    <!-- Left Column: Product Information -->
+                    <div>
+                        <div class="admin-card">
+                            <div class="admin-card-header">
+                                <h3><i class="fas fa-info-circle" style="color: var(--accent);"></i> Thông tin cơ bản</h3>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Tên sản phẩm Sneaker *</label>
+                                <input type="text" class="admin-input" placeholder="Ví dụ: Nike Air Jordan 1 Retro High OG" required>
+                            </div>
+
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label>Mã sản phẩm (SKU) *</label>
+                                    <input type="text" class="admin-input" placeholder="Ví dụ: NK-AJ1-009" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Thương hiệu hãng *</label>
+                                    <select class="admin-select">
+                                        <option value="nike">Nike</option>
+                                        <option value="adidas">Adidas</option>
+                                        <option value="converse">Converse</option>
+                                        <option value="vans">Vans</option>
+                                        <option value="puma">Puma</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label>Giá bán niêm yết (VNĐ) *</label>
+                                    <input type="number" class="admin-input" placeholder="Ví dụ: 4500000" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Giá khuyến mãi (Nếu có)</label>
+                                    <input type="number" class="admin-input" placeholder="Để trống nếu không giảm">
+                                </div>
+                            </div>
+
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label>Số lượng nhập kho ban đầu *</label>
+                                    <input type="number" class="admin-input" placeholder="Ví dụ: 50" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Phân loại đối tượng</label>
+                                    <select class="admin-select">
+                                        <option>Unisex (Nam & Nữ)</option>
+                                        <option>Giày Nam</option>
+                                        <option>Giày Nữ</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Các kích cỡ (Size giày có sẵn)</label>
+                                <div class="size-chips">
+                                    <label class="size-chip-label">
+                                        <input type="checkbox" checked>
+                                        <span>Size 38</span>
+                                    </label>
+                                    <label class="size-chip-label">
+                                        <input type="checkbox" checked>
+                                        <span>Size 39</span>
+                                    </label>
+                                    <label class="size-chip-label">
+                                        <input type="checkbox" checked>
+                                        <span>Size 40</span>
+                                    </label>
+                                    <label class="size-chip-label">
+                                        <input type="checkbox" checked>
+                                        <span>Size 41</span>
+                                    </label>
+                                    <label class="size-chip-label">
+                                        <input type="checkbox" checked>
+                                        <span>Size 42</span>
+                                    </label>
+                                    <label class="size-chip-label">
+                                        <input type="checkbox">
+                                        <span>Size 43</span>
+                                    </label>
+                                    <label class="size-chip-label">
+                                        <input type="checkbox">
+                                        <span>Size 44</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label>Mô tả chi tiết sản phẩm</label>
+                                <textarea rows="5" class="admin-textarea" placeholder="Nhập đặc điểm chất liệu, công nghệ đế, phong cách phối đồ..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Images & Status -->
+                    <div>
+                        <!-- Image Upload Card -->
+                        <div class="admin-card">
+                            <div class="admin-card-header">
+                                <h3><i class="fas fa-image" style="color: var(--accent);"></i> Hình ảnh sản phẩm</h3>
+                            </div>
+                            <div class="image-preview-box" onclick="document.getElementById('fileInput').click()">
+                                <img id="previewImg" src="../images/shoe1.jpg" alt="Preview">
+                                <p style="font-weight: 700; font-size: 14px; color: var(--dark); margin-bottom: 4px;">Nhấn để chọn ảnh mới</p>
+                                <p style="font-size: 12px; color: #94a3b8;">PNG, JPG, WEBP lên đến 5MB</p>
+                                <input type="file" id="fileInput" style="display:none;" onchange="previewImage(event)">
+                            </div>
+                        </div>
+
+                        <!-- Visibility & Status Card -->
+                        <div class="admin-card">
+                            <div class="admin-card-header">
+                                <h3><i class="fas fa-sliders-h" style="color: var(--accent);"></i> Trạng thái & Hiển thị</h3>
+                            </div>
+                            <div class="form-group">
+                                <label>Trạng thái bán</label>
+                                <select class="admin-select">
+                                    <option value="active">Đang bán (Hiển thị ngay)</option>
+                                    <option value="out_of_stock">Hết hàng</option>
+                                    <option value="hidden">Tạm ẩn</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Nhãn nổi bật (Badge)</label>
+                                <select class="admin-select">
+                                    <option>Hàng Mới Về (New Arrival)</option>
+                                    <option>Bán Chạy Nhất (Best Seller)</option>
+                                    <option>Phiên Bản Giới Hạn (Limited)</option>
+                                    <option>Không có nhãn</option>
+                                </select>
+                            </div>
+                            <div style="margin-top: 15px; display: flex; align-items: center; gap: 10px;">
+                                <input type="checkbox" id="featured" checked style="width: 18px; height: 18px; cursor: pointer;">
+                                <label for="featured" style="cursor: pointer; font-size: 14px; font-weight: 600; margin: 0;">Ghim hiển thị trên Trang Chủ</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script>
+        function previewImage(event) {
+            const input = event.target;
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('previewImg').src = e.target.result;
+                };
+                reader.readAsDataURL(input.files[0]);
+                showToast('Đã tải hình ảnh xem trước!');
+            }
+        }
+
+        function handleSubmitProduct(event) {
+            event.preventDefault();
+            showToast('Đã thêm sản phẩm mới thành công! Đang chuyển hướng...');
+            setTimeout(function() {
+                window.location.href = 'products.html';
+            }, 1200);
+        }
+    </script>
+</body>
+</html>

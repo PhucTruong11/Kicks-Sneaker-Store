@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Đơn hàng #ORD-001 - Kicks Admin</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="toast">Thông báo</div>
+
+    <!-- Admin Dynamic Island Navbar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            KICKS ADMIN.
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
+            <li><a href="products.html"><i class="fas fa-box"></i> Sản phẩm</a></li>
+            <li><a href="orders.html" class="active"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li>
+            <li class="profile-dropdown">
+                <button class="profile-btn">
+                    <span class="admin-avatar-mono">PT</span>
+                    <span>Phúc Trương</span>
+                    <i class="fas fa-chevron-down" style="font-size: 11px;"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="dropdown-header">
+                        <h4>Phúc Trương</h4>
+                        <p>phuctruong@kicks.vn</p>
+                    </div>
+                    <a href="profile.html"><i class="fas fa-user"></i> Hồ sơ</a>
+                    <a href="profile.html"><i class="fas fa-cog"></i> Cài đặt</a>
+                    <a href="../login.html" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                </div>
+            </li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-content">
+            <!-- Header Actions -->
+            <div class="admin-header-actions">
+                <div>
+                    <a href="orders.html" class="btn-back-link">
+                        <i class="fas fa-arrow-left"></i> Quay lại danh sách đơn hàng
+                    </a>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-top: 10px;">
+                        <h1 class="page-title" style="margin: 0;">Đơn hàng #ORD-001</h1>
+                        <span class="status-badge status-pending">Đang xử lý</span>
+                    </div>
+                    <p style="font-size: 13px; color: #64748b; margin-top: 4px;">Thời gian đặt: 09/10/2026 lúc 08:30 sáng</p>
+                </div>
+                <div class="order-action-bar">
+                    <button class="btn-order-action btn-order-approve" onclick="showToast('Đã xác nhận & duyệt đơn hàng thành công!')">
+                        <i class="fas fa-check"></i> Duyệt đơn
+                    </button>
+                    <button class="btn-order-action btn-order-print" onclick="showToast('Đang kết nối máy in để in hóa đơn...')">
+                        <i class="fas fa-print"></i> In hóa đơn
+                    </button>
+                    <button class="btn-order-action btn-order-cancel" onclick="showToast('Đã chuyển trạng thái đơn hàng sang Đã Hủy!')">
+                        <i class="fas fa-times"></i> Hủy đơn
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2-Column Content Layout -->
+            <div class="admin-grid-layout">
+                <!-- Left Column -->
+                <div>
+                    <!-- Order Items Card -->
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h3><i class="fas fa-box-open" style="color: var(--accent);"></i> Sản phẩm trong đơn (2 món)</h3>
+                            <span style="font-size: 13px; color: #64748b;">Mã kiện: PKG-8921</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <div class="detail-item-row">
+                                <div class="detail-item-info">
+                                    <img src="../images/shoe1.jpg" alt="Nike Jordan">
+                                    <div>
+                                        <strong style="display: block; font-size: 15px; color: var(--dark);">Nike Air Jordan 1 High</strong>
+                                        <div style="font-size: 12px; color: #64748b; margin-top: 2px;">
+                                            <span>SKU: NK-AJ1-001</span> • 
+                                            <span style="background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Size: 42</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="font-weight: 800; color: var(--dark); font-size: 15px;">4.500.000đ</div>
+                                    <div style="font-size: 12px; color: #64748b;">Số lượng: 1</div>
+                                </div>
+                            </div>
+
+                            <div class="detail-item-row">
+                                <div class="detail-item-info">
+                                    <img src="../images/shoe2.jpg" alt="Air Max">
+                                    <div>
+                                        <strong style="display: block; font-size: 15px; color: var(--dark);">Nike Air Max 90</strong>
+                                        <div style="font-size: 12px; color: #64748b; margin-top: 2px;">
+                                            <span>SKU: NK-AM90-002</span> • 
+                                            <span style="background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Size: 40</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="font-weight: 800; color: var(--dark); font-size: 15px;">3.200.000đ</div>
+                                    <div style="font-size: 12px; color: #64748b;">Số lượng: 1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Summary Card -->
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h3><i class="fas fa-file-invoice-dollar" style="color: var(--accent);"></i> Thanh toán & Quyết toán</h3>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+                            <div style="display: flex; justify-content: space-between; color: #64748b;">
+                                <span>Tiền hàng (Tạm tính):</span>
+                                <strong style="color: var(--dark);">7.700.000đ</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; color: #64748b;">
+                                <span>Phí vận chuyển:</span>
+                                <span style="color: var(--success); font-weight: 700;">Miễn phí (Hỏa tốc)</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; color: #64748b;">
+                                <span>Chiết khấu khuyến mại:</span>
+                                <span>0đ</span>
+                            </div>
+                            <div style="height: 1px; background: #e2e8f0; margin: 8px 0;"></div>
+                            <div style="display: flex; justify-content: space-between; font-size: 18px;">
+                                <strong style="color: var(--dark);">Tổng số tiền thanh toán:</strong>
+                                <strong style="color: var(--accent); font-weight: 900;">7.700.000đ</strong>
+                            </div>
+                            <div style="margin-top: 10px; background: #f8fafc; padding: 12px 16px; border-radius: 8px; font-size: 13px; color: #475569;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                                    <span>Phương thức thanh toán:</span>
+                                    <strong style="color: var(--dark);">COD (Tiền mặt khi nhận)</strong>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>Trạng thái thanh toán:</span>
+                                    <span class="status-badge status-pending" style="font-size: 11px;">Chưa thanh toán (Thu hộ 7.700.000đ)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div>
+                    <!-- Customer Information Card -->
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h3><i class="fas fa-user-circle" style="color: var(--accent);"></i> Khách hàng</h3>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                            <div style="width: 44px; height: 44px; border-radius: 50%; background: #e2e8f0; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #475569;">
+                                NA
+                            </div>
+                            <div>
+                                <strong style="display: block; font-size: 15px; color: var(--dark);">Nguyễn Văn A</strong>
+                                <span style="font-size: 12px; color: var(--success); font-weight: 600;"><i class="fas fa-circle" style="font-size: 8px;"></i> Khách hàng thân thiết</span>
+                            </div>
+                        </div>
+                        <div style="font-size: 13px; display: flex; flex-direction: column; gap: 10px; color: #475569;">
+                            <div><i class="fas fa-phone" style="width: 20px; color: #94a3b8;"></i> <strong>0987 654 321</strong></div>
+                            <div><i class="fas fa-envelope" style="width: 20px; color: #94a3b8;"></i> nguyenvana@gmail.com</div>
+                            <div>
+                                <i class="fas fa-map-marker-alt" style="width: 20px; color: #94a3b8;"></i> 
+                                123 Đường Nguyễn Huệ, P. Bến Nghé, Quận 1, TP. Hồ Chí Minh
+                            </div>
+                        </div>
+                        <div style="margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9; font-size: 13px;">
+                            <strong style="color: #64748b; font-size: 12px; display: block; margin-bottom: 4px;">GHI CHÚ ĐƠN HÀNG:</strong>
+                            <p style="background: #fffbeb; padding: 10px; border-radius: 6px; border: 1px solid #fef3c7; color: #92400e; font-size: 12px;">
+                                "Giao trong giờ hành chính, liên hệ trước khi đến nhận hàng 15 phút. Kiểm tra đúng size giúp mình nhé!"
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Order Timeline Card -->
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h3><i class="fas fa-history" style="color: var(--accent);"></i> Tiến trình vận chuyển</h3>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-step completed">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Đặt đơn thành công</h4>
+                                    <p>09/10/2026 - 08:30</p>
+                                </div>
+                            </div>
+                            <div class="timeline-step completed">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Xác nhận đơn hàng</h4>
+                                    <p>09/10/2026 - 09:15</p>
+                                </div>
+                            </div>
+                            <div class="timeline-step active">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Đang đóng gói tại kho Kicks</h4>
+                                    <p>09/10/2026 - 11:00</p>
+                                </div>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Bàn giao đơn vị vận chuyển</h4>
+                                    <p>Dự kiến chiều nay</p>
+                                </div>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Giao hàng thành công</h4>
+                                    <p>Dự kiến ngày 10/10/2026</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

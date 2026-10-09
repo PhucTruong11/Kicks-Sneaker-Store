@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm - Kicks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="toast">Thông báo</div>
+
+    <header class="navbar">
+        <div class="logo"><a href="index.html">KICKS.</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Trang chủ</a></li>
+            <li><a href="products.html" style="color: var(--accent);"><i class="fas fa-shoe-prints"></i> Sản phẩm</a></li>
+        </ul>
+        <div class="search-bar">
+            <form onsubmit="event.preventDefault(); showToast('Chức năng tìm kiếm demo tĩnh!');">
+                <input type="text" placeholder="Tìm kiếm sneaker...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div class="auth-buttons">
+            <a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
+            <div class="user-nav-dropdown">
+                <a href="profile.html" class="user-nav-btn">
+                    <span class="user-avatar-mono">PT</span>
+                    <span>Phúc Trương</span>
+                    <i class="fas fa-chevron-down" style="font-size: 11px;"></i>
+                </a>
+                <div class="user-dropdown-popup">
+                    <div class="user-popup-header">
+                        <strong>Phúc Trương</strong>
+                        <p>phuctruong@gmail.com</p>
+                    </div>
+                    <a href="profile.html"><i class="fas fa-user"></i> Hồ sơ của tôi</a>
+                    <a href="profile.html#orders"><i class="fas fa-box"></i> Đơn mua của tôi</a>
+                    <a href="login.html" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="margin-top: 40px;">
+        <div class="products-header">
+            <div class="products-header-title">
+                <h1>Tất cả sản phẩm</h1>
+                <p>Khám phá bộ sưu tập sneaker cao cấp chính hãng (12 sản phẩm)</p>
+            </div>
+            <div class="sort-wrapper">
+                <span class="sort-label"><i class="fas fa-sliders-h"></i> Sắp xếp:</span>
+                <div class="custom-select-wrap">
+                    <select id="sort-select" class="sort-select" onchange="showToast('Đã sắp xếp theo: ' + this.options[this.selectedIndex].text)">
+                        <option value="newest">Mới nhất</option>
+                        <option value="price-asc">Giá: Thấp đến cao</option>
+                        <option value="price-desc">Giá: Cao đến thấp</option>
+                        <option value="popular">Bán chạy nhất</option>
+                    </select>
+                    <i class="fas fa-chevron-down select-arrow"></i>
+                </div>
+            </div>
+        </div>
+
+        <section class="product-grid">
+            <div class="product-card"><a href="detail.html"><span class="brand-tag">Nike</span><img src="images/shoe1.jpg" alt="Sneaker"><div class="product-info"><h3>Nike Air Jordan 1 High</h3><p class="price">4.500.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
+            <div class="product-card"><a href="detail.html"><span class="brand-tag">Nike</span><img src="images/shoe2.jpg" alt="Sneaker"><div class="product-info"><h3>Nike Air Max 90</h3><p class="price">3.200.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
+            <div class="product-card"><a href="detail.html"><span class="brand-tag">Converse</span><img src="images/shoe4.jpg" alt="Sneaker"><div class="product-info"><h3>Converse Chuck 70</h3><p class="price">1.500.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
+            <div class="product-card"><a href="detail.html"><span class="brand-tag">Nike</span><img src="images/shoe5.jpg" alt="Sneaker"><div class="product-info"><h3>Nike Air Force 1</h3><p class="price">2.800.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
+            <div class="product-card"><a href="detail.html"><span class="brand-tag">Vans</span><img src="images/shoe6.jpg" alt="Sneaker"><div class="product-info"><h3>Vans Old Skool</h3><p class="price">1.800.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
+            <div class="product-card"><a href="detail.html"><span class="brand-tag">Nike</span><img src="images/sneaker1.jpg" alt="Sneaker"><div class="product-info"><h3>Nike SB Dunk</h3><p class="price">5.200.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
+            <div class="product-card"><a href="detail.html"><span class="brand-tag">Puma</span><img src="images/sneaker2.jpg" alt="Sneaker"><div class="product-info"><h3>Puma RS-X Neon</h3><p class="price">2.600.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
+            <div class="product-card"><a href="detail.html"><span class="brand-tag">Nike</span><img src="images/shoe1.jpg" alt="Sneaker"><div class="product-info"><h3>Nike Air Jordan 1 Mid</h3><p class="price">3.900.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
+            <div class="product-card"><a href="detail.html"><span class="brand-tag">Nike</span><img src="images/shoe2.jpg" alt="Sneaker"><div class="product-info"><h3>Nike Air Max 97</h3><p class="price">4.200.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
+            <div class="product-card"><a href="detail.html"><span class="brand-tag">Converse</span><img src="images/shoe4.jpg" alt="Sneaker"><div class="product-info"><h3>Converse Run Star</h3><p class="price">2.900.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
+            <div class="product-card"><a href="detail.html"><span class="brand-tag">Nike</span><img src="images/shoe5.jpg" alt="Sneaker"><div class="product-info"><h3>Nike Air Force 1 Shadow</h3><p class="price">3.100.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
+            <div class="product-card"><a href="detail.html"><span class="brand-tag">Vans</span><img src="images/shoe6.jpg" alt="Sneaker"><div class="product-info"><h3>Vans Slip-on Classic</h3><p class="price">1.600.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
+        </section>
+
+        <div class="pagination">
+            <button class="active">1</button>
+            <button onclick="window.scrollTo({top:0, behavior:'smooth'})">2</button>
+            <button onclick="window.scrollTo({top:0, behavior:'smooth'})">3</button>
+            <button onclick="window.scrollTo({top:0, behavior:'smooth'})"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>KICKS.</h3>
+                <p>Thương hiệu cung cấp Sneaker chính hãng hàng đầu Việt Nam. Chúng tôi cam kết mang đến cho bạn những đôi giày chất lượng nhất với phong cách độc đáo.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Sản Phẩm</h3>
+                <ul>
+                    <li><a href="#">Giày Nam</a></li>
+                    <li><a href="#">Giày Nữ</a></li>
+                    <li><a href="#">Hàng Mới Về</a></li>
+                    <li><a href="#">Khuyến Mãi</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ Trợ</h3>
+                <ul>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Bảo mật thông tin</a></li>
+                    <li><a href="#">Hướng dẫn chọn size</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Liên Hệ</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Đường Sneaker, Quận 1, TP.HCM</li>
+                    <li><i class="fas fa-phone"></i> 1900 1234</li>
+                    <li><i class="fas fa-envelope"></i> contact@kicks.vn</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Kicks Store. Đồ án Web tĩnh.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

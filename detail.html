@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm - Kicks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="toast">Thông báo</div>
+
+    <header class="navbar">
+        <div class="logo"><a href="index.html">KICKS.</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Trang chủ</a></li>
+            <li><a href="products.html"><i class="fas fa-shoe-prints"></i> Sản phẩm</a></li>
+        </ul>
+        <div class="search-bar">
+            <form onsubmit="event.preventDefault(); showToast('Chức năng tìm kiếm demo tĩnh!');">
+                <input type="text" placeholder="Tìm kiếm sneaker...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div class="auth-buttons">
+            <a href="cart.html" class="icon-link"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
+            <div class="user-nav-dropdown">
+                <a href="profile.html" class="user-nav-btn">
+                    <span class="user-avatar-mono">PT</span>
+                    <span>Phúc Trương</span>
+                    <i class="fas fa-chevron-down" style="font-size: 11px;"></i>
+                </a>
+                <div class="user-dropdown-popup">
+                    <div class="user-popup-header">
+                        <strong>Phúc Trương</strong>
+                        <p>phuctruong@gmail.com</p>
+                    </div>
+                    <a href="profile.html"><i class="fas fa-user"></i> Hồ sơ của tôi</a>
+                    <a href="profile.html#orders"><i class="fas fa-box"></i> Đơn mua của tôi</a>
+                    <a href="login.html" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="product-detail-card">
+            <!-- Phần chính: Ảnh và Thông tin 2 cột -->
+            <div class="product-detail-main">
+                <!-- Cột trái: Ảnh sản phẩm -->
+                <div class="detail-image">
+                    <img src="images/shoe1.jpg" alt="Sneaker Detail">
+                </div>
+
+                <!-- Cột phải: Thông tin -->
+                <div class="detail-info">
+                    <div style="display: flex; gap: 10px; align-items: center; margin-bottom: -10px;">
+                        <span style="background: rgba(16,185,129,0.12); color: var(--success); padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 700;">
+                            <i class="fas fa-circle-check"></i> Còn hàng sẵn (Kho HCM)
+                        </span>
+                        <span style="background: rgba(37,99,235,0.1); color: var(--accent); padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 700;">
+                            <i class="fas fa-fire"></i> Best Seller
+                        </span>
+                    </div>
+
+                    <h1>Nike Air Jordan 1 High OG</h1>
+                    <p class="price-large">4.500.000 đ</p>
+                    
+                    <div class="sizes">
+                        <h3 style="display: flex; align-items: center; gap: 8px; font-size: 16px; margin-bottom: 12px;">
+                            <i class="fas fa-ruler-horizontal" style="color: var(--accent);"></i> Chọn Size của bạn:
+                        </h3>
+                        <div class="size-options">
+                            <button class="size-btn">39</button>
+                            <button class="size-btn">40</button>
+                            <button class="size-btn">41</button>
+                            <button class="size-btn active">42</button>
+                        </div>
+                    </div>
+
+                    <div class="description">
+                        <h3 style="display: flex; align-items: center; gap: 8px; font-size: 16px; margin-bottom: 12px;">
+                            <i class="fas fa-circle-info" style="color: var(--accent);"></i> Mô tả sản phẩm:
+                        </h3>
+                        <p>Mẫu giày Sneaker huyền thoại thiết kế với chất liệu da cao cấp và đế cao su đúc nguyên khối chống trượt. Phù hợp cho cả việc đi chơi, đi làm và các hoạt động dạo phố hàng ngày.</p>
+                    </div>
+
+                    <button class="btn-buy-now" onclick="addToCart()">
+                        <i class="fas fa-cart-plus"></i> THÊM VÀO GIỎ HÀNG NGAY
+                    </button>
+                </div>
+            </div>
+
+            <!-- 4 Thẻ chính sách trải ngang cân đối bên dưới (Không còn line ngăn cách) -->
+            <div class="product-perks-horizontal">
+                <div class="product-perk-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <strong>100% Chính hãng</strong>
+                        <p>Cam kết Authentic, Fullbox đầy đủ phụ kiện</p>
+                    </div>
+                </div>
+                <div class="product-perk-card">
+                    <i class="fas fa-truck-fast"></i>
+                    <div>
+                        <strong>Giao hỏa tốc 2H</strong>
+                        <p>Nội thành TP.HCM & HN nhận trong ngày</p>
+                    </div>
+                </div>
+                <div class="product-perk-card">
+                    <i class="fas fa-rotate-left"></i>
+                    <div>
+                        <strong>Đổi trả 30 ngày</strong>
+                        <p>Đổi size tận nhà miễn phí nếu không vừa</p>
+                    </div>
+                </div>
+                <div class="product-perk-card">
+                    <i class="fas fa-award"></i>
+                    <div>
+                        <strong>Bảo hành 12 tháng</strong>
+                        <p>Bảo hành keo chỉ, lỗi đế nhà sản xuất</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>KICKS.</h3>
+                <p>Thương hiệu cung cấp Sneaker chính hãng hàng đầu Việt Nam. Chúng tôi cam kết mang đến cho bạn những đôi giày chất lượng nhất với phong cách độc đáo.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Sản Phẩm</h3>
+                <ul>
+                    <li><a href="#">Giày Nam</a></li>
+                    <li><a href="#">Giày Nữ</a></li>
+                    <li><a href="#">Hàng Mới Về</a></li>
+                    <li><a href="#">Khuyến Mãi</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ Trợ</h3>
+                <ul>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Bảo mật thông tin</a></li>
+                    <li><a href="#">Hướng dẫn chọn size</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Liên Hệ</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Đường Sneaker, Quận 1, TP.HCM</li>
+                    <li><i class="fas fa-phone"></i> 1900 1234</li>
+                    <li><i class="fas fa-envelope"></i> contact@kicks.vn</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Kicks Store. Đồ án Web tĩnh.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

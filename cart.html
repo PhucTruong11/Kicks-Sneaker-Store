@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng - Kicks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="toast">Thông báo</div>
+
+    <header class="navbar">
+        <div class="logo"><a href="index.html">KICKS.</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Trang chủ</a></li>
+            <li><a href="products.html"><i class="fas fa-shoe-prints"></i> Sản phẩm</a></li>
+        </ul>
+        <div class="search-bar">
+            <form onsubmit="event.preventDefault(); showToast('Chức năng tìm kiếm demo tĩnh!');">
+                <input type="text" placeholder="Tìm kiếm sneaker...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div class="auth-buttons">
+            <a href="cart.html" class="icon-link active"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
+            <div class="user-nav-dropdown">
+                <a href="profile.html" class="user-nav-btn">
+                    <span class="user-avatar-mono">PT</span>
+                    <span>Phúc Trương</span>
+                    <i class="fas fa-chevron-down" style="font-size: 11px;"></i>
+                </a>
+                <div class="user-dropdown-popup">
+                    <div class="user-popup-header">
+                        <strong>Phúc Trương</strong>
+                        <p>phuctruong@gmail.com</p>
+                    </div>
+                    <a href="profile.html"><i class="fas fa-user"></i> Hồ sơ của tôi</a>
+                    <a href="profile.html#orders"><i class="fas fa-box"></i> Đơn mua của tôi</a>
+                    <a href="login.html" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="cart-layout" style="margin-top: 30px;">
+            <div class="cart-items">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 100px;">Sản phẩm</th>
+                            <th>Chi tiết</th>
+                            <th style="text-align: center; width: 120px;">Số lượng</th>
+                            <th style="text-align: right; width: 130px;">Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-unit-price="4500000">
+                            <td><img src="images/shoe1.jpg" alt="Nike Air Jordan 1"></td>
+                            <td class="cart-item-info">
+                                <strong>Nike Air Jordan 1 High</strong>
+                                <span class="size-badge">Size: 42</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <div class="quantity-control">
+                                    <button type="button" class="qty-btn" onclick="updateQty(this, -1)" title="Giảm">-</button>
+                                    <span class="qty-val">1</span>
+                                    <button type="button" class="qty-btn" onclick="updateQty(this, 1)" title="Tăng">+</button>
+                                </div>
+                            </td>
+                            <td style="text-align: right;">
+                                <span class="cart-price item-subtotal">4.500.000đ</span>
+                                <span class="cart-price-sub">Đơn giá: 4.500.000đ</span>
+                            </td>
+                        </tr>
+                        <tr data-unit-price="3200000">
+                            <td><img src="images/shoe2.jpg" alt="Nike Air Max 90"></td>
+                            <td class="cart-item-info">
+                                <strong>Nike Air Max 90</strong>
+                                <span class="size-badge">Size: 40</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <div class="quantity-control">
+                                    <button type="button" class="qty-btn" onclick="updateQty(this, -1)" title="Giảm">-</button>
+                                    <span class="qty-val">1</span>
+                                    <button type="button" class="qty-btn" onclick="updateQty(this, 1)" title="Tăng">+</button>
+                                </div>
+                            </td>
+                            <td style="text-align: right;">
+                                <span class="cart-price item-subtotal">3.200.000đ</span>
+                                <span class="cart-price-sub">Đơn giá: 3.200.000đ</span>
+                            </td>
+                        </tr>
+                        <tr data-unit-price="1500000">
+                            <td><img src="images/shoe4.jpg" alt="Converse Chuck 70"></td>
+                            <td class="cart-item-info">
+                                <strong>Converse Chuck 70</strong>
+                                <span class="size-badge">Size: 41</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <div class="quantity-control">
+                                    <button type="button" class="qty-btn" onclick="updateQty(this, -1)" title="Giảm">-</button>
+                                    <span class="qty-val">2</span>
+                                    <button type="button" class="qty-btn" onclick="updateQty(this, 1)" title="Tăng">+</button>
+                                </div>
+                            </td>
+                            <td style="text-align: right;">
+                                <span class="cart-price item-subtotal">3.000.000đ</span>
+                                <span class="cart-price-sub">Đơn giá: 1.500.000đ</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #f1f5f9;">
+                    <a href="products.html" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--accent); font-size: 14px; text-decoration: none;">
+                        <i class="fas fa-arrow-left"></i> Tiếp tục chọn thêm sản phẩm
+                    </a>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <h3><i class="fas fa-receipt" style="color: var(--accent);"></i> Tóm tắt đơn hàng</h3>
+                <div class="summary-row">
+                    <span>Tạm tính</span>
+                    <span id="cart-subtotal">10.700.000đ</span>
+                </div>
+                <div class="summary-row">
+                    <span>Phí vận chuyển</span>
+                    <span style="color: var(--success); font-weight: 700;">Miễn phí</span>
+                </div>
+                <div class="summary-row">
+                    <span>Bảo hiểm đơn hàng</span>
+                    <span>Đã bao gồm</span>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-total">
+                    <span>Tổng cộng:</span>
+                    <span id="cart-total">10.700.000đ</span>
+                </div>
+
+                <button class="btn-checkout" onclick="showToast('Chức năng thanh toán đang chuẩn bị tích hợp!')">
+                    <i class="fas fa-credit-card"></i> Tiến Hành Thanh Toán
+                </button>
+
+                <div class="cart-perks">
+                    <div class="perk-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% Giày chính hãng authentic, Fullbox</span>
+                    </div>
+                    <div class="perk-item">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Giao hàng hỏa tốc trong 2 giờ nội thành</span>
+                    </div>
+                    <div class="perk-item">
+                        <i class="fas fa-rotate-left"></i>
+                        <span>Đổi size & mẫu miễn phí trong vòng 30 ngày</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>KICKS.</h3>
+                <p>Thương hiệu cung cấp Sneaker chính hãng hàng đầu Việt Nam. Chúng tôi cam kết mang đến cho bạn những đôi giày chất lượng nhất với phong cách độc đáo.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Sản Phẩm</h3>
+                <ul>
+                    <li><a href="#">Giày Nam</a></li>
+                    <li><a href="#">Giày Nữ</a></li>
+                    <li><a href="#">Hàng Mới Về</a></li>
+                    <li><a href="#">Khuyến Mãi</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ Trợ</h3>
+                <ul>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Bảo mật thông tin</a></li>
+                    <li><a href="#">Hướng dẫn chọn size</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Liên Hệ</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Đường Sneaker, Quận 1, TP.HCM</li>
+                    <li><i class="fas fa-phone"></i> 1900 1234</li>
+                    <li><i class="fas fa-envelope"></i> contact@kicks.vn</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Kicks Store. Đồ án Web tĩnh.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function updateQty(btn, change) {
+            const row = btn.closest('tr');
+            const valSpan = row.querySelector('.qty-val');
+            let qty = parseInt(valSpan.textContent) + change;
+            if (qty < 1) {
+                showToast('Số lượng tối thiểu là 1!');
+                return;
+            }
+            valSpan.textContent = qty;
+            
+            const unitPrice = parseInt(row.getAttribute('data-unit-price'));
+            const subtotal = qty * unitPrice;
+            const subtotalEl = row.querySelector('.item-subtotal');
+            if (subtotalEl) {
+                subtotalEl.textContent = subtotal.toLocaleString('vi-VN') + 'đ';
+            }
+            
+            recalculateCart();
+        }
+
+        function recalculateCart() {
+            let total = 0;
+            document.querySelectorAll('.cart-table tbody tr').forEach(row => {
+                const qty = parseInt(row.querySelector('.qty-val').textContent);
+                const unitPrice = parseInt(row.getAttribute('data-unit-price'));
+                total += qty * unitPrice;
+            });
+            const formattedTotal = total.toLocaleString('vi-VN') + 'đ';
+            const subtotalEl = document.getElementById('cart-subtotal');
+            const totalEl = document.getElementById('cart-total');
+            if (subtotalEl) subtotalEl.textContent = formattedTotal;
+            if (totalEl) totalEl.textContent = formattedTotal;
+        }
+    </script>
+</body>
+</html>
