@@ -11,32 +11,7 @@
     <div id="toast">Thông báo</div>
 
     <!-- Admin Dynamic Island Navbar -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            KICKS ADMIN.
-        </div>
-        <ul class="sidebar-menu">
-            <li><a href="index.html"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
-            <li><a href="products.html"><i class="fas fa-box"></i> Sản phẩm</a></li>
-            <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li>
-            <li class="profile-dropdown">
-                <button class="profile-btn" style="background: rgba(37,99,235,0.1); color: var(--accent);">
-                    <span class="admin-avatar-mono">PT</span>
-                    <span>Phúc Trương</span>
-                    <i class="fas fa-chevron-down" style="font-size: 11px;"></i>
-                </button>
-                <div class="dropdown-content">
-                    <div class="dropdown-header">
-                        <h4>Phúc Trương</h4>
-                        <p>phuctruong@kicks.vn</p>
-                    </div>
-                    <a href="profile.html"><i class="fas fa-user"></i> Hồ sơ</a>
-                    <a href="profile.html"><i class="fas fa-cog"></i> Cài đặt</a>
-                    <a href="../login.html" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
-                </div>
-            </li>
-        </ul>
-    </aside>
+    <aside class="sidebar"><a class="sidebar-header" href="index.html">KICKS ADMIN.</a><ul class="sidebar-menu"><li><a href="index.html"><i class="fas fa-chart-pie"></i> Tổng quan</a></li><li><a href="products.html"><i class="fas fa-box"></i> Sản phẩm</a></li><li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li><li><a href="users.html"><i class="fas fa-users"></i> Người dùng</a></li><li><a href="statistics.html"><i class="fas fa-chart-line"></i> Thống kê</a></li><li class="profile-dropdown"><button class="profile-btn" type="button"><span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down"></i></button><div class="dropdown-content"><div class="dropdown-header"><h4>Phúc Trương</h4><p>phuctruong@kicks.vn</p></div><a href="profile.html">Hồ sơ quản trị</a><a href="../index.html">Xem cửa hàng</a><a href="login.html">Đăng xuất</a></div></li></ul></aside>
 
     <main class="main-content">
         <div class="page-content">
@@ -74,7 +49,7 @@
                         </div>
 
                         <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #f1f5f9;">
-                            <a href="../login.html" class="btn-outline-danger" style="width: 100%; justify-content: center; text-decoration: none;">
+                            <a href="login.html" class="btn-outline-danger" style="width: 100%; justify-content: center; text-decoration: none;">
                                 <i class="fas fa-sign-out-alt"></i> Đăng xuất tài khoản
                             </a>
                         </div>
@@ -127,7 +102,7 @@
                         <div class="admin-card-header">
                             <h3><i class="fas fa-key" style="color: var(--accent);"></i> Đổi mật khẩu</h3>
                         </div>
-                        <form onsubmit="event.preventDefault(); showToast('Mật khẩu quản trị đã được đổi thành công!'); this.reset();">
+                        <form onsubmit="event.preventDefault(); showToast('Mật khẩu quản trị đã được đổi thành công!');">
                             <div class="form-group">
                                 <label>Mật khẩu hiện tại *</label>
                                 <input type="password" class="admin-input" placeholder="Nhập mật khẩu cũ..." required>

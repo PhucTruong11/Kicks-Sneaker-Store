@@ -6,6 +6,7 @@
     <title>Đăng ký - Kicks</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/static-pages.css">
 </head>
 <body class="login-body">
     <div id="toast">Thông báo</div>
@@ -17,7 +18,7 @@
             <li><a href="products.html"><i class="fas fa-shoe-prints"></i> Sản phẩm</a></li>
         </ul>
         <div class="search-bar">
-            <form onsubmit="event.preventDefault(); showToast('Chức năng tìm kiếm demo tĩnh!');">
+            <form action="register.html" method="get">
                 <input type="text" placeholder="Tìm kiếm sneaker...">
                 <button type="submit"><i class="fas fa-search"></i></button>
             </form>
@@ -32,7 +33,7 @@
         <div class="auth-card">
             <div class="login-container">
                 <h2>Tạo tài khoản mới</h2>
-                <form onsubmit="event.preventDefault(); showToast('Đăng ký thành công!'); setTimeout(()=>window.location.href='login.html', 1500);">
+                <form onsubmit="event.preventDefault(); showToast('Đăng ký thành công!');">
                     <div class="form-group">
                         <label>Họ và tên</label>
                         <input type="text" placeholder="Nhập họ tên của bạn">

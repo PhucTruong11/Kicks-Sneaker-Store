@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng nhập quản trị - Kicks</title>
+<link rel="stylesheet" href="../css/admin.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-login-body">
+<div id="toast" role="status" aria-live="polite">Thông báo</div>
+<main class="admin-login-card">
+<a href="../index.html" class="sidebar-header">KICKS ADMIN.</a>
+<span class="badge-role">Khu vực quản trị</span>
+<h1>Đăng nhập quản trị</h1>
+<p class="helper-text">Quản lý sản phẩm, người mua và đơn hàng của Kicks.</p>
+<form onsubmit="event.preventDefault(); showToast('Đăng nhập quản trị thành công!');">
+<div class="form-group">
+<label>Email quản trị<input class="admin-input" type="email" placeholder="admin@kicks.vn">
+</label>
+</div>
+<div class="form-group">
+<label>Mật khẩu<input class="admin-input" type="password" placeholder="Nhập mật khẩu">
+</label>
+</div>
+<button type="submit" class="btn-solid-primary">Đăng nhập</button>
+</form>
+<a class="admin-login-entry" href="index.html">Vào trang quản trị <i class="fas fa-arrow-right">
+</i>
+</a>
+<a class="btn-back-link" href="../login.html">Đăng nhập khách hàng</a>
+</main>
+<script src="../js/main.js">
+</script>
+</body>
+</html>

@@ -1,95 +1,44 @@
-# KICKS — Sneaker Store & Admin Management System
+# KICKS Sneaker Store
 
-> Dự án website thương mại điện tử chuyên kinh doanh giày Sneaker thời trang cao cấp, tích hợp đầy đủ giao diện người dùng (Storefront) và hệ thống quản trị chuyên nghiệp (Admin Dashboard).
+Đồ án Web 1 xây dựng **giao diện website bán giày tĩnh** bằng HTML và CSS.
+Dữ liệu sản phẩm, khách hàng, đơn hàng và số tiền được viết sẵn trong HTML.
+JavaScript chỉ hiển thị thông báo; không tính tiền, cập nhật dữ liệu, lưu trữ hay gọi API.
+Các liên kết chuyển tới trang mẫu cố định và không truyền dữ liệu giữa các trang.
+Tìm kiếm, lọc và áp dụng sắp xếp dùng form HTML tải lại chính trang hiện tại, không hiện thông báo và không xử lý kết quả thật.
+Phân trang ở user và admin là liên kết về chính trang hiện tại. Các nút tăng/giảm số lượng chỉ minh họa giao diện, không có JavaScript và không thay đổi số lượng hoặc tổng tiền.
 
----
+## Mở website
 
-## 🌟 Điểm nổi bật & Tính năng chính
+Mở trực tiếp `index.html` bằng Chrome. Có thể dùng Live Server khi phát triển.
+Font Awesome và Google Fonts dùng CDN nên cần Internet để tải icon và font Inter.
 
-### 1. Phía Khách hàng (Storefront)
-- **Trang chủ (`index.html`)**:
-  - Hero banner độc đáo, phối cảnh năng động với các mẫu giày xu hướng.
-  - Dynamic Island Navigation Bar hiện đại, hỗ trợ tìm kiếm nhanh và dropdown menu người dùng.
-  - Danh sách sản phẩm thịnh hành (Trending Sneakers), cam kết dịch vụ và chân trang (Footer) đầy đủ thông tin.
-- **Danh mục sản phẩm (`products.html`)**:
-  - Hiển thị 4 sản phẩm/hàng chuẩn tỉ lệ vàng, grid layout thoáng đãng.
-  - Bộ lọc thương hiệu (Nike, Adidas, Jordan, Converse, Puma, New Balance,...).
-  - Thanh tìm kiếm và bộ chọn sắp xếp giá/độ phổ biến.
-  - Hệ thống phân trang (Pagination) mượt mà.
-- **Chi tiết sản phẩm (`detail.html`)**:
-  - Khung ảnh sản phẩm tỉ lệ 1:1 sắc nét, bo góc hiện đại.
-  - Chọn size giày thời gian thực với hiệu ứng chuyển màu sống động.
-  - 4 khối lợi ích & dịch vụ trải ngang cân đối (Giao hàng hỏa tốc, Đổi trả 30 ngày, 100% Chính hãng, Bảo hành 12 tháng).
-- **Giỏ hàng (`cart.html`)**:
-  - Bảng giỏ hàng tối ưu: bộ tăng giảm số lượng (+ / -) realtime, tính tổng tiền tự động.
-  - Hộp nhập Voucher giảm giá kèm mã đề xuất tiện lợi.
-- **Hồ sơ cá nhân (`profile.html`)**:
-  - Avatar đơn sắc tối giản (Monochrome badge).
-  - Quản lý thông tin tài khoản, sổ địa chỉ nhận hàng, đổi mật khẩu.
-  - Lịch sử mua hàng với badge trạng thái đơn hàng (Đang giao hàng, Đã nhận hàng,...) có icon chỉ dẫn trực quan.
-- **Đăng nhập & Đăng ký (`login.html`, `register.html`)**:
-  - Giao diện form tối giản, hiện đại, hình nền sneaker thẩm mỹ.
+## Giao diện khách hàng
 
-### 2. Phía Quản trị viên (Admin Dashboard)
-- **Tổng quan (`admin/index.html`)**:
-  - Dashboard thống kê doanh thu, đơn hàng, khách hàng mới và biểu đồ trực quan.
-  - Bảng danh sách đơn hàng gần đây với trạng thái cập nhật liên tục.
-- **Quản lý sản phẩm (`admin/products.html`, `admin/product-add.html`, `admin/product-edit.html`)**:
-  - Danh sách sản phẩm kèm ảnh thumbnail, phân loại, giá bán và tồn kho.
-  - Trang thêm mới và chỉnh sửa sản phẩm đầy đủ thông tin chi tiết.
-- **Quản lý đơn hàng (`admin/orders.html`, `admin/order-detail.html`)**:
-  - Danh sách đơn hàng với bộ lọc trạng thái và thao tác nhanh (Duyệt, In hóa đơn, Hủy).
-  - Trang chi tiết đơn hàng chi tiết từng món đồ, địa chỉ nhận hàng và tổng thanh toán.
-- **Hồ sơ Admin (`admin/profile.html`)**:
-  - Thông tin quản trị viên, phân quyền và cài đặt hệ thống.
+- `index.html`: trang chủ và sản phẩm nổi bật.
+- `products.html`: danh sách sản phẩm, bộ lọc tên/thương hiệu/khoảng giá, sắp xếp và phân trang mẫu.
+- `detail.html`: chi tiết sản phẩm mẫu, kích cỡ và nút thêm giỏ hàng.
+- `cart.html`: giỏ hàng và tổng tiền cố định. Nút thanh toán dẫn tới `invoice.html`.
+- `invoice.html`: hóa đơn đặt hàng mẫu, thông tin người mua, chọn địa chỉ có sẵn/địa chỉ mới, phương thức thanh toán và thông báo xác nhận.
+- `profile.html`: thông tin tài khoản, lịch sử mua hàng theo đơn, địa chỉ và đổi mật khẩu. Chuyển mục bằng liên kết HTML/CSS.
+- `login.html`, `register.html`: form đăng nhập và đăng ký mẫu.
 
----
+## Giao diện quản trị
 
-## 🛠 Công nghệ sử dụng
-- **HTML5**: Cấu trúc ngữ nghĩa chuẩn SEO, hỗ trợ khả năng truy cập.
-- **CSS3 (Vanilla CSS)**: Thiết kế giao diện hiện đại (Modern UI, Dynamic Island, Flexbox, CSS Grid, Glassmorphism, Micro-animations).
-- **JavaScript (Vanilla JS)**: Xử lý tương tác giao diện, tính toán giỏ hàng, thông báo Toast, chuyển tab hồ sơ và trạng thái.
-- **Font Awesome 6**: Hệ thống icon vector đồng bộ.
-- **Google Fonts**: Phông chữ `Inter` thanh lịch và chuẩn quốc tế.
+- `admin/login.html`: đăng nhập quản trị bằng URL riêng. Liên kết “Vào trang quản trị” mở dashboard mẫu.
+- `admin/index.html`: tổng quan và biểu đồ doanh thu dựng bằng HTML/CSS.
+- `admin/products.html`: danh sách sản phẩm; minh họa ẩn sản phẩm đã bán và xác nhận xóa sản phẩm chưa bán.
+- `admin/product-add.html`, `admin/product-edit.html`: form thêm/sửa với phân loại, ảnh xem trước cố định và ô chọn file. Chọn file chỉ hiện thông báo, không đọc file hoặc đổi ảnh.
+- `admin/orders.html`: danh sách đơn và bộ lọc trạng thái, khoảng ngày, tỉnh/thành, quận/huyện.
+- `admin/order-detail.html`: chi tiết đơn mẫu, thông tin người mua, thanh toán và các thao tác thông báo.
+- `admin/users.html`, `admin/user-add.html`, `admin/user-edit.html`: danh sách, thêm, sửa, khóa/mở người dùng bằng giao diện mẫu.
+- `admin/statistics.html`: chọn khoảng ngày, top 5 khách hàng theo tổng mua giảm dần, danh sách đơn từng khách và liên kết chi tiết.
+- `admin/profile.html`: hồ sơ quản trị.
 
----
+## Hình ảnh và dữ liệu mẫu
 
-## 🚀 Hướng dẫn khởi chạy dự án
+Ảnh có sẵn tương ứng với Nike Free Run Flyknit đỏ, Puma Smash trắng, Nike Air Max 1 cam,
+Nike Air Force 1 Shadow pastel và Vans Old Skool đỏ đô. Danh sách gồm 12 biến thể kích cỡ;
+tên, thương hiệu, ảnh và giá được thống nhất giữa trang chủ, danh sách và quản trị.
 
-1. Clone repository về máy:
-   ```bash
-   git clone https://github.com/<your-username>/kicks-sneaker-store.git
-   ```
-2. Mở thư mục dự án bằng Visual Studio Code hoặc bất kỳ trình soạn thảo code nào.
-3. Khởi chạy bằng extension **Live Server** (chuột phải vào `index.html` chọn *Open with Live Server*) hoặc mở trực tiếp file `index.html` trên trình duyệt web.
-
----
-
-## 📂 Cấu trúc thư mục
-
-```text
-├── index.html              # Trang chủ khách hàng
-├── products.html           # Trang danh sách sản phẩm
-├── detail.html             # Trang chi tiết sản phẩm
-├── cart.html               # Trang giỏ hàng & thanh toán
-├── profile.html            # Trang hồ sơ cá nhân khách hàng
-├── login.html              # Trang đăng nhập
-├── register.html           # Trang đăng ký
-├── admin/                  # Khu vực quản trị viên
-│   ├── index.html          # Dashboard tổng quan
-│   ├── products.html       # Quản lý danh mục sản phẩm
-│   ├── product-add.html    # Thêm sản phẩm mới
-│   ├── product-edit.html   # Chỉnh sửa sản phẩm
-│   ├── orders.html         # Quản lý danh sách đơn hàng
-│   ├── order-detail.html   # Xem chi tiết đơn hàng
-│   └── profile.html        # Hồ sơ & cài đặt Admin
-├── css/
-│   ├── style.css           # Toàn bộ style cho khách hàng
-│   └── admin.css           # Toàn bộ style cho quản trị viên
-├── js/
-│   └── main.js             # Logic xử lý giao diện & giỏ hàng
-└── images/                 # Tài nguyên hình ảnh sản phẩm & banner
-```
-
----
-*Dự án phục vụ mục đích học tập và phát triển ứng dụng Web Front-end.*
+`css/style.css` giữ kiểu dáng cửa hàng; `css/static-pages.css` bổ sung bộ lọc, hóa đơn và các mục hồ sơ;
+`css/admin.css` dành cho quản trị. `js/main.js` chỉ chứa thông báo toast.

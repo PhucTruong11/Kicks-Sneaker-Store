@@ -1,141 +1,348 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý Sản phẩm - Kicks Admin</title>
-    <link rel="stylesheet" href="../css/admin.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quản lý sản phẩm - Kicks</title>
+<link rel="stylesheet" href="../css/admin.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div id="toast">Thông báo</div>
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            KICKS ADMIN.
-        </div>
-        <ul class="sidebar-menu">
-            <li><a href="index.html"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
-            <li><a href="products.html" class="active"><i class="fas fa-box"></i> Sản phẩm</a></li>
-            <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li>
-            <li class="profile-dropdown">
-                <button class="profile-btn">
-                    <span class="admin-avatar-mono">PT</span>
-                    <span>Phúc Trương</span>
-                    <i class="fas fa-chevron-down" style="font-size: 11px;"></i>
-                </button>
-                <div class="dropdown-content">
-                    <div class="dropdown-header">
-                        <h4>Phúc Trương</h4>
-                        <p>phuctruong@kicks.vn</p>
-                    </div>
-                    <a href="profile.html"><i class="fas fa-user"></i> Hồ sơ</a>
-                    <a href="profile.html"><i class="fas fa-cog"></i> Cài đặt</a>
-                    <a href="../login.html" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
-                </div>
-            </li>
-        </ul>
-    </aside>
-
-    <main class="main-content">
-        <div class="page-content">
-            <h1 class="page-title">Quản lý Sản phẩm</h1>
-
-            <div class="data-table-container">
-                <div class="table-header">
-                    <h2>Danh sách tất cả (12 sản phẩm)</h2>
-                    <a href="product-add.html" class="btn-add" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none;">
-                        <i class="fas fa-plus"></i> Thêm sản phẩm
-                    </a>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Hình ảnh</th>
-                            <th>Tên sản phẩm</th>
-                            <th>Giá bán</th>
-                            <th>Kho hàng</th>
-                            <th>Trạng thái</th>
-                            <th>Hành động</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="cursor:pointer;" onclick="window.location.href='product-edit.html'" title="Bấm để chỉnh sửa sản phẩm">
-                            <td><img src="../images/shoe1.jpg" alt="Shoe 1"></td>
-                            <td><strong style="color: var(--dark);">Nike Air Jordan 1 High</strong></td>
-                            <td>4.500.000đ</td>
-                            <td style="color: var(--success); font-weight:bold;">120</td>
-                            <td><span class="status-badge status-success">Đang bán</span></td>
-                            <td>
-                                <a href="product-edit.html" onclick="event.stopPropagation();" class="btn-action btn-edit">Sửa</a>
-                                <button class="btn-action btn-delete" onclick="event.stopPropagation(); showToast('Đã xóa thành công!')">Xóa</button>
-                            </td>
-                        </tr>
-                        <tr style="cursor:pointer;" onclick="window.location.href='product-edit.html'" title="Bấm để chỉnh sửa sản phẩm">
-                            <td><img src="../images/shoe2.jpg" alt="Shoe 2"></td>
-                            <td><strong style="color: var(--dark);">Nike Air Max 90</strong></td>
-                            <td>3.200.000đ</td>
-                            <td style="color: var(--success); font-weight:bold;">45</td>
-                            <td><span class="status-badge status-success">Đang bán</span></td>
-                            <td>
-                                <a href="product-edit.html" onclick="event.stopPropagation();" class="btn-action btn-edit">Sửa</a>
-                                <button class="btn-action btn-delete" onclick="event.stopPropagation(); showToast('Đã xóa thành công!')">Xóa</button>
-                            </td>
-                        </tr>
-                        <tr style="cursor:pointer;" onclick="window.location.href='product-edit.html'" title="Bấm để chỉnh sửa sản phẩm">
-                            <td><img src="../images/shoe4.jpg" alt="Shoe"></td>
-                            <td><strong style="color: var(--dark);">Converse Chuck 70</strong></td>
-                            <td>1.500.000đ</td>
-                            <td style="color: var(--warning); font-weight:bold;">8</td>
-                            <td><span class="status-badge status-pending">Sắp hết</span></td>
-                            <td>
-                                <a href="product-edit.html" onclick="event.stopPropagation();" class="btn-action btn-edit">Sửa</a>
-                                <button class="btn-action btn-delete" onclick="event.stopPropagation(); showToast('Đã xóa thành công!')">Xóa</button>
-                            </td>
-                        </tr>
-                        <tr style="cursor:pointer;" onclick="window.location.href='product-edit.html'" title="Bấm để chỉnh sửa sản phẩm">
-                            <td><img src="../images/shoe4.jpg" alt="Shoe"></td>
-                            <td><strong style="color: var(--dark);">Nike Air Force 1</strong></td>
-                            <td>2.800.000đ</td>
-                            <td style="color: var(--success); font-weight:bold;">200</td>
-                            <td><span class="status-badge status-success">Đang bán</span></td>
-                            <td>
-                                <a href="product-edit.html" onclick="event.stopPropagation();" class="btn-action btn-edit">Sửa</a>
-                                <button class="btn-action btn-delete" onclick="event.stopPropagation(); showToast('Đã xóa thành công!')">Xóa</button>
-                            </td>
-                        </tr>
-                        <tr style="cursor:pointer;" onclick="window.location.href='product-edit.html'" title="Bấm để chỉnh sửa sản phẩm">
-                            <td><img src="../images/shoe5.jpg" alt="Shoe"></td>
-                            <td><strong style="color: var(--dark);">Vans Old Skool</strong></td>
-                            <td>1.800.000đ</td>
-                            <td style="color: var(--danger); font-weight:bold;">0</td>
-                            <td><span class="status-badge status-danger">Hết hàng</span></td>
-                            <td>
-                                <a href="product-edit.html" onclick="event.stopPropagation();" class="btn-action btn-edit">Sửa</a>
-                                <button class="btn-action btn-delete" onclick="event.stopPropagation(); showToast('Đã xóa thành công!')">Xóa</button>
-                            </td>
-                        </tr>
-                        <tr style="cursor:pointer;" onclick="window.location.href='product-edit.html'" title="Bấm để chỉnh sửa sản phẩm">
-                            <td><img src="../images/shoe6.jpg" alt="Shoe"></td>
-                            <td><strong style="color: var(--dark);">Nike SB Dunk</strong></td>
-                            <td>5.200.000đ</td>
-                            <td style="color: var(--success); font-weight:bold;">34</td>
-                            <td><span class="status-badge status-success">Đang bán</span></td>
-                            <td>
-                                <a href="product-edit.html" onclick="event.stopPropagation();" class="btn-action btn-edit">Sửa</a>
-                                <button class="btn-action btn-delete" onclick="event.stopPropagation(); showToast('Đã xóa thành công!')">Xóa</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div style="text-align:center; margin-top: 20px;">
-                    <a href="product-add.html" style="color:var(--accent); font-weight:bold; text-decoration:none;">
-                        <i class="fas fa-plus-circle"></i> Thêm sản phẩm mới vào danh sách
-                    </a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <script src="../js/main.js"></script>
+<div id="toast" role="status" aria-live="polite">Thông báo</div>
+<aside class="sidebar">
+<a class="sidebar-header" href="index.html">KICKS ADMIN.</a>
+<ul class="sidebar-menu">
+<li>
+<a href="index.html">
+<i class="fas fa-chart-pie">
+</i> Tổng quan</a>
+</li>
+<li>
+<a href="products.html" class="active">
+<i class="fas fa-box">
+</i> Sản phẩm</a>
+</li>
+<li>
+<a href="orders.html">
+<i class="fas fa-shopping-cart">
+</i> Đơn hàng</a>
+</li>
+<li>
+<a href="users.html">
+<i class="fas fa-users">
+</i> Người dùng</a>
+</li>
+<li>
+<a href="statistics.html">
+<i class="fas fa-chart-line">
+</i> Thống kê</a>
+</li>
+<li class="profile-dropdown">
+<button class="profile-btn" type="button">
+<span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down">
+</i>
+</button>
+<div class="dropdown-content">
+<div class="dropdown-header">
+<h4>Phúc Trương</h4>
+<p>phuctruong@kicks.vn</p>
+</div>
+<a href="profile.html">Hồ sơ quản trị</a>
+<a href="../index.html">Xem cửa hàng</a>
+<a href="login.html">Đăng xuất</a>
+</div>
+</li>
+</ul>
+</aside>
+<main class="main-content">
+<div class="page-content">
+<div class="admin-header-actions">
+<h1 class="page-title">Quản lý sản phẩm</h1>
+<a class="btn-solid-primary" href="product-add.html">
+<i class="fas fa-plus">
+</i> Thêm sản phẩm</a>
+</div>
+<div class="data-table-container">
+<div class="table-header">
+<h2>Danh sách tất cả (12 sản phẩm)</h2>
+</div>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>Ảnh</th>
+<th>Sản phẩm / Phân loại</th>
+<th>Giá bán</th>
+<th>Tồn kho</th>
+<th>Trạng thái</th>
+<th>Thao tác</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<img src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ">
+</td>
+<td>
+<strong>Nike Free Run Flyknit Đỏ</strong>
+<small class="table-subtitle">NK-FR-042 · Nike · Size 42</small>
+</td>
+<td>4.500.000đ</td>
+<td>120</td>
+<td>
+<span class="status-badge status-success">Đang bán</span>
+</td>
+<td>
+<div class="table-actions">
+<a class="btn-action btn-edit" href="product-edit.html">Sửa</a>
+<button class="btn-action btn-muted" onclick="showToast('Sản phẩm đã bán: đã ẩn sản phẩm thành công!')">Ẩn sản phẩm</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<img src="../images/shoe2.jpg" alt="Puma Smash Trắng">
+</td>
+<td>
+<strong>Puma Smash Trắng</strong>
+<small class="table-subtitle">PM-SM-040 · Puma · Size 40</small>
+</td>
+<td>3.200.000đ</td>
+<td>45</td>
+<td>
+<span class="status-badge status-success">Đang bán</span>
+</td>
+<td>
+<div class="table-actions">
+<a class="btn-action btn-edit" href="product-edit.html">Sửa</a>
+<button class="btn-action btn-muted" onclick="showToast('Sản phẩm đã bán: đã ẩn sản phẩm thành công!')">Ẩn sản phẩm</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<img src="../images/shoe4.jpg" alt="Nike Air Max 1 Cam">
+</td>
+<td>
+<strong>Nike Air Max 1 Cam</strong>
+<small class="table-subtitle">NK-AM1-041 · Nike · Size 41</small>
+</td>
+<td>1.500.000đ</td>
+<td>8</td>
+<td>
+<span class="status-badge status-success">Đang bán</span>
+</td>
+<td>
+<div class="table-actions">
+<a class="btn-action btn-edit" href="product-edit.html">Sửa</a>
+<button class="btn-action btn-muted" onclick="showToast('Sản phẩm đã bán: đã ẩn sản phẩm thành công!')">Ẩn sản phẩm</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<img src="../images/shoe5.jpg" alt="Nike Air Force 1 Shadow Pastel">
+</td>
+<td>
+<strong>Nike Air Force 1 Shadow Pastel</strong>
+<small class="table-subtitle">NK-AF1-039 · Nike · Size 39</small>
+</td>
+<td>2.800.000đ</td>
+<td>200</td>
+<td>
+<span class="status-badge status-success">Đang bán</span>
+</td>
+<td>
+<div class="table-actions">
+<a class="btn-action btn-edit" href="product-edit.html">Sửa</a>
+<a class="btn-action btn-delete" href="#delete-product">Xóa</a>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<img src="../images/shoe6.jpg" alt="Vans Old Skool Đỏ đô">
+</td>
+<td>
+<strong>Vans Old Skool Đỏ đô</strong>
+<small class="table-subtitle">VN-OS-040 · Vans · Size 40</small>
+</td>
+<td>1.800.000đ</td>
+<td>0</td>
+<td>
+<span class="status-badge status-danger">Hết hàng</span>
+</td>
+<td>
+<div class="table-actions">
+<a class="btn-action btn-edit" href="product-edit.html">Sửa</a>
+<a class="btn-action btn-delete" href="#delete-product">Xóa</a>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<img src="../images/sneaker1.jpg" alt="Nike Free Run Flyknit Đỏ">
+</td>
+<td>
+<strong>Nike Free Run Flyknit Đỏ</strong>
+<small class="table-subtitle">NK-FR-040 · Nike · Size 40</small>
+</td>
+<td>4.500.000đ</td>
+<td>34</td>
+<td>
+<span class="status-badge status-success">Đang bán</span>
+</td>
+<td>
+<div class="table-actions">
+<a class="btn-action btn-edit" href="product-edit.html">Sửa</a>
+<a class="btn-action btn-delete" href="#delete-product">Xóa</a>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<img src="../images/sneaker2.jpg" alt="Puma Smash Trắng">
+</td>
+<td>
+<strong>Puma Smash Trắng</strong>
+<small class="table-subtitle">PM-SM-042 · Puma · Size 42</small>
+</td>
+<td>3.200.000đ</td>
+<td>20</td>
+<td>
+<span class="status-badge status-success">Đang bán</span>
+</td>
+<td>
+<div class="table-actions">
+<a class="btn-action btn-edit" href="product-edit.html">Sửa</a>
+<a class="btn-action btn-delete" href="#delete-product">Xóa</a>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<img src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ">
+</td>
+<td>
+<strong>Nike Free Run Flyknit Đỏ</strong>
+<small class="table-subtitle">NK-FR-039 · Nike · Size 39</small>
+</td>
+<td>4.500.000đ</td>
+<td>18</td>
+<td>
+<span class="status-badge status-success">Đang bán</span>
+</td>
+<td>
+<div class="table-actions">
+<a class="btn-action btn-edit" href="product-edit.html">Sửa</a>
+<a class="btn-action btn-delete" href="#delete-product">Xóa</a>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<img src="../images/shoe2.jpg" alt="Puma Smash Trắng">
+</td>
+<td>
+<strong>Puma Smash Trắng</strong>
+<small class="table-subtitle">PM-SM-039 · Puma · Size 39</small>
+</td>
+<td>3.200.000đ</td>
+<td>22</td>
+<td>
+<span class="status-badge status-success">Đang bán</span>
+</td>
+<td>
+<div class="table-actions">
+<a class="btn-action btn-edit" href="product-edit.html">Sửa</a>
+<a class="btn-action btn-delete" href="#delete-product">Xóa</a>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<img src="../images/shoe4.jpg" alt="Nike Air Max 1 Cam">
+</td>
+<td>
+<strong>Nike Air Max 1 Cam</strong>
+<small class="table-subtitle">NK-AM1-042 · Nike · Size 42</small>
+</td>
+<td>1.500.000đ</td>
+<td>15</td>
+<td>
+<span class="status-badge status-success">Đang bán</span>
+</td>
+<td>
+<div class="table-actions">
+<a class="btn-action btn-edit" href="product-edit.html">Sửa</a>
+<a class="btn-action btn-delete" href="#delete-product">Xóa</a>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<img src="../images/shoe5.jpg" alt="Nike Air Force 1 Shadow Pastel">
+</td>
+<td>
+<strong>Nike Air Force 1 Shadow Pastel</strong>
+<small class="table-subtitle">NK-AF1-042 · Nike · Size 42</small>
+</td>
+<td>2.800.000đ</td>
+<td>30</td>
+<td>
+<span class="status-badge status-success">Đang bán</span>
+</td>
+<td>
+<div class="table-actions">
+<a class="btn-action btn-edit" href="product-edit.html">Sửa</a>
+<a class="btn-action btn-delete" href="#delete-product">Xóa</a>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<img src="../images/shoe6.jpg" alt="Vans Old Skool Đỏ đô">
+</td>
+<td>
+<strong>Vans Old Skool Đỏ đô</strong>
+<small class="table-subtitle">VN-OS-042 · Vans · Size 42</small>
+</td>
+<td>1.800.000đ</td>
+<td>12</td>
+<td>
+<span class="status-badge status-success">Đang bán</span>
+</td>
+<td>
+<div class="table-actions">
+<a class="btn-action btn-edit" href="product-edit.html">Sửa</a>
+<a class="btn-action btn-delete" href="#delete-product">Xóa</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<nav class="pagination" aria-label="Phân trang danh sách">
+<a href="products.html" class="active" aria-current="page" aria-label="Trang 1">1</a>
+<a href="products.html" aria-label="Trang 2">2</a>
+<a href="products.html" aria-label="Trang 3">3</a>
+<a href="products.html" aria-label="Trang tiếp theo"><i class="fas fa-chevron-right"></i></a>
+</nav>
+<p class="helper-text">Sản phẩm đã có đơn mua chỉ được ẩn. Sản phẩm chưa bán có thể xóa sau khi xác nhận.</p>
+</div>
+<section id="delete-product" class="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="delete-title">
+<div class="confirm-card">
+<h2 id="delete-title">Xác nhận xóa sản phẩm</h2>
+<p>Sản phẩm chưa được bán. Bạn có chắc muốn xóa sản phẩm khỏi danh sách?</p>
+<div class="table-actions">
+<a href="products.html" class="btn-outline-danger">Quay lại</a>
+<button class="btn-solid-primary" onclick="showToast('Đã xóa sản phẩm thành công!')">Xác nhận xóa</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<script src="../js/main.js">
+</script>
 </body>
 </html>

@@ -6,6 +6,7 @@
     <title>Chi tiết sản phẩm - Kicks</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/static-pages.css">
 </head>
 <body>
     <div id="toast">Thông báo</div>
@@ -17,7 +18,7 @@
             <li><a href="products.html"><i class="fas fa-shoe-prints"></i> Sản phẩm</a></li>
         </ul>
         <div class="search-bar">
-            <form onsubmit="event.preventDefault(); showToast('Chức năng tìm kiếm demo tĩnh!');">
+            <form action="detail.html" method="get">
                 <input type="text" placeholder="Tìm kiếm sneaker...">
                 <button type="submit"><i class="fas fa-search"></i></button>
             </form>
@@ -49,7 +50,7 @@
             <div class="product-detail-main">
                 <!-- Cột trái: Ảnh sản phẩm -->
                 <div class="detail-image">
-                    <img src="images/shoe1.jpg" alt="Sneaker Detail">
+                    <img src="images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ">
                 </div>
 
                 <!-- Cột phải: Thông tin -->
@@ -63,7 +64,7 @@
                         </span>
                     </div>
 
-                    <h1>Nike Air Jordan 1 High OG</h1>
+                    <h1>Nike Free Run Flyknit Đỏ</h1>
                     <p class="price-large">4.500.000 đ</p>
                     
                     <div class="sizes">
@@ -71,10 +72,10 @@
                             <i class="fas fa-ruler-horizontal" style="color: var(--accent);"></i> Chọn Size của bạn:
                         </h3>
                         <div class="size-options">
-                            <button class="size-btn">39</button>
-                            <button class="size-btn">40</button>
-                            <button class="size-btn">41</button>
-                            <button class="size-btn active">42</button>
+                            <button class="size-btn" onclick="showToast('Đã chọn size giày!')">39</button>
+                            <button class="size-btn" onclick="showToast('Đã chọn size giày!')">40</button>
+                            <button class="size-btn" onclick="showToast('Đã chọn size giày!')">41</button>
+                            <button class="size-btn active" onclick="showToast('Đã chọn size giày!')">42</button>
                         </div>
                     </div>
 
@@ -82,7 +83,7 @@
                         <h3 style="display: flex; align-items: center; gap: 8px; font-size: 16px; margin-bottom: 12px;">
                             <i class="fas fa-circle-info" style="color: var(--accent);"></i> Mô tả sản phẩm:
                         </h3>
-                        <p>Mẫu giày Sneaker huyền thoại thiết kế với chất liệu da cao cấp và đế cao su đúc nguyên khối chống trượt. Phù hợp cho cả việc đi chơi, đi làm và các hoạt động dạo phố hàng ngày.</p>
+                        <p>Nike Free Run Flyknit phối đỏ với thân giày dệt thoáng khí, kiểu dáng thấp cổ và đế giày linh hoạt. Phù hợp để đi bộ, vận động nhẹ và phối đồ hằng ngày.</p>
                     </div>
 
                     <button class="btn-buy-now" onclick="addToCart()">

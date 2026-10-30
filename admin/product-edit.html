@@ -11,32 +11,7 @@
     <div id="toast">Thông báo</div>
 
     <!-- Admin Dynamic Island Navbar -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            KICKS ADMIN.
-        </div>
-        <ul class="sidebar-menu">
-            <li><a href="index.html"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
-            <li><a href="products.html" class="active"><i class="fas fa-box"></i> Sản phẩm</a></li>
-            <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li>
-            <li class="profile-dropdown">
-                <button class="profile-btn">
-                    <span class="admin-avatar-mono">PT</span>
-                    <span>Phúc Trương</span>
-                    <i class="fas fa-chevron-down" style="font-size: 11px;"></i>
-                </button>
-                <div class="dropdown-content">
-                    <div class="dropdown-header">
-                        <h4>Phúc Trương</h4>
-                        <p>phuctruong@kicks.vn</p>
-                    </div>
-                    <a href="profile.html"><i class="fas fa-user"></i> Hồ sơ</a>
-                    <a href="profile.html"><i class="fas fa-cog"></i> Cài đặt</a>
-                    <a href="../login.html" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
-                </div>
-            </li>
-        </ul>
-    </aside>
+    <aside class="sidebar"><a class="sidebar-header" href="index.html">KICKS ADMIN.</a><ul class="sidebar-menu"><li><a href="index.html"><i class="fas fa-chart-pie"></i> Tổng quan</a></li><li><a href="products.html" class="active"><i class="fas fa-box"></i> Sản phẩm</a></li><li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li><li><a href="users.html"><i class="fas fa-users"></i> Người dùng</a></li><li><a href="statistics.html"><i class="fas fa-chart-line"></i> Thống kê</a></li><li class="profile-dropdown"><button class="profile-btn" type="button"><span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down"></i></button><div class="dropdown-content"><div class="dropdown-header"><h4>Phúc Trương</h4><p>phuctruong@kicks.vn</p></div><a href="profile.html">Hồ sơ quản trị</a><a href="../index.html">Xem cửa hàng</a><a href="login.html">Đăng xuất</a></div></li></ul></aside>
 
     <main class="main-content">
         <div class="page-content">
@@ -47,21 +22,21 @@
                         <i class="fas fa-arrow-left"></i> Quay lại danh sách sản phẩm
                     </a>
                     <div style="display: flex; align-items: center; gap: 12px; margin-top: 10px;">
-                        <h1 class="page-title" style="margin: 0;">Sửa: Nike Air Jordan 1 High</h1>
+                        <h1 class="page-title" style="margin: 0;">Sửa: Nike Free Run Flyknit Đỏ</h1>
                         <span class="status-badge status-success">Đang bán</span>
                     </div>
                 </div>
                 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    <button type="button" class="btn-outline-danger" onclick="handleDeleteProduct()">
-                        <i class="fas fa-trash-alt"></i> Xóa sản phẩm
+                    <button type="button" class="btn-outline-danger" onclick="showToast('Sản phẩm đã được bán: đã ẩn sản phẩm thành công!')">
+                        <i class="fas fa-eye-slash"></i> Ẩn sản phẩm
                     </button>
-                    <button type="button" class="btn-solid-primary" onclick="handleUpdateProduct(event)">
+                    <button type="button" class="btn-solid-primary" onclick="showToast('Đã lưu thông tin sản phẩm thành công!')">
                         <i class="fas fa-save"></i> Cập nhật thay đổi
                     </button>
                 </div>
             </div>
 
-            <form onsubmit="handleUpdateProduct(event)">
+            <form onsubmit="event.preventDefault(); showToast('Đã lưu thông tin sản phẩm thành công!');">
                 <div class="admin-grid-layout">
                     <!-- Left Column: Product Information -->
                     <div>
@@ -72,13 +47,13 @@
                             
                             <div class="form-group">
                                 <label>Tên sản phẩm Sneaker *</label>
-                                <input type="text" class="admin-input" value="Nike Air Jordan 1 Retro High" required>
+                                <input type="text" class="admin-input" value="Nike Free Run Flyknit Đỏ" required>
                             </div>
 
                             <div class="form-grid-2">
                                 <div class="form-group">
                                     <label>Mã sản phẩm (SKU) *</label>
-                                    <input type="text" class="admin-input" value="NK-AJ1-001" required>
+                                    <input type="text" class="admin-input" value="NK-FR-042" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Thương hiệu hãng *</label>
@@ -99,7 +74,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Giá khuyến mãi (Nếu có)</label>
-                                    <input type="number" class="admin-input" placeholder="Để trống nếu không giảm" value="4200000">
+                                    <input type="number" class="admin-input" placeholder="Để trống nếu không giảm">
                                 </div>
                             </div>
 
@@ -154,7 +129,7 @@
 
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label>Mô tả chi tiết sản phẩm</label>
-                                <textarea rows="5" class="admin-textarea">Nike Air Jordan 1 High là biểu tượng bất hủ của nền văn hóa bóng rổ và thời trang đường phố thế giới. Sở hữu chất liệu da cao cấp, đệm khí Air êm ái cùng màu sắc phối kinh điển mang lại sự tự tin cho bất cứ ai sở hữu.</textarea>
+                                <textarea rows="5" class="admin-textarea">Nike Free Run Flyknit phối đỏ, thân giày dệt thoáng khí và đế linh hoạt cho vận động hằng ngày.</textarea>
                             </div>
                         </div>
                     </div>
@@ -166,12 +141,7 @@
                             <div class="admin-card-header">
                                 <h3><i class="fas fa-image" style="color: var(--accent);"></i> Hình ảnh sản phẩm</h3>
                             </div>
-                            <div class="image-preview-box" onclick="document.getElementById('fileInput').click()">
-                                <img id="previewImg" src="../images/shoe1.jpg" alt="Preview Shoe">
-                                <p style="font-weight: 700; font-size: 14px; color: var(--dark); margin-bottom: 4px;">Nhấn để thay đổi ảnh</p>
-                                <p style="font-size: 12px; color: #94a3b8;">Hỗ trợ PNG, JPG, WEBP chất lượng cao</p>
-                                <input type="file" id="fileInput" style="display:none;" onchange="previewImage(event)">
-                            </div>
+                            <div class="image-preview-box"><img id="previewImg" src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ"><p>Ảnh sản phẩm xem trước</p><label class="upload-label" for="fileInput">Chọn ảnh sản phẩm</label><input type="file" id="fileInput" accept="image/png,image/jpeg,image/webp" onchange="showToast('Đã chọn ảnh sản phẩm thành công!')"><p class="helper-text">PNG, JPG hoặc WEBP. Ảnh xem trước là ảnh mẫu có sẵn.</p></div>
                         </div>
 
                         <!-- Visibility & Status Card -->
@@ -208,35 +178,5 @@
     </main>
 
     <script src="../js/main.js"></script>
-    <script>
-        function previewImage(event) {
-            const input = event.target;
-            if (input.files && input.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById('previewImg').src = e.target.result;
-                };
-                reader.readAsDataURL(input.files[0]);
-                showToast('Đã tải hình ảnh xem trước mới!');
-            }
-        }
-
-        function handleUpdateProduct(event) {
-            event.preventDefault();
-            showToast('Đã lưu thông tin sản phẩm thành công!');
-            setTimeout(function() {
-                window.location.href = 'products.html';
-            }, 1200);
-        }
-
-        function handleDeleteProduct() {
-            if(confirm('Bạn có chắc chắn muốn xóa sản phẩm này khỏi hệ thống?')) {
-                showToast('Đã xóa sản phẩm khỏi kho hàng!');
-                setTimeout(function() {
-                    window.location.href = 'products.html';
-                }, 1000);
-            }
-        }
-    </script>
 </body>
 </html>

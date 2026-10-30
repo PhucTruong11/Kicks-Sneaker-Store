@@ -6,6 +6,7 @@
     <title>Đăng nhập - Kicks</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/static-pages.css">
 </head>
 <body class="login-body">
     <div id="toast">Thông báo</div>
@@ -17,7 +18,7 @@
             <li><a href="products.html"><i class="fas fa-shoe-prints"></i> Sản phẩm</a></li>
         </ul>
         <div class="search-bar">
-            <form onsubmit="event.preventDefault(); showToast('Chức năng tìm kiếm demo tĩnh!');">
+            <form action="login.html" method="get">
                 <input type="text" placeholder="Tìm kiếm sneaker...">
                 <button type="submit"><i class="fas fa-search"></i></button>
             </form>
@@ -33,7 +34,7 @@
             <div class="auth-image"></div>
             <div class="login-container">
                 <h2>Xin chào trở lại!</h2>
-                <form onsubmit="return handleLogin(event)">
+                <form onsubmit="event.preventDefault(); showToast('Đăng nhập thành công!');">
                     <div class="form-group">
                         <label>Email hoặc Tên đăng nhập</label>
                         <input type="text" placeholder="Nhập email của bạn">
@@ -44,7 +45,7 @@
                     </div>
                     <button type="submit" class="btn-submit">Đăng nhập ngay</button>
                 </form>
-                <div class="auth-links">
+                <div class="auth-links"><p><a href="index.html">Vào cửa hàng</a> · <a href="admin/login.html">Đăng nhập quản trị</a></p>
                     <p>Chưa có tài khoản? <a href="register.html">Đăng ký tại đây</a></p>
                 </div>
             </div>

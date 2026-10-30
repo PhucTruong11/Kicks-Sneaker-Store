@@ -10,32 +10,7 @@
 <body>
     <div id="toast">Thông báo</div>
     <!-- Navbar (Dynamic Island style) -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            KICKS ADMIN.
-        </div>
-        <ul class="sidebar-menu">
-            <li><a href="index.html" class="active"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
-            <li><a href="products.html"><i class="fas fa-box"></i> Sản phẩm</a></li>
-            <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li>
-            <li class="profile-dropdown">
-                <button class="profile-btn">
-                    <span class="admin-avatar-mono">PT</span>
-                    <span>Phúc Trương</span>
-                    <i class="fas fa-chevron-down" style="font-size: 11px;"></i>
-                </button>
-                <div class="dropdown-content">
-                    <div class="dropdown-header">
-                        <h4>Phúc Trương</h4>
-                        <p>phuctruong@kicks.vn</p>
-                    </div>
-                    <a href="profile.html"><i class="fas fa-user"></i> Hồ sơ</a>
-                    <a href="profile.html"><i class="fas fa-cog"></i> Cài đặt</a>
-                    <a href="../login.html" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
-                </div>
-            </li>
-        </ul>
-    </aside>
+    <aside class="sidebar"><a class="sidebar-header" href="index.html">KICKS ADMIN.</a><ul class="sidebar-menu"><li><a href="index.html" class="active"><i class="fas fa-chart-pie"></i> Tổng quan</a></li><li><a href="products.html"><i class="fas fa-box"></i> Sản phẩm</a></li><li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li><li><a href="users.html"><i class="fas fa-users"></i> Người dùng</a></li><li><a href="statistics.html"><i class="fas fa-chart-line"></i> Thống kê</a></li><li class="profile-dropdown"><button class="profile-btn" type="button"><span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down"></i></button><div class="dropdown-content"><div class="dropdown-header"><h4>Phúc Trương</h4><p>phuctruong@kicks.vn</p></div><a href="profile.html">Hồ sơ quản trị</a><a href="../index.html">Xem cửa hàng</a><a href="login.html">Đăng xuất</a></div></li></ul></aside>
 
     <main class="main-content">
         <div class="page-content">
@@ -61,9 +36,7 @@
             </div>
 
             <!-- Biểu đồ Doanh Thu -->
-            <div class="chart-placeholder">
-                <canvas id="revenueChart"></canvas>
-            </div>
+            <section class="admin-card"><div class="table-header"><h2>Doanh thu trong tuần</h2><a class="btn-back-link" href="statistics.html">Thống kê khách hàng →</a></div><div class="static-chart" role="img" aria-label="Doanh thu mẫu từ thứ hai đến chủ nhật: 15, 22, 18, 29, 35, 42 và 48 triệu đồng"><div class="chart-column"><span>15tr</span><div class="chart-bar" style="height:45px"></div><small>T2</small></div><div class="chart-column"><span>22tr</span><div class="chart-bar" style="height:66px"></div><small>T3</small></div><div class="chart-column"><span>18tr</span><div class="chart-bar" style="height:54px"></div><small>T4</small></div><div class="chart-column"><span>29tr</span><div class="chart-bar" style="height:87px"></div><small>T5</small></div><div class="chart-column"><span>35tr</span><div class="chart-bar" style="height:105px"></div><small>T6</small></div><div class="chart-column"><span>42tr</span><div class="chart-bar" style="height:126px"></div><small>T7</small></div><div class="chart-column"><span>48tr</span><div class="chart-bar" style="height:144px"></div><small>CN</small></div></div></section>
 
             <div class="data-table-container">
                 <div class="table-header">
@@ -82,61 +55,61 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="cursor:pointer;" onclick="window.location.href='order-detail.html'" title="Bấm để xem chi tiết đơn hàng">
-                            <td><img src="../images/shoe1.jpg" alt="Item"></td>
-                            <td><strong style="color: var(--accent);">#ORD-001</strong></td>
+                        <tr>
+                            <td><img src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ"></td>
+                            <td><a class="order-link" href="order-detail.html">#ORD-001</a></td>
                             <td>Nguyễn Văn A</td>
                             <td>09/10/2026</td>
                             <td><span class="status-badge status-pending">Đang xử lý</span></td>
-                            <td>4.500.000đ</td>
+                            <td>7.700.000đ</td>
                         </tr>
-                        <tr style="cursor:pointer;" onclick="window.location.href='order-detail.html'" title="Bấm để xem chi tiết đơn hàng">
-                            <td><img src="../images/shoe2.jpg" alt="Item"></td>
-                            <td><strong style="color: var(--accent);">#ORD-002</strong></td>
+                        <tr>
+                            <td><img src="../images/shoe2.jpg" alt="Puma Smash Trắng"></td>
+                            <td><a class="order-link" href="order-detail.html">#ORD-002</a></td>
                             <td>Trần Thị B</td>
                             <td>08/10/2026</td>
                             <td><span class="status-badge status-success">Hoàn thành</span></td>
                             <td>8.200.000đ</td>
                         </tr>
-                        <tr style="cursor:pointer;" onclick="window.location.href='order-detail.html'" title="Bấm để xem chi tiết đơn hàng">
-                            <td><img src="../images/shoe4.jpg" alt="Item"></td>
-                            <td><strong style="color: var(--accent);">#ORD-003</strong></td>
+                        <tr>
+                            <td><img src="../images/shoe4.jpg" alt="Nike Air Max 1 Cam"></td>
+                            <td><a class="order-link" href="order-detail.html">#ORD-003</a></td>
                             <td>Lê Văn C</td>
                             <td>07/10/2026</td>
                             <td><span class="status-badge status-danger">Đã hủy</span></td>
                             <td>2.100.000đ</td>
                         </tr>
-                        <tr style="cursor:pointer;" onclick="window.location.href='order-detail.html'" title="Bấm để xem chi tiết đơn hàng">
-                            <td><img src="../images/shoe5.jpg" alt="Item"></td>
-                            <td><strong style="color: var(--accent);">#ORD-004</strong></td>
+                        <tr>
+                            <td><img src="../images/shoe5.jpg" alt="Nike Air Force 1 Shadow Pastel"></td>
+                            <td><a class="order-link" href="order-detail.html">#ORD-004</a></td>
                             <td>Đoàn Hữu D</td>
                             <td>06/10/2026</td>
                             <td><span class="status-badge status-success">Hoàn thành</span></td>
                             <td>1.800.000đ</td>
                         </tr>
-                        <tr style="cursor:pointer;" onclick="window.location.href='order-detail.html'" title="Bấm để xem chi tiết đơn hàng">
-                            <td><img src="../images/shoe6.jpg" alt="Item"></td>
-                            <td><strong style="color: var(--accent);">#ORD-005</strong></td>
+                        <tr>
+                            <td><img src="../images/shoe6.jpg" alt="Vans Old Skool Đỏ đô"></td>
+                            <td><a class="order-link" href="order-detail.html">#ORD-005</a></td>
                             <td>Trịnh Cảnh E</td>
                             <td>05/10/2026</td>
                             <td><span class="status-badge status-pending">Đang xử lý</span></td>
                             <td>5.200.000đ</td>
                         </tr>
-                        <tr style="cursor:pointer;" onclick="window.location.href='order-detail.html'" title="Bấm để xem chi tiết đơn hàng">
-                            <td><img src="../images/shoe4.jpg" alt="Item"></td>
-                            <td><strong style="color: var(--accent);">#ORD-006</strong></td>
+                        <tr>
+                            <td><img src="../images/shoe4.jpg" alt="Nike Air Max 1 Cam"></td>
+                            <td><a class="order-link" href="order-detail.html">#ORD-006</a></td>
                             <td>Cao Thị F</td>
                             <td>04/10/2026</td>
                             <td><span class="status-badge status-success">Hoàn thành</span></td>
                             <td>3.200.000đ</td>
                         </tr>
-                        <tr style="cursor:pointer;" onclick="window.location.href='order-detail.html'" title="Bấm để xem chi tiết đơn hàng">
-                            <td><img src="../images/shoe2.jpg" alt="Item"></td>
-                            <td><strong style="color: var(--accent);">#ORD-007</strong></td>
+                        <tr>
+                            <td><img src="../images/shoe2.jpg" alt="Puma Smash Trắng"></td>
+                            <td><a class="order-link" href="order-detail.html">#ORD-007</a></td>
                             <td>Phạm Văn G</td>
                             <td>04/10/2026</td>
                             <td><span class="status-badge status-success">Hoàn thành</span></td>
-                            <td>4.500.000đ</td>
+                            <td>7.700.000đ</td>
                         </tr>
                     </tbody>
                 </table>
@@ -145,50 +118,5 @@
     </main>
 
     <script src="../js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const ctx = document.getElementById('revenueChart').getContext('2d');
-        
-        // Gradient fill cho biểu đồ
-        let gradient = ctx.createLinearGradient(0, 0, 0, 300);
-        gradient.addColorStop(0, 'rgba(37, 99, 235, 0.5)'); // Xanh blue
-        gradient.addColorStop(1, 'rgba(37, 99, 235, 0)');
-
-        const revenueChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7', 'CN'],
-                datasets: [{
-                    label: 'Doanh thu (VNĐ)',
-                    data: [15000000, 22000000, 18000000, 29000000, 35000000, 42000000, 48000000],
-                    borderColor: '#2563eb',
-                    backgroundColor: gradient,
-                    borderWidth: 3,
-                    pointBackgroundColor: '#fff',
-                    pointBorderColor: '#2563eb',
-                    pointBorderWidth: 2,
-                    pointRadius: 5,
-                    fill: true,
-                    tension: 0.4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: { borderDash: [5, 5], color: '#f3f4f6' }
-                    },
-                    x: {
-                        grid: { display: false }
-                    }
-                }
-            }
-        });
-    </script>
 </body>
 </html>

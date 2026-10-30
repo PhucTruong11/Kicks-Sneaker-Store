@@ -11,32 +11,7 @@
     <div id="toast">Thông báo</div>
 
     <!-- Admin Dynamic Island Navbar -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            KICKS ADMIN.
-        </div>
-        <ul class="sidebar-menu">
-            <li><a href="index.html"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
-            <li><a href="products.html"><i class="fas fa-box"></i> Sản phẩm</a></li>
-            <li><a href="orders.html" class="active"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li>
-            <li class="profile-dropdown">
-                <button class="profile-btn">
-                    <span class="admin-avatar-mono">PT</span>
-                    <span>Phúc Trương</span>
-                    <i class="fas fa-chevron-down" style="font-size: 11px;"></i>
-                </button>
-                <div class="dropdown-content">
-                    <div class="dropdown-header">
-                        <h4>Phúc Trương</h4>
-                        <p>phuctruong@kicks.vn</p>
-                    </div>
-                    <a href="profile.html"><i class="fas fa-user"></i> Hồ sơ</a>
-                    <a href="profile.html"><i class="fas fa-cog"></i> Cài đặt</a>
-                    <a href="../login.html" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
-                </div>
-            </li>
-        </ul>
-    </aside>
+    <aside class="sidebar"><a class="sidebar-header" href="index.html">KICKS ADMIN.</a><ul class="sidebar-menu"><li><a href="index.html"><i class="fas fa-chart-pie"></i> Tổng quan</a></li><li><a href="products.html"><i class="fas fa-box"></i> Sản phẩm</a></li><li><a href="orders.html" class="active"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li><li><a href="users.html"><i class="fas fa-users"></i> Người dùng</a></li><li><a href="statistics.html"><i class="fas fa-chart-line"></i> Thống kê</a></li><li class="profile-dropdown"><button class="profile-btn" type="button"><span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down"></i></button><div class="dropdown-content"><div class="dropdown-header"><h4>Phúc Trương</h4><p>phuctruong@kicks.vn</p></div><a href="profile.html">Hồ sơ quản trị</a><a href="../index.html">Xem cửa hàng</a><a href="login.html">Đăng xuất</a></div></li></ul></aside>
 
     <main class="main-content">
         <div class="page-content">
@@ -48,13 +23,13 @@
                     </a>
                     <div style="display: flex; align-items: center; gap: 12px; margin-top: 10px;">
                         <h1 class="page-title" style="margin: 0;">Đơn hàng #ORD-001</h1>
-                        <span class="status-badge status-pending">Đang xử lý</span>
+                        <span class="status-badge status-pending">Đã xác nhận</span>
                     </div>
                     <p style="font-size: 13px; color: #64748b; margin-top: 4px;">Thời gian đặt: 09/10/2026 lúc 08:30 sáng</p>
                 </div>
                 <div class="order-action-bar">
-                    <button class="btn-order-action btn-order-approve" onclick="showToast('Đã xác nhận & duyệt đơn hàng thành công!')">
-                        <i class="fas fa-check"></i> Duyệt đơn
+                    <button class="btn-order-action btn-order-approve" onclick="showToast('Đã cập nhật đơn hàng: giao thành công!')">
+                        <i class="fas fa-truck"></i> Xác nhận giao thành công
                     </button>
                     <button class="btn-order-action btn-order-print" onclick="showToast('Đang kết nối máy in để in hóa đơn...')">
                         <i class="fas fa-print"></i> In hóa đơn
@@ -78,11 +53,11 @@
                         <div style="display: flex; flex-direction: column; gap: 15px;">
                             <div class="detail-item-row">
                                 <div class="detail-item-info">
-                                    <img src="../images/shoe1.jpg" alt="Nike Jordan">
+                                    <img src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ">
                                     <div>
-                                        <strong style="display: block; font-size: 15px; color: var(--dark);">Nike Air Jordan 1 High</strong>
+                                        <strong style="display: block; font-size: 15px; color: var(--dark);">Nike Free Run Flyknit Đỏ</strong>
                                         <div style="font-size: 12px; color: #64748b; margin-top: 2px;">
-                                            <span>SKU: NK-AJ1-001</span> • 
+                                            <span>SKU: NK-FR-042</span> •
                                             <span style="background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Size: 42</span>
                                         </div>
                                     </div>
@@ -95,11 +70,11 @@
 
                             <div class="detail-item-row">
                                 <div class="detail-item-info">
-                                    <img src="../images/shoe2.jpg" alt="Air Max">
+                                    <img src="../images/shoe2.jpg" alt="Puma Smash Trắng">
                                     <div>
-                                        <strong style="display: block; font-size: 15px; color: var(--dark);">Nike Air Max 90</strong>
+                                        <strong style="display: block; font-size: 15px; color: var(--dark);">Puma Smash Trắng</strong>
                                         <div style="font-size: 12px; color: #64748b; margin-top: 2px;">
-                                            <span>SKU: NK-AM90-002</span> • 
+                                            <span>SKU: PM-SM-040</span> •
                                             <span style="background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Size: 40</span>
                                         </div>
                                     </div>

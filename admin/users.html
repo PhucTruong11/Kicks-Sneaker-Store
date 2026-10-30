@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quản lý người dùng - Kicks</title>
+<link rel="stylesheet" href="../css/admin.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div id="toast" role="status" aria-live="polite">Thông báo</div>
+<aside class="sidebar">
+<a class="sidebar-header" href="index.html">KICKS ADMIN.</a>
+<ul class="sidebar-menu">
+<li>
+<a href="index.html">
+<i class="fas fa-chart-pie">
+</i> Tổng quan</a>
+</li>
+<li>
+<a href="products.html">
+<i class="fas fa-box">
+</i> Sản phẩm</a>
+</li>
+<li>
+<a href="orders.html">
+<i class="fas fa-shopping-cart">
+</i> Đơn hàng</a>
+</li>
+<li>
+<a href="users.html" class="active">
+<i class="fas fa-users">
+</i> Người dùng</a>
+</li>
+<li>
+<a href="statistics.html">
+<i class="fas fa-chart-line">
+</i> Thống kê</a>
+</li>
+<li class="profile-dropdown">
+<button class="profile-btn" type="button">
+<span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down">
+</i>
+</button>
+<div class="dropdown-content">
+<div class="dropdown-header">
+<h4>Phúc Trương</h4>
+<p>phuctruong@kicks.vn</p>
+</div>
+<a href="profile.html">Hồ sơ quản trị</a>
+<a href="../index.html">Xem cửa hàng</a>
+<a href="login.html">Đăng xuất</a>
+</div>
+</li>
+</ul>
+</aside>
+<main class="main-content">
+<div class="page-content">
+<div class="admin-header-actions">
+<h1 class="page-title">Quản lý người dùng</h1>
+<a class="btn-solid-primary" href="user-add.html">
+<i class="fas fa-user-plus">
+</i> Thêm người dùng</a>
+</div>
+<form class="filter-panel" action="users.html" method="get">
+<div class="form-group">
+<label>Tên hoặc email<input class="admin-input" type="search" placeholder="Tìm người dùng">
+</label>
+</div>
+<div class="form-group">
+<label>Trạng thái<select class="admin-select">
+<option>Tất cả</option>
+<option>Đang hoạt động</option>
+<option>Đang khóa</option>
+</select>
+</label>
+</div>
+<button class="btn-solid-primary" type="submit">
+<i class="fas fa-filter">
+</i> Lọc kết quả</button>
+</form>
+<div class="data-table-container">
+<div class="table-header">
+<h2>Danh sách người mua</h2>
+<span>5 tài khoản</span>
+</div>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>Mã / Họ tên</th>
+<th>Email</th>
+<th>Điện thoại</th>
+<th>Trạng thái</th>
+<th>Thao tác</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>Phúc Trương</strong>
+<small class="table-subtitle">KH001</small>
+</td>
+<td>phuctruong@gmail.com</td>
+<td>0987 654 321</td>
+<td>
+<span class="status-badge status-success">Đang hoạt động</span>
+</td>
+<td>
+<div class="table-actions">
+<a href="user-edit.html" class="btn-action btn-edit">Sửa</a>
+<button class="btn-action btn-delete" onclick="showToast('Đã khóa người dùng thành công!')">Khóa</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Nguyễn Văn A</strong>
+<small class="table-subtitle">KH002</small>
+</td>
+<td>nguyenvana@gmail.com</td>
+<td>0901 234 567</td>
+<td>
+<span class="status-badge status-success">Đang hoạt động</span>
+</td>
+<td>
+<div class="table-actions">
+<a href="user-edit.html" class="btn-action btn-edit">Sửa</a>
+<button class="btn-action btn-delete" onclick="showToast('Đã khóa người dùng thành công!')">Khóa</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Trần Thị B</strong>
+<small class="table-subtitle">KH003</small>
+</td>
+<td>tranthib@gmail.com</td>
+<td>0902 345 678</td>
+<td>
+<span class="status-badge status-danger">Đang khóa</span>
+</td>
+<td>
+<div class="table-actions">
+<a href="user-edit.html" class="btn-action btn-edit">Sửa</a>
+<button class="btn-action btn-muted" onclick="showToast('Đã mở khóa người dùng thành công!')">Mở khóa</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Lê Văn C</strong>
+<small class="table-subtitle">KH004</small>
+</td>
+<td>levanc@gmail.com</td>
+<td>0903 456 789</td>
+<td>
+<span class="status-badge status-success">Đang hoạt động</span>
+</td>
+<td>
+<div class="table-actions">
+<a href="user-edit.html" class="btn-action btn-edit">Sửa</a>
+<button class="btn-action btn-delete" onclick="showToast('Đã khóa người dùng thành công!')">Khóa</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Đoàn Hữu D</strong>
+<small class="table-subtitle">KH005</small>
+</td>
+<td>doanhuud@gmail.com</td>
+<td>0904 567 890</td>
+<td>
+<span class="status-badge status-success">Đang hoạt động</span>
+</td>
+<td>
+<div class="table-actions">
+<a href="user-edit.html" class="btn-action btn-edit">Sửa</a>
+<button class="btn-action btn-delete" onclick="showToast('Đã khóa người dùng thành công!')">Khóa</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<nav class="pagination" aria-label="Phân trang danh sách">
+<a href="users.html" class="active" aria-current="page" aria-label="Trang 1">1</a>
+<a href="users.html" aria-label="Trang 2">2</a>
+<a href="users.html" aria-label="Trang 3">3</a>
+<a href="users.html" aria-label="Trang tiếp theo"><i class="fas fa-chevron-right"></i></a>
+</nav>
+</div>
+</div>
+</main>
+<script src="../js/main.js">
+</script>
+</body>
+</html>

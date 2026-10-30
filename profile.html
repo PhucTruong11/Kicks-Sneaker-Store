@@ -6,6 +6,7 @@
     <title>Hồ sơ cá nhân - Kicks Sneaker</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/static-pages.css">
 </head>
 <body>
     <div id="toast">Thông báo</div>
@@ -18,7 +19,7 @@
             <li><a href="products.html"><i class="fas fa-shoe-prints"></i> Sản phẩm</a></li>
         </ul>
         <div class="search-bar">
-            <form onsubmit="event.preventDefault(); showToast('Chức năng tìm kiếm demo tĩnh!');">
+            <form action="profile.html" method="get">
                 <input type="text" placeholder="Tìm kiếm sneaker...">
                 <button type="submit"><i class="fas fa-search"></i></button>
             </form>
@@ -37,7 +38,7 @@
                         <p>phuctruong@gmail.com</p>
                     </div>
                     <a href="profile.html"><i class="fas fa-user"></i> Hồ sơ của tôi</a>
-                    <a href="profile.html#orders" onclick="switchTab('orders')"><i class="fas fa-box"></i> Đơn mua của tôi</a>
+                    <a href="profile.html#orders"><i class="fas fa-box"></i> Đơn mua của tôi</a>
                     <a href="login.html" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
                 </div>
             </div>
@@ -68,18 +69,18 @@
                 </div>
 
                 <div class="user-menu-list">
-                    <button class="user-menu-btn active" id="btn-info" onclick="switchTab('info')">
+                    <a class="user-menu-btn" href="#info">
                         <i class="fas fa-user" style="width: 20px;"></i> Thông tin tài khoản
-                    </button>
-                    <button class="user-menu-btn" id="btn-orders" onclick="switchTab('orders')">
+                    </a>
+                    <a class="user-menu-btn" href="#orders">
                         <i class="fas fa-box" style="width: 20px;"></i> Đơn hàng của tôi
-                    </button>
-                    <button class="user-menu-btn" id="btn-address" onclick="switchTab('address')">
+                    </a>
+                    <a class="user-menu-btn" href="#address">
                         <i class="fas fa-map-marker-alt" style="width: 20px;"></i> Sổ địa chỉ nhận hàng
-                    </button>
-                    <button class="user-menu-btn" id="btn-password" onclick="switchTab('password')">
+                    </a>
+                    <a class="user-menu-btn" href="#password">
                         <i class="fas fa-lock" style="width: 20px;"></i> Đổi mật khẩu
-                    </button>
+                    </a>
                     <a href="login.html" class="user-menu-btn" style="color: var(--danger); margin-top: 10px; border-top: 1px solid #f1f5f9; padding-top: 15px;">
                         <i class="fas fa-sign-out-alt" style="width: 20px;"></i> Đăng xuất
                     </a>
@@ -89,7 +90,7 @@
             <!-- Right: Tab Contents -->
             <section class="user-profile-content">
                 <!-- Tab 1: Info -->
-                <div id="tab-info" class="tab-pane">
+                <div id="info" class="tab-pane">
                     <h2><i class="fas fa-user-gear" style="color: var(--accent);"></i> Thông tin cá nhân</h2>
                     <form onsubmit="event.preventDefault(); showToast('Đã lưu thông tin tài khoản thành công!');">
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
@@ -130,7 +131,7 @@
                 </div>
 
                 <!-- Tab 2: Orders -->
-                <div id="tab-orders" class="tab-pane" style="display: none;">
+                <div id="orders" class="tab-pane">
                     <h2><i class="fas fa-bag-shopping" style="color: var(--accent);"></i> Lịch sử đơn hàng của tôi</h2>
                     <div style="overflow-x: auto;">
                         <table class="order-history-table">
@@ -148,7 +149,7 @@
                                 <tr>
                                     <td class="col-nowrap"><strong style="color: var(--accent);">#KICKS-8921</strong></td>
                                     <td>
-                                        <strong style="color: var(--dark);">Nike Air Jordan 1 High</strong><br>
+                                        <strong style="color: var(--dark);">Nike Free Run Flyknit Đỏ</strong><br>
                                         <small style="color: #64748b;">Size: 42 • SL: 1</small>
                                     </td>
                                     <td class="col-nowrap">09/10/2026</td>
@@ -159,13 +160,13 @@
                                         </span>
                                     </td>
                                     <td class="col-nowrap" style="text-align: right;">
-                                        <button type="button" onclick="showToast('Đơn hàng đang trên đường giao đến bạn!')" class="btn-order-action btn-view">Xem chi tiết</button>
+                                        <button type="button" class="btn-order-action btn-view" onclick="showToast('Đơn hàng đang trên đường giao đến bạn!')">Xem chi tiết</button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-nowrap"><strong style="color: var(--accent);">#KICKS-7634</strong></td>
                                     <td>
-                                        <strong style="color: var(--dark);">Nike Air Max 90</strong><br>
+                                        <strong style="color: var(--dark);">Puma Smash Trắng</strong><br>
                                         <small style="color: #64748b;">Size: 40 • SL: 1</small>
                                     </td>
                                     <td class="col-nowrap">20/09/2026</td>
@@ -182,7 +183,7 @@
                                 <tr>
                                     <td class="col-nowrap"><strong style="color: var(--accent);">#KICKS-6512</strong></td>
                                     <td>
-                                        <strong style="color: var(--dark);">Converse Chuck 70</strong><br>
+                                        <strong style="color: var(--dark);">Nike Air Max 1 Cam</strong><br>
                                         <small style="color: #64748b;">Size: 41 • SL: 1</small>
                                     </td>
                                     <td class="col-nowrap">15/08/2026</td>
@@ -202,7 +203,7 @@
                 </div>
 
                 <!-- Tab 3: Address -->
-                <div id="tab-address" class="tab-pane" style="display: none;">
+                <div id="address" class="tab-pane">
                     <h2><i class="fas fa-location-dot" style="color: var(--accent);"></i> Sổ địa chỉ giao hàng</h2>
                     <form onsubmit="event.preventDefault(); showToast('Đã lưu địa chỉ nhận hàng mặc định!');">
                         <div class="form-group">
@@ -228,9 +229,9 @@
                 </div>
 
                 <!-- Tab 4: Password -->
-                <div id="tab-password" class="tab-pane" style="display: none;">
+                <div id="password" class="tab-pane">
                     <h2><i class="fas fa-shield-halved" style="color: var(--accent);"></i> Đổi mật khẩu tài khoản</h2>
-                    <form onsubmit="event.preventDefault(); showToast('Mật khẩu của bạn đã được cập nhật thành công!'); this.reset();">
+                    <form onsubmit="event.preventDefault(); showToast('Mật khẩu của bạn đã được cập nhật thành công!');">
                         <div class="form-group">
                             <label>Mật khẩu hiện tại</label>
                             <input type="password" placeholder="Nhập mật khẩu cũ..." required>
@@ -296,23 +297,5 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        function switchTab(tabName) {
-            document.querySelectorAll('.tab-pane').forEach(el => el.style.display = 'none');
-            document.querySelectorAll('.user-menu-btn').forEach(btn => btn.classList.remove('active'));
-            
-            const targetTab = document.getElementById('tab-' + tabName);
-            const targetBtn = document.getElementById('btn-' + tabName);
-            if (targetTab) targetTab.style.display = 'block';
-            if (targetBtn) targetBtn.classList.add('active');
-        }
-
-        // Tự động chuyển tab nếu URL có hash #orders
-        window.addEventListener('DOMContentLoaded', () => {
-            if (window.location.hash === '#orders') {
-                switchTab('orders');
-            }
-        });
-    </script>
 </body>
 </html>
