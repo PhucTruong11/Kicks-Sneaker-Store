@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kicks - Cửa Hàng Giày Sneaker Chính Hãng</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/static-pages.css">
+    <link rel="stylesheet" href="css/style.css?v=20261030-layout-3">
+    <link rel="stylesheet" href="css/store-layout.css?v=20261030-4">
 </head>
 <body>
     <div id="toast">Thông báo</div>
@@ -57,16 +57,73 @@
         </div>
     </section>
 
-    <main class="container">
-        <h2 class="section-title">Sản Phẩm Nổi Bật</h2>
-        <section class="product-grid"><div class="product-card"><a href="detail.html"><span class="brand-tag">Nike</span><img src="images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ"><div class="product-info"><h3>Nike Free Run Flyknit Đỏ</h3><p class="product-size">Size 42</p><p class="price">4.500.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
-<div class="product-card"><a href="detail.html"><span class="brand-tag">Puma</span><img src="images/shoe2.jpg" alt="Puma Smash Trắng"><div class="product-info"><h3>Puma Smash Trắng</h3><p class="product-size">Size 40</p><p class="price">3.200.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
-<div class="product-card"><a href="detail.html"><span class="brand-tag">Nike</span><img src="images/shoe4.jpg" alt="Nike Air Max 1 Cam"><div class="product-info"><h3>Nike Air Max 1 Cam</h3><p class="product-size">Size 41</p><p class="price">1.500.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
-<div class="product-card"><a href="detail.html"><span class="brand-tag">Nike</span><img src="images/shoe5.jpg" alt="Nike Air Force 1 Shadow Pastel"><div class="product-info"><h3>Nike Air Force 1 Shadow Pastel</h3><p class="product-size">Size 39</p><p class="price">2.800.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
-<div class="product-card"><a href="detail.html"><span class="brand-tag">Vans</span><img src="images/shoe6.jpg" alt="Vans Old Skool Đỏ đô"><div class="product-info"><h3>Vans Old Skool Đỏ đô</h3><p class="product-size">Size 40</p><p class="price">1.800.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
-<div class="product-card"><a href="detail.html"><span class="brand-tag">Nike</span><img src="images/sneaker1.jpg" alt="Nike Free Run Flyknit Đỏ"><div class="product-info"><h3>Nike Free Run Flyknit Đỏ</h3><p class="product-size">Size 40</p><p class="price">4.500.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
-<div class="product-card"><a href="detail.html"><span class="brand-tag">Puma</span><img src="images/sneaker2.jpg" alt="Puma Smash Trắng"><div class="product-info"><h3>Puma Smash Trắng</h3><p class="product-size">Size 42</p><p class="price">3.200.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div>
-<div class="product-card"><a href="detail.html"><span class="brand-tag">Nike</span><img src="images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ"><div class="product-info"><h3>Nike Free Run Flyknit Đỏ</h3><p class="product-size">Size 39</p><p class="price">4.500.000đ</p></div></a><button class="btn-add-cart" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button></div></section>
+    <main class="container featured-section" aria-labelledby="featured-title">
+        <div class="featured-heading">
+            <div>
+                <p class="featured-eyebrow">KICKS SELECTION</p>
+                <h2 id="featured-title">Sản phẩm nổi bật</h2>
+                <p class="featured-intro">Bốn thiết kế, bốn dấu ấn. Tìm đôi giày hợp với phong cách của bạn.</p>
+            </div>
+            <a class="featured-all" href="products.html">Khám phá tất cả <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <section class="featured-grid" aria-label="Bốn sản phẩm nổi bật">
+            <article class="featured-card">
+                <a class="featured-photo" href="detail.html" aria-label="Xem Nike Free Run Flyknit Đỏ">
+                    <img src="images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ" loading="lazy">
+                    <span class="featured-badge">Bán chạy</span>
+                    <span class="featured-number">01</span>
+                </a>
+                <div class="featured-card-body">
+                    <p class="featured-brand">Nike</p>
+                    <h3><a href="detail.html">Nike Free Run Flyknit Đỏ</a></h3>
+                    <p class="featured-description">Thể thao · Phối đỏ</p>
+                    <p class="featured-price">4.500.000đ</p>
+                    <button class="featured-cart" type="button" onclick="addToCart()"><i class="fas fa-cart-plus" aria-hidden="true"></i> Thêm vào giỏ</button>
+                </div>
+            </article>
+            <article class="featured-card">
+                <a class="featured-photo" href="detail.html" aria-label="Xem Puma Smash Trắng">
+                    <img src="images/shoe2.jpg" alt="Puma Smash Trắng" loading="lazy">
+                    <span class="featured-badge">Dễ phối đồ</span>
+                    <span class="featured-number">02</span>
+                </a>
+                <div class="featured-card-body">
+                    <p class="featured-brand">Puma</p>
+                    <h3><a href="detail.html">Puma Smash Trắng</a></h3>
+                    <p class="featured-description">Tối giản · Phối trắng</p>
+                    <p class="featured-price">3.200.000đ</p>
+                    <button class="featured-cart" type="button" onclick="addToCart()"><i class="fas fa-cart-plus" aria-hidden="true"></i> Thêm vào giỏ</button>
+                </div>
+            </article>
+            <article class="featured-card">
+                <a class="featured-photo" href="detail.html" aria-label="Xem Nike Air Force 1 Shadow Pastel">
+                    <img src="images/shoe5.jpg" alt="Nike Air Force 1 Shadow Pastel" loading="lazy">
+                    <span class="featured-badge">Nổi bật</span>
+                    <span class="featured-number">03</span>
+                </a>
+                <div class="featured-card-body">
+                    <p class="featured-brand">Nike</p>
+                    <h3><a href="detail.html">Nike Air Force 1 Shadow Pastel</a></h3>
+                    <p class="featured-description">Cá tính · Phối pastel</p>
+                    <p class="featured-price">2.800.000đ</p>
+                    <button class="featured-cart" type="button" onclick="addToCart()"><i class="fas fa-cart-plus" aria-hidden="true"></i> Thêm vào giỏ</button>
+                </div>
+            </article>
+            <article class="featured-card">
+                <a class="featured-photo" href="detail.html" aria-label="Xem Adidas Samba OG Trắng Đen">
+                    <img src="images/adidas-samba-og.jpg" alt="Adidas Samba OG Trắng Đen" loading="lazy">
+                    <span class="featured-badge">Kinh điển</span>
+                    <span class="featured-number">04</span>
+                </a>
+                <div class="featured-card-body">
+                    <p class="featured-brand">Adidas</p>
+                    <h3><a href="detail.html">Adidas Samba OG Trắng Đen</a></h3>
+                    <p class="featured-description">Cổ điển · Phối trắng đen</p>
+                    <p class="featured-price">2.700.000đ</p>
+                    <button class="featured-cart" type="button" onclick="addToCart()"><i class="fas fa-cart-plus" aria-hidden="true"></i> Thêm vào giỏ</button>
+                </div>
+            </article>
+        </section>
     </main>
 
     <footer>

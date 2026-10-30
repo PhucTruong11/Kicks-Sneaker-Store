@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Đăng nhập quản trị - Kicks</title>
-<link rel="stylesheet" href="../css/admin.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập quản trị - Kicks Sneaker</title>
+    <link rel="stylesheet" href="../css/admin.css?v=20261030-layout-3">
+    <link rel="stylesheet" href="../css/admin-layout.css?v=20261030-4">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="admin-login-body">
-<div id="toast" role="status" aria-live="polite">Thông báo</div>
-<main class="admin-login-card">
-<a href="../index.html" class="sidebar-header">KICKS ADMIN.</a>
-<span class="badge-role">Khu vực quản trị</span>
-<h1>Đăng nhập quản trị</h1>
-<p class="helper-text">Quản lý sản phẩm, người mua và đơn hàng của Kicks.</p>
-<form onsubmit="event.preventDefault(); showToast('Đăng nhập quản trị thành công!');">
-<div class="form-group">
-<label>Email quản trị<input class="admin-input" type="email" placeholder="admin@kicks.vn">
-</label>
-</div>
-<div class="form-group">
-<label>Mật khẩu<input class="admin-input" type="password" placeholder="Nhập mật khẩu">
-</label>
-</div>
-<button type="submit" class="btn-solid-primary">Đăng nhập</button>
-</form>
-<a class="admin-login-entry" href="index.html">Vào trang quản trị <i class="fas fa-arrow-right">
-</i>
-</a>
-<a class="btn-back-link" href="../login.html">Đăng nhập khách hàng</a>
-</main>
-<script src="../js/main.js">
-</script>
+    <div id="toast" role="status" aria-live="polite">Thông báo</div>
+
+    <main class="admin-login-card">
+        <div style="text-align: center; margin-bottom: 24px;">
+            <a href="index.html" class="sidebar-header" style="font-size: 26px; font-weight: 900; letter-spacing: -0.5px; color: var(--primary); text-decoration: none; display: inline-block;">
+                KICKS <span style="color: var(--accent);">ADMIN.</span>
+            </a>
+            <div style="margin-top: 8px;">
+                <span class="badge-role"><i class="fas fa-shield-halved"></i> Cổng Xác Thực Quản Trị</span>
+            </div>
+            <h1 style="font-size: 22px; font-weight: 800; color: var(--dark); margin: 16px 0 6px;">Đăng Nhập Quản Trị Viên</h1>
+            <p style="font-size: 13px; color: #64748b; line-height: 1.6;">Hệ thống kiểm soát kho hàng, đơn đặt và dữ liệu khách hàng Kicks Sneaker.</p>
+        </div>
+
+        <form action="index.html" method="get" novalidate>
+            <div class="form-group" style="margin-bottom: 16px;">
+                <label style="font-size: 13px; font-weight: 700; color: var(--dark); display: block; margin-bottom: 6px;">
+                    <i class="fas fa-user-shield" style="color: var(--accent); margin-right: 4px;"></i> Tài khoản hoặc Email quản trị
+                </label>
+                <input class="admin-input" type="text" placeholder="Nhập tài khoản quản trị (vd: admin)" value="admin">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 24px;">
+                <label style="font-size: 13px; font-weight: 700; color: var(--dark); display: block; margin-bottom: 6px;">
+                    <i class="fas fa-lock" style="color: var(--accent); margin-right: 4px;"></i> Mật khẩu
+                </label>
+                <input class="admin-input" type="password" placeholder="Nhập mật khẩu" value="123456">
+            </div>
+
+            <button type="submit" class="btn-solid-primary" style="width: 100%; justify-content: center; padding: 13px; font-size: 15px; border-radius: 10px;">
+                <i class="fas fa-right-to-bracket"></i> Đăng nhập hệ thống
+            </button>
+        </form>
+    </main>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>
