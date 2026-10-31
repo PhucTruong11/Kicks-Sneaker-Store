@@ -2,10 +2,10 @@
 
 Đồ án Web 1 xây dựng **giao diện website bán giày tĩnh** bằng HTML và CSS.
 Dữ liệu sản phẩm, khách hàng, đơn hàng và số tiền được viết sẵn trong HTML.
-JavaScript chỉ hiển thị thông báo; không tính tiền, cập nhật dữ liệu, lưu trữ hay gọi API.
-Các liên kết chuyển tới trang mẫu cố định và không truyền dữ liệu giữa các trang.
+JavaScript hiển thị thông báo và cập nhật số lượng/thành tiền ngay trên giao diện giỏ hàng; không lưu trữ hay gọi API.
+Các liên kết chuyển tới trang mẫu cố định. Riêng giỏ hàng truyền số lượng sang hóa đơn qua URL để hai trang hiển thị số tiền khớp nhau.
 Tìm kiếm, lọc và áp dụng sắp xếp dùng form HTML tải lại chính trang hiện tại, không hiện thông báo và không xử lý kết quả thật.
-Phân trang ở user và admin là liên kết về chính trang hiện tại. Các nút tăng/giảm số lượng chỉ minh họa giao diện, không có JavaScript và không thay đổi số lượng hoặc tổng tiền.
+Phân trang ở user và admin là liên kết về chính trang hiện tại. Riêng trong giỏ hàng, nút tăng/giảm cập nhật số lượng (tối thiểu 1), thành tiền từng sản phẩm và tổng tiền bằng JavaScript. Hóa đơn nhận số lượng qua URL; quay lại giỏ hàng từ hóa đơn giữ số lượng đó. Mở hai trang không kèm số lượng sẽ hiển thị dữ liệu mẫu.
 
 ## Mở website
 
@@ -17,8 +17,8 @@ Font Awesome và Google Fonts dùng CDN nên cần Internet để tải icon và
 - `index.html`: trang chủ với 4 sản phẩm nổi bật, bố cục thẻ riêng và liên kết xem toàn bộ danh mục.
 - `products.html`: danh sách sản phẩm, bộ lọc tên/thương hiệu/khoảng giá, sắp xếp và phân trang mẫu.
 - `detail.html`: chi tiết sản phẩm mẫu; chọn kích cỡ bằng radio HTML/CSS, nút thêm giỏ chỉ thông báo và không lưu lựa chọn.
-- `cart.html`: giỏ hàng và tổng tiền cố định. Nút thanh toán dẫn tới `invoice.html`.
-- `invoice.html`: hóa đơn đặt hàng mẫu, thông tin người mua, chọn địa chỉ có sẵn/địa chỉ mới, phương thức thanh toán và thông báo xác nhận.
+- `cart.html`: giỏ hàng với nút tăng/giảm số lượng và tổng tiền cập nhật theo đơn giá. Nút thanh toán dẫn tới `invoice.html`.
+- `invoice.html`: hóa đơn nhận số lượng và tính tiền theo giỏ hàng, thông tin người mua mẫu, chọn địa chỉ có sẵn/địa chỉ mới, phương thức thanh toán và thông báo xác nhận.
 - `profile.html`: thông tin tài khoản, lịch sử mua hàng theo đơn, địa chỉ và đổi mật khẩu. Chuyển mục bằng liên kết HTML/CSS.
 - `login.html`, `register.html`: form đăng nhập và đăng ký mẫu.
 
@@ -45,6 +45,6 @@ Nike Dunk Low Panda, New Balance 550 và ASICS GEL-1130. Tên, thương hiệu, 
 để dùng khi mở HTML trực tiếp; nguồn các ảnh bổ sung nằm trong `images/SOURCES.md`.
 
 `css/style.css` giữ kiểu dáng cửa hàng; `css/store-layout.css` bổ sung bộ lọc, hóa đơn và các mục hồ sơ;
-`css/admin.css` và `css/admin-layout.css` dành cho quản trị. `js/main.js` chỉ chứa thông báo toast.
+`css/admin.css` và `css/admin-layout.css` dành cho quản trị. `js/main.js` chỉ chứa thông báo toast; `js/cart.js` cập nhật số lượng và số tiền trên giỏ hàng và hóa đơn.
 
 Đăng nhập/đăng ký khách hàng chuyển về trang chủ user, đăng nhập quản trị chuyển về dashboard bằng form HTML; không gửi thông tin nhập hoặc xác thực thật. Các trang admin không có liên kết sang khu vực user.

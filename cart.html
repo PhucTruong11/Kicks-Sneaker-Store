@@ -6,7 +6,7 @@
     <title>Giỏ hàng - Kicks</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css?v=20261030-layout-3">
-    <link rel="stylesheet" href="css/store-layout.css?v=20261030-4">
+    <link rel="stylesheet" href="css/store-layout.css?v=20261031-1">
 </head>
 <body>
     <div id="toast">Thông báo</div>
@@ -57,7 +57,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr data-unit-price="4500000">
                             <td><img src="images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ"></td>
                             <td class="cart-item-info">
                                 <strong>Nike Free Run Flyknit Đỏ</strong>
@@ -65,9 +65,9 @@
                             </td>
                             <td style="text-align: center;">
                                 <div class="quantity-control">
-                                    <button type="button" class="qty-btn" title="Giảm" aria-label="Giảm số lượng">-</button>
+                                    <button type="button" class="qty-btn" data-quantity-change="-1" title="Giảm" aria-label="Giảm số lượng">-</button>
                                     <span class="qty-val">1</span>
-                                    <button type="button" class="qty-btn" title="Tăng" aria-label="Tăng số lượng">+</button>
+                                    <button type="button" class="qty-btn" data-quantity-change="1" title="Tăng" aria-label="Tăng số lượng">+</button>
                                 </div>
                             </td>
                             <td style="text-align: right;">
@@ -75,7 +75,7 @@
                                 <span class="cart-price-sub">Đơn giá: 4.500.000đ</span>
                             </td>
                         </tr>
-                        <tr>
+                        <tr data-unit-price="3200000">
                             <td><img src="images/shoe2.jpg" alt="Puma Smash Trắng"></td>
                             <td class="cart-item-info">
                                 <strong>Puma Smash Trắng</strong>
@@ -83,9 +83,9 @@
                             </td>
                             <td style="text-align: center;">
                                 <div class="quantity-control">
-                                    <button type="button" class="qty-btn" title="Giảm" aria-label="Giảm số lượng">-</button>
+                                    <button type="button" class="qty-btn" data-quantity-change="-1" title="Giảm" aria-label="Giảm số lượng">-</button>
                                     <span class="qty-val">1</span>
-                                    <button type="button" class="qty-btn" title="Tăng" aria-label="Tăng số lượng">+</button>
+                                    <button type="button" class="qty-btn" data-quantity-change="1" title="Tăng" aria-label="Tăng số lượng">+</button>
                                 </div>
                             </td>
                             <td style="text-align: right;">
@@ -93,7 +93,7 @@
                                 <span class="cart-price-sub">Đơn giá: 3.200.000đ</span>
                             </td>
                         </tr>
-                        <tr>
+                        <tr data-unit-price="1500000">
                             <td><img src="images/shoe4.jpg" alt="Nike Air Max 1 Cam"></td>
                             <td class="cart-item-info">
                                 <strong>Nike Air Max 1 Cam</strong>
@@ -101,9 +101,9 @@
                             </td>
                             <td style="text-align: center;">
                                 <div class="quantity-control">
-                                    <button type="button" class="qty-btn" title="Giảm" aria-label="Giảm số lượng">-</button>
+                                    <button type="button" class="qty-btn" data-quantity-change="-1" title="Giảm" aria-label="Giảm số lượng">-</button>
                                     <span class="qty-val">2</span>
-                                    <button type="button" class="qty-btn" title="Tăng" aria-label="Tăng số lượng">+</button>
+                                    <button type="button" class="qty-btn" data-quantity-change="1" title="Tăng" aria-label="Tăng số lượng">+</button>
                                 </div>
                             </td>
                             <td style="text-align: right;">
@@ -125,7 +125,7 @@
                 <h3><i class="fas fa-receipt" style="color: var(--accent);"></i> Tóm tắt đơn hàng</h3>
                 <div class="summary-row">
                     <span>Tạm tính</span>
-                    <span id="cart-subtotal">10.700.000đ</span>
+                    <span id="cart-subtotal" data-order-subtotal>10.700.000đ</span>
                 </div>
                 <div class="summary-row">
                     <span>Phí vận chuyển</span>
@@ -138,7 +138,7 @@
                 <div class="summary-divider"></div>
                 <div class="summary-total">
                     <span>Tổng cộng:</span>
-                    <span id="cart-total">10.700.000đ</span>
+                    <span id="cart-total" data-order-total aria-live="polite" aria-atomic="true">10.700.000đ</span>
                 </div>
 
                 <a class="btn-checkout" href="invoice.html"><i class="fas fa-credit-card"></i> Tiến Hành Thanh Toán</a>
@@ -205,5 +205,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/cart.js?v=20261031-2"></script>
 </body>
 </html>

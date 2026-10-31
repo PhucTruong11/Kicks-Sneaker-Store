@@ -48,9 +48,9 @@ td img.catalog-image { object-fit: contain; background: #f8fafc; }
 .helper-text { font-size: 12px; line-height: 1.8; color: #64748b; margin: 12px 0; }
 .filter-panel { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; padding: 22px; margin-bottom: 24px; background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; }
 .filter-panel .form-group { flex: 1 1 150px; margin-bottom: 0; }
-.filter-panel label { font-size: 12px; }
-.filter-panel input, .filter-panel select { display: block; margin-top: 8px; min-height: 42px; }
-.filter-panel .btn-solid-primary { min-height: 42px; }
+.filter-panel label { font-size: 12px; margin-bottom: 0; }
+.filter-panel input, .filter-panel select { display: block; margin-top: 8px; height: 42px; }
+.filter-panel .btn-solid-primary { height: 42px; flex-shrink: 0; white-space: nowrap; }
 .admin-header-actions .page-title { margin: 10px 0; }
 .ranking-number { width: 30px; height: 30px; border-radius: 50%; background: #eff6ff; color: #2563eb; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; }
 .ranking-orders { margin-top: 28px; }

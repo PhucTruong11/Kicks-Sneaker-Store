@@ -1,4 +1,5 @@
 /* Shared presentation for the static checkout and product filters. */
+.qty-btn:disabled { color: #cbd5e1; background: transparent; cursor: default; transform: none; }
 /* Home collection uses its own cards; catalogue styling stays independent. */
 .featured-section { min-height: 0; padding-top: 78px; padding-bottom: 88px; }
 .featured-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 32px; }

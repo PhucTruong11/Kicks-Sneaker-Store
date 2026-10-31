@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css?v=20261030-layout-3">
     <link rel="stylesheet" href="css/store-layout.css?v=20261030-4">
+    <link rel="stylesheet" href="css/profile-orders.css?v=20261031-1">
 </head>
 <body>
     <div id="toast">Thông báo</div>
@@ -132,73 +133,68 @@
 
                 <!-- Tab 2: Orders -->
                 <div id="orders" class="tab-pane">
-                    <h2><i class="fas fa-bag-shopping" style="color: var(--accent);"></i> Lịch sử đơn hàng của tôi</h2>
-                    <div style="overflow-x: auto;">
-                        <table class="order-history-table">
-                            <thead>
-                                <tr>
-                                    <th class="col-nowrap">Mã đơn</th>
-                                    <th>Sản phẩm</th>
-                                    <th class="col-nowrap">Ngày mua</th>
-                                    <th class="col-nowrap">Tổng tiền</th>
-                                    <th class="col-nowrap">Trạng thái</th>
-                                    <th class="col-nowrap" style="text-align: right;">Thao tác</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="col-nowrap"><strong style="color: var(--accent);">#KICKS-8921</strong></td>
-                                    <td>
-                                        <strong style="color: var(--dark);">Nike Free Run Flyknit Đỏ</strong><br>
-                                        <small style="color: #64748b;">Size: 42 • SL: 1</small>
-                                    </td>
-                                    <td class="col-nowrap">09/10/2026</td>
-                                    <td class="col-nowrap" style="font-weight: 800; color: var(--dark);">4.500.000đ</td>
-                                    <td class="col-nowrap">
-                                        <span class="user-status-badge status-shipping">
-                                            <i class="fas fa-truck-fast"></i> Đang giao hàng
-                                        </span>
-                                    </td>
-                                    <td class="col-nowrap" style="text-align: right;">
-                                        <button type="button" class="btn-order-action btn-view" onclick="showToast('Đơn hàng đang trên đường giao đến bạn!')">Xem chi tiết</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-nowrap"><strong style="color: var(--accent);">#KICKS-7634</strong></td>
-                                    <td>
-                                        <strong style="color: var(--dark);">Puma Smash Trắng</strong><br>
-                                        <small style="color: #64748b;">Size: 40 • SL: 1</small>
-                                    </td>
-                                    <td class="col-nowrap">20/09/2026</td>
-                                    <td class="col-nowrap" style="font-weight: 800; color: var(--dark);">3.200.000đ</td>
-                                    <td class="col-nowrap">
-                                        <span class="user-status-badge status-success">
-                                            <i class="fas fa-check-circle"></i> Đã nhận hàng
-                                        </span>
-                                    </td>
-                                    <td class="col-nowrap" style="text-align: right;">
-                                        <button type="button" onclick="showToast('Đã thêm sản phẩm vào giỏ hàng!')" class="btn-order-action btn-reorder">Mua lại</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-nowrap"><strong style="color: var(--accent);">#KICKS-6512</strong></td>
-                                    <td>
-                                        <strong style="color: var(--dark);">Nike Air Max 1 Cam</strong><br>
-                                        <small style="color: #64748b;">Size: 41 • SL: 1</small>
-                                    </td>
-                                    <td class="col-nowrap">15/08/2026</td>
-                                    <td class="col-nowrap" style="font-weight: 800; color: var(--dark);">1.500.000đ</td>
-                                    <td class="col-nowrap">
-                                        <span class="user-status-badge status-success">
-                                            <i class="fas fa-check-circle"></i> Đã nhận hàng
-                                        </span>
-                                    </td>
-                                    <td class="col-nowrap" style="text-align: right;">
-                                        <button type="button" onclick="showToast('Đã thêm sản phẩm vào giỏ hàng!')" class="btn-order-action btn-reorder">Mua lại</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="orders-heading">
+                        <div>
+                            <h2><i class="fas fa-bag-shopping" aria-hidden="true"></i> Đơn hàng của tôi</h2>
+                            <p>Theo dõi và xem lại những đôi giày bạn đã đặt.</p>
+                        </div>
+                        <span class="orders-count">3 đơn hàng</span>
+                    </div>
+                    <div class="purchase-list">
+                        <article class="purchase-card" aria-labelledby="order-8921">
+                            <header class="purchase-header">
+                                <div class="purchase-reference">
+                                    <h3 id="order-8921">#KICKS-8921</h3>
+                                    <time datetime="2026-10-09">Ngày đặt: 09/10/2026</time>
+                                </div>
+                                <span class="user-status-badge status-shipping"><i class="fas fa-truck-fast" aria-hidden="true"></i> Đang giao hàng</span>
+                            </header>
+                            <div class="purchase-product">
+                                <img src="images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ">
+                                <div><h4>Nike Free Run Flyknit Đỏ</h4><p>Size 42 · Số lượng: 1</p></div>
+                                <span class="purchase-price">4.500.000đ</span>
+                            </div>
+                            <div class="purchase-footer">
+                                <p class="purchase-total"><span>Thành tiền</span><strong>4.500.000đ</strong></p>
+                                <button type="button" class="btn-order-action btn-view" onclick="showToast('Đơn hàng đang trên đường giao đến bạn!')">Xem chi tiết <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </article>
+                        <article class="purchase-card" aria-labelledby="order-7634">
+                            <header class="purchase-header">
+                                <div class="purchase-reference">
+                                    <h3 id="order-7634">#KICKS-7634</h3>
+                                    <time datetime="2026-09-20">Ngày đặt: 20/09/2026</time>
+                                </div>
+                                <span class="user-status-badge status-success"><i class="fas fa-check-circle" aria-hidden="true"></i> Đã nhận hàng</span>
+                            </header>
+                            <div class="purchase-product">
+                                <img src="images/shoe2.jpg" alt="Puma Smash Trắng">
+                                <div><h4>Puma Smash Trắng</h4><p>Size 40 · Số lượng: 1</p></div>
+                                <span class="purchase-price">3.200.000đ</span>
+                            </div>
+                            <div class="purchase-footer">
+                                <p class="purchase-total"><span>Thành tiền</span><strong>3.200.000đ</strong></p>
+                                <button type="button" class="btn-order-action btn-reorder" onclick="showToast('Đã thêm sản phẩm vào giỏ hàng!')"><i class="fas fa-rotate-right" aria-hidden="true"></i> Mua lại</button>
+                            </div>
+                        </article>
+                        <article class="purchase-card" aria-labelledby="order-6512">
+                            <header class="purchase-header">
+                                <div class="purchase-reference">
+                                    <h3 id="order-6512">#KICKS-6512</h3>
+                                    <time datetime="2026-08-15">Ngày đặt: 15/08/2026</time>
+                                </div>
+                                <span class="user-status-badge status-success"><i class="fas fa-check-circle" aria-hidden="true"></i> Đã nhận hàng</span>
+                            </header>
+                            <div class="purchase-product">
+                                <img src="images/shoe4.jpg" alt="Nike Air Max 1 Cam">
+                                <div><h4>Nike Air Max 1 Cam</h4><p>Size 41 · Số lượng: 1</p></div>
+                                <span class="purchase-price">1.500.000đ</span>
+                            </div>
+                            <div class="purchase-footer">
+                                <p class="purchase-total"><span>Thành tiền</span><strong>1.500.000đ</strong></p>
+                                <button type="button" class="btn-order-action btn-reorder" onclick="showToast('Đã thêm sản phẩm vào giỏ hàng!')"><i class="fas fa-rotate-right" aria-hidden="true"></i> Mua lại</button>
+                            </div>
+                        </article>
                     </div>
                 </div>
 
