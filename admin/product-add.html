@@ -5,14 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thêm Sản phẩm mới - Kicks Admin</title>
     <link rel="stylesheet" href="../css/admin.css?v=20261030-layout-3">
-    <link rel="stylesheet" href="../css/admin-layout.css?v=20261031-1">
+    <link rel="stylesheet" href="../css/admin-layout.css?v=20261101-final">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div id="toast">Thông báo</div>
 
     <!-- Admin Dynamic Island Navbar -->
-    <aside class="sidebar"><a class="sidebar-header" href="index.html">KICKS ADMIN.</a><ul class="sidebar-menu"><li><a href="index.html"><i class="fas fa-chart-pie"></i> Tổng quan</a></li><li><a href="products.html" class="active"><i class="fas fa-box"></i> Sản phẩm</a></li><li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li><li><a href="users.html"><i class="fas fa-users"></i> Người dùng</a></li><li><a href="statistics.html"><i class="fas fa-chart-line"></i> Thống kê</a></li><li class="profile-dropdown"><button class="profile-btn" type="button"><span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down"></i></button><div class="dropdown-content"><div class="dropdown-header"><h4>Phúc Trương</h4><p>phuctruong@kicks.vn</p></div><a href="profile.html">Hồ sơ quản trị</a><a href="login.html">Đăng xuất</a></div></li></ul></aside>
+    <aside class="sidebar">
+<a class="sidebar-header" href="index.html">KICKS ADMIN.</a>
+<ul class="sidebar-menu">
+<li>
+<a href="index.html">
+<i class="fas fa-chart-pie">
+</i> Tổng quan</a>
+</li>
+<li>
+<a href="products.html" class="active">
+<i class="fas fa-box">
+</i> Sản phẩm</a>
+</li>
+<li>
+<a href="orders.html">
+<i class="fas fa-shopping-cart">
+</i> Đơn hàng</a>
+</li>
+<li>
+<a href="users.html">
+<i class="fas fa-users">
+</i> Người dùng</a>
+</li>
+<li>
+<a href="statistics.html">
+<i class="fas fa-chart-line">
+</i> Thống kê</a>
+</li>
+<li class="profile-dropdown">
+<button class="profile-btn" type="button">
+<span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down">
+</i>
+</button>
+<div class="dropdown-content">
+<div class="dropdown-header">
+<h4>Phúc Trương</h4>
+<p>phuctruong@kicks.vn</p>
+</div>
+<a href="profile.html">Hồ sơ quản trị</a>
+<a href="login.html">Đăng xuất</a>
+</div>
+</li>
+</ul>
+</aside>
 
     <main class="main-content">
         <div class="page-content">
@@ -20,16 +63,19 @@
             <div class="admin-header-actions">
                 <div>
                     <a href="products.html" class="btn-back-link">
-                        <i class="fas fa-arrow-left"></i> Quay lại danh sách sản phẩm
+                        <i class="fas fa-arrow-left">
+</i> Quay lại danh sách sản phẩm
                     </a>
                     <h1 class="page-title" style="margin: 10px 0 0 0;">Thêm Sneaker Mới</h1>
                 </div>
                 <div style="display: flex; gap: 10px;">
                     <a href="products.html" class="btn-outline-danger" style="text-decoration:none;">
-                        <i class="fas fa-times"></i> Hủy bỏ
+                        <i class="fas fa-times">
+</i> Hủy bỏ
                     </a>
                     <button type="button" class="btn-solid-primary" onclick="showToast('Đã thêm sản phẩm thành công!')">
-                        <i class="fas fa-save"></i> Lưu & Đăng bán
+                        <i class="fas fa-save">
+</i> Lưu & Đăng bán
                     </button>
                 </div>
             </div>
@@ -40,7 +86,9 @@
                     <div>
                         <div class="admin-card">
                             <div class="admin-card-header">
-                                <h3><i class="fas fa-info-circle" style="color: var(--accent);"></i> Thông tin cơ bản</h3>
+                                <h3>
+<i class="fas fa-info-circle" style="color: var(--accent);">
+</i> Thông tin cơ bản</h3>
                             </div>
                             
                             <div class="form-group">
@@ -70,11 +118,11 @@
                             <div class="form-grid-2">
                                 <div class="form-group">
                                     <label>Giá bán niêm yết (VNĐ) *</label>
-                                    <input type="number" class="admin-input" placeholder="Ví dụ: 4500000" required>
+                                    <input type="text" inputmode="numeric" data-money-input class="admin-input" placeholder="Ví dụ: 4.500.000" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Giá khuyến mãi (Nếu có)</label>
-                                    <input type="number" class="admin-input" placeholder="Để trống nếu không giảm">
+                                    <input type="text" inputmode="numeric" data-money-input class="admin-input" placeholder="Để trống nếu không giảm">
                                 </div>
                             </div>
 
@@ -129,25 +177,88 @@
 
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label>Mô tả chi tiết sản phẩm</label>
-                                <textarea rows="5" class="admin-textarea" placeholder="Nhập đặc điểm chất liệu, công nghệ đế, phong cách phối đồ..."></textarea>
+                                <textarea rows="5" class="admin-textarea" placeholder="Nhập đặc điểm chất liệu, công nghệ đế, phong cách phối đồ...">
+</textarea>
                             </div>
                         </div>
                     </div>
 
                     <!-- Right Column: Images & Status -->
                     <div>
-                        <!-- Image Upload Card -->
+                        <div class="admin-card">
+<div class="admin-card-header">
+<h3>
+<i class="fas fa-store">
+</i> Thông tin hiển thị tại cửa hàng</h3>
+</div>
+<div class="form-grid-2">
+<div class="form-group">
+<label>Màu sắc<input class="admin-input" type="text" value="" placeholder="Nhập màu sắc">
+</label>
+</div>
+<div class="form-group">
+<label>Loại sản phẩm<input class="admin-input" type="text" value="Sneaker" placeholder="Nhập loại sản phẩm">
+</label>
+</div>
+<div class="form-group">
+<label>Kho hàng<input class="admin-input" type="text" value="Kho HCM" placeholder="Nhập kho hàng">
+</label>
+</div>
+</div>
+<div class="form-group">
+<label>Cam kết chính hãng<textarea class="admin-textarea" rows="2">100% Chính hãng · Cam kết Authentic, Fullbox đầy đủ phụ kiện</textarea>
+</label>
+</div>
+<div class="form-group">
+<label>Giao hàng<textarea class="admin-textarea" rows="2">Giao hỏa tốc 2H · Nội thành TP.HCM &amp; HN nhận trong ngày</textarea>
+</label>
+</div>
+<div class="form-group">
+<label>Đổi trả<textarea class="admin-textarea" rows="2">Đổi trả 30 ngày · Đổi size tận nhà miễn phí nếu không vừa</textarea>
+</label>
+</div>
+<div class="form-group">
+<label>Bảo hành<textarea class="admin-textarea" rows="2">Bảo hành 12 tháng · Bảo hành keo chỉ, lỗi đế nhà sản xuất</textarea>
+</label>
+</div>
+</div>
+<div class="admin-card">
+<div class="admin-card-header">
+<h3>
+<i class="fas fa-tag">
+</i> Thẻ sản phẩm trang chủ</h3>
+</div>
+<div class="form-group">
+<label>Nhãn thẻ trang chủ<input class="admin-input" type="text" placeholder="Ví dụ: Bán chạy">
+</label>
+</div>
+<div class="form-group">
+<label>Mô tả ngắn trang chủ<input class="admin-input" type="text" placeholder="Ví dụ: Thể thao · Phối đỏ">
+</label>
+</div>
+</div>
+<!-- Image Upload Card -->
                         <div class="admin-card">
                             <div class="admin-card-header">
-                                <h3><i class="fas fa-image" style="color: var(--accent);"></i> Hình ảnh sản phẩm</h3>
+                                <h3>
+<i class="fas fa-image" style="color: var(--accent);">
+</i> Hình ảnh sản phẩm</h3>
                             </div>
-                            <div class="image-preview-box"><img id="previewImg" src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ"><p>Ảnh sản phẩm xem trước</p><label class="upload-label" for="fileInput">Chọn ảnh sản phẩm</label><input type="file" id="fileInput" accept="image/png,image/jpeg,image/webp" onchange="showToast('Đã chọn ảnh sản phẩm thành công!')"><p class="helper-text">PNG, JPG hoặc WEBP. Ảnh xem trước là ảnh mẫu có sẵn.</p></div>
+                            <div class="image-preview-box">
+<img id="previewImg" src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ">
+<p>Ảnh sản phẩm xem trước</p>
+<label class="upload-label" for="fileInput">Chọn ảnh sản phẩm</label>
+<input type="file" id="fileInput" accept="image/png,image/jpeg,image/webp" onchange="showToast('Đã chọn ảnh sản phẩm thành công!')">
+<p class="helper-text">PNG, JPG hoặc WEBP. Ảnh xem trước là ảnh mẫu có sẵn.</p>
+</div>
                         </div>
 
                         <!-- Visibility & Status Card -->
                         <div class="admin-card">
                             <div class="admin-card-header">
-                                <h3><i class="fas fa-sliders-h" style="color: var(--accent);"></i> Trạng thái & Hiển thị</h3>
+                                <h3>
+<i class="fas fa-sliders-h" style="color: var(--accent);">
+</i> Trạng thái & Hiển thị</h3>
                             </div>
                             <div class="form-group">
                                 <label>Trạng thái bán</label>
@@ -177,6 +288,8 @@
         </div>
     </main>
 
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js">
+</script>
+<script src="../js/price-format.js?v=20261101-1"></script>
 </body>
 </html>

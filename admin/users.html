@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quản lý người dùng - Kicks</title>
 <link rel="stylesheet" href="../css/admin.css?v=20261030-layout-3">
-    <link rel="stylesheet" href="../css/admin-layout.css?v=20261031-1">
+    <link rel="stylesheet" href="../css/admin-layout.css?v=20261101-final">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -82,7 +82,7 @@
 <div class="data-table-container">
 <div class="table-header">
 <h2>Danh sách người mua</h2>
-<span>5 tài khoản</span>
+<span>8 tài khoản</span>
 </div>
 <div class="table-scroll">
 <table>
@@ -108,8 +108,8 @@
 </td>
 <td>
 <div class="table-actions">
-<a href="user-edit.html" class="btn-action btn-edit">Sửa</a>
-<button class="btn-action btn-delete" onclick="showToast('Đã khóa người dùng thành công!')">Khóa</button>
+<a href="user-detail.html" class="btn-action btn-muted">Chi tiết</a>
+<button class="btn-action btn-muted" type="button" onclick="showToast('Đã khóa người dùng thành công!')">Khóa</button>
 </div>
 </td>
 </tr>
@@ -125,8 +125,8 @@
 </td>
 <td>
 <div class="table-actions">
-<a href="user-edit.html" class="btn-action btn-edit">Sửa</a>
-<button class="btn-action btn-delete" onclick="showToast('Đã khóa người dùng thành công!')">Khóa</button>
+<a href="user-detail.html" class="btn-action btn-muted">Chi tiết</a>
+<button class="btn-action btn-muted" type="button" onclick="showToast('Đã khóa người dùng thành công!')">Khóa</button>
 </div>
 </td>
 </tr>
@@ -142,8 +142,8 @@
 </td>
 <td>
 <div class="table-actions">
-<a href="user-edit.html" class="btn-action btn-edit">Sửa</a>
-<button class="btn-action btn-muted" onclick="showToast('Đã mở khóa người dùng thành công!')">Mở khóa</button>
+<a href="user-detail.html" class="btn-action btn-muted">Chi tiết</a>
+<button class="btn-action btn-muted" type="button" onclick="showToast('Đã mở khóa người dùng thành công!')">Mở khóa</button>
 </div>
 </td>
 </tr>
@@ -159,8 +159,8 @@
 </td>
 <td>
 <div class="table-actions">
-<a href="user-edit.html" class="btn-action btn-edit">Sửa</a>
-<button class="btn-action btn-delete" onclick="showToast('Đã khóa người dùng thành công!')">Khóa</button>
+<a href="user-detail.html" class="btn-action btn-muted">Chi tiết</a>
+<button class="btn-action btn-muted" type="button" onclick="showToast('Đã khóa người dùng thành công!')">Khóa</button>
 </div>
 </td>
 </tr>
@@ -176,8 +176,59 @@
 </td>
 <td>
 <div class="table-actions">
-<a href="user-edit.html" class="btn-action btn-edit">Sửa</a>
-<button class="btn-action btn-delete" onclick="showToast('Đã khóa người dùng thành công!')">Khóa</button>
+<a href="user-detail.html" class="btn-action btn-muted">Chi tiết</a>
+<button class="btn-action btn-muted" type="button" onclick="showToast('Đã khóa người dùng thành công!')">Khóa</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Trịnh Cảnh E</strong>
+<small class="table-subtitle">KH006</small>
+</td>
+<td>trinhcanhe@gmail.com</td>
+<td>0905 678 901</td>
+<td>
+<span class="status-badge status-success">Đang hoạt động</span>
+</td>
+<td>
+<div class="table-actions">
+<a href="user-detail.html" class="btn-action btn-muted">Chi tiết</a>
+<button class="btn-action btn-muted" type="button" onclick="showToast('Đã khóa người dùng thành công!')">Khóa</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Cao Thị F</strong>
+<small class="table-subtitle">KH007</small>
+</td>
+<td>caothif@gmail.com</td>
+<td>0906 789 012</td>
+<td>
+<span class="status-badge status-success">Đang hoạt động</span>
+</td>
+<td>
+<div class="table-actions">
+<a href="user-detail.html" class="btn-action btn-muted">Chi tiết</a>
+<button class="btn-action btn-muted" type="button" onclick="showToast('Đã khóa người dùng thành công!')">Khóa</button>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Phạm Văn G</strong>
+<small class="table-subtitle">KH008</small>
+</td>
+<td>phamvang@gmail.com</td>
+<td>0907 890 123</td>
+<td>
+<span class="status-badge status-success">Đang hoạt động</span>
+</td>
+<td>
+<div class="table-actions">
+<a href="user-detail.html" class="btn-action btn-muted">Chi tiết</a>
+<button class="btn-action btn-muted" type="button" onclick="showToast('Đã khóa người dùng thành công!')">Khóa</button>
 </div>
 </td>
 </tr>
@@ -188,7 +239,10 @@
 <a href="users.html" class="active" aria-current="page" aria-label="Trang 1">1</a>
 <a href="users.html" aria-label="Trang 2">2</a>
 <a href="users.html" aria-label="Trang 3">3</a>
-<a href="users.html" aria-label="Trang tiếp theo"><i class="fas fa-chevron-right"></i></a>
+<a href="users.html" aria-label="Trang tiếp theo">
+<i class="fas fa-chevron-right">
+</i>
+</a>
 </nav>
 </div>
 </div>

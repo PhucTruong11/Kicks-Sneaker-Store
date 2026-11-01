@@ -1,6 +1,13 @@
 /* Order history stays readable without a wide table. */
 .user-profile-layout { grid-template-columns: 260px minmax(0, 1fr); gap: 24px; }
 .user-profile-content { min-width: 0; }
+.profile-readonly { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.profile-readonly > div { min-width: 0; padding: 16px; border: 1px solid #edf1f5; border-radius: 10px; background: #f8fafc; }
+.profile-readonly dt { color: #64748b; font-size: 12px; margin-bottom: 9px; }
+.profile-readonly dd { color: #1e293b; font-size: 14px; font-weight: 600; line-height: 1.8; overflow-wrap: anywhere; }
+.profile-readonly .full-width { grid-column: 1 / -1; }
+.profile-address-note { color: #64748b; font-size: 13px; line-height: 1.8; margin-top: 20px; }
+.profile-address-note a { color: var(--accent); font-weight: 600; }
 .orders-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
 .orders-heading h2 { margin: 0 0 8px; padding: 0; border: 0; font-size: 23px; letter-spacing: -.6px; }
 .orders-heading h2 i { color: var(--accent); font-size: 20px; }
@@ -30,6 +37,7 @@
     .user-profile-layout { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 600px) {
+    .profile-readonly { grid-template-columns: minmax(0, 1fr); }
     .user-profile-content { padding: 20px 16px; }
     .orders-heading { align-items: flex-start; gap: 10px; }
     .orders-heading h2 { font-size: 19px; line-height: 1.5; gap: 8px; }

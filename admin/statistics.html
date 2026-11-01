@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thống kê khách hàng - Kicks</title>
 <link rel="stylesheet" href="../css/admin.css?v=20261030-layout-3">
-    <link rel="stylesheet" href="../css/admin-layout.css?v=20261031-1">
+    <link rel="stylesheet" href="../css/admin-layout.css?v=20261101-final">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -59,7 +59,7 @@
 <h1 class="page-title">Top 5 khách hàng mua nhiều nhất</h1>
 <form class="filter-panel" action="statistics.html" method="get">
 <div class="form-group">
-<label>Từ ngày<input class="admin-input" type="date" placeholder="" value="2026-10-01">
+<label>Từ ngày<input class="admin-input" type="date" placeholder="" value="2026-08-01">
 </label>
 </div>
 <div class="form-group">
@@ -73,11 +73,11 @@
 <div class="card-row">
 <div class="stat-card">
 <h3>Khoảng thời gian</h3>
-<p class="stat-date">01/10 – 30/10/2026</p>
+<p class="stat-date">01/08 – 30/10/2026</p>
 </div>
 <div class="stat-card">
 <h3>Tổng mua của top 5</h3>
-<p>57.800.000đ</p>
+<p>22.900.000đ</p>
 </div>
 <div class="stat-card">
 <h3>Khách hàng</h3>
@@ -106,12 +106,12 @@
 <span class="ranking-number">1</span>
 </td>
 <td>
-<strong>Phúc Trương</strong>
-<small class="table-subtitle">KH001 · phuctruong@gmail.com</small>
+<strong>Phạm Văn G</strong>
+<small class="table-subtitle">KH008 · phamvang@gmail.com</small>
 </td>
-<td>4</td>
+<td>1</td>
 <td>
-<strong>18.000.000đ</strong>
+<strong>7.700.000đ</strong>
 </td>
 <td>
 <a class="btn-action btn-muted" href="#customer-1">Xem các đơn</a>
@@ -122,12 +122,12 @@
 <span class="ranking-number">2</span>
 </td>
 <td>
-<strong>Nguyễn Văn A</strong>
-<small class="table-subtitle">KH002 · nguyenvana@gmail.com</small>
+<strong>Trần Thị B</strong>
+<small class="table-subtitle">KH003 · tranthib@gmail.com</small>
 </td>
-<td>3</td>
+<td>1</td>
 <td>
-<strong>14.500.000đ</strong>
+<strong>5.500.000đ</strong>
 </td>
 <td>
 <a class="btn-action btn-muted" href="#customer-2">Xem các đơn</a>
@@ -138,12 +138,12 @@
 <span class="ranking-number">3</span>
 </td>
 <td>
-<strong>Trần Thị B</strong>
-<small class="table-subtitle">KH003 · tranthib@gmail.com</small>
+<strong>Phúc Trương</strong>
+<small class="table-subtitle">KH001 · phuctruong@gmail.com</small>
 </td>
 <td>2</td>
 <td>
-<strong>10.700.000đ</strong>
+<strong>4.700.000đ</strong>
 </td>
 <td>
 <a class="btn-action btn-muted" href="#customer-3">Xem các đơn</a>
@@ -154,12 +154,12 @@
 <span class="ranking-number">4</span>
 </td>
 <td>
-<strong>Lê Văn C</strong>
-<small class="table-subtitle">KH004 · levanc@gmail.com</small>
+<strong>Cao Thị F</strong>
+<small class="table-subtitle">KH007 · caothif@gmail.com</small>
 </td>
-<td>2</td>
+<td>1</td>
 <td>
-<strong>8.200.000đ</strong>
+<strong>3.200.000đ</strong>
 </td>
 <td>
 <a class="btn-action btn-muted" href="#customer-4">Xem các đơn</a>
@@ -173,9 +173,9 @@
 <strong>Đoàn Hữu D</strong>
 <small class="table-subtitle">KH005 · doanhuud@gmail.com</small>
 </td>
-<td>2</td>
+<td>1</td>
 <td>
-<strong>6.400.000đ</strong>
+<strong>1.800.000đ</strong>
 </td>
 <td>
 <a class="btn-action btn-muted" href="#customer-5">Xem các đơn</a>
@@ -185,11 +185,12 @@
 </table>
 </div>
 </section>
+<p class="helper-text">Dữ liệu mẫu từ 01/08 đến 30/10/2026. Chỉ tính đơn đã giao thành công; không tính đơn chưa xác nhận, đã xác nhận hoặc đã hủy.</p>
 <div class="ranking-orders">
 <section class="admin-card customer-orders" id="customer-1">
 <div class="table-header">
-<h2>1. Phúc Trương</h2>
-<strong>Tổng mua: 18.000.000đ</strong>
+<h2>1. Phạm Văn G</h2>
+<strong>Tổng mua: 7.700.000đ</strong>
 </div>
 <div class="table-scroll">
 <table>
@@ -204,45 +205,12 @@
 </thead>
 <tbody>
 <tr>
-<td>#TK-101</td>
-<td>08/10/2026</td>
+<td>#ORD-007</td>
+<td>04/10/2026</td>
 <td>
 <span class="status-badge status-success">Đã giao thành công</span>
 </td>
-<td>4.500.000đ</td>
-<td>
-<a class="btn-action btn-muted" href="order-detail.html">Xem chi tiết</a>
-</td>
-</tr>
-<tr>
-<td>#TK-102</td>
-<td>09/10/2026</td>
-<td>
-<span class="status-badge status-success">Đã giao thành công</span>
-</td>
-<td>4.500.000đ</td>
-<td>
-<a class="btn-action btn-muted" href="order-detail.html">Xem chi tiết</a>
-</td>
-</tr>
-<tr>
-<td>#TK-103</td>
-<td>10/10/2026</td>
-<td>
-<span class="status-badge status-success">Đã giao thành công</span>
-</td>
-<td>4.500.000đ</td>
-<td>
-<a class="btn-action btn-muted" href="order-detail.html">Xem chi tiết</a>
-</td>
-</tr>
-<tr>
-<td>#TK-104</td>
-<td>11/10/2026</td>
-<td>
-<span class="status-badge status-success">Đã giao thành công</span>
-</td>
-<td>4.500.000đ</td>
+<td>7.700.000đ</td>
 <td>
 <a class="btn-action btn-muted" href="order-detail.html">Xem chi tiết</a>
 </td>
@@ -253,8 +221,8 @@
 </section>
 <section class="admin-card customer-orders" id="customer-2">
 <div class="table-header">
-<h2>2. Nguyễn Văn A</h2>
-<strong>Tổng mua: 14.500.000đ</strong>
+<h2>2. Trần Thị B</h2>
+<strong>Tổng mua: 5.500.000đ</strong>
 </div>
 <div class="table-scroll">
 <table>
@@ -269,34 +237,12 @@
 </thead>
 <tbody>
 <tr>
-<td>#TK-201</td>
-<td>09/10/2026</td>
+<td>#ORD-002</td>
+<td>08/10/2026</td>
 <td>
 <span class="status-badge status-success">Đã giao thành công</span>
 </td>
-<td>4.800.000đ</td>
-<td>
-<a class="btn-action btn-muted" href="order-detail.html">Xem chi tiết</a>
-</td>
-</tr>
-<tr>
-<td>#TK-202</td>
-<td>10/10/2026</td>
-<td>
-<span class="status-badge status-success">Đã giao thành công</span>
-</td>
-<td>4.800.000đ</td>
-<td>
-<a class="btn-action btn-muted" href="order-detail.html">Xem chi tiết</a>
-</td>
-</tr>
-<tr>
-<td>#TK-203</td>
-<td>11/10/2026</td>
-<td>
-<span class="status-badge status-success">Đã giao thành công</span>
-</td>
-<td>4.900.000đ</td>
+<td>5.500.000đ</td>
 <td>
 <a class="btn-action btn-muted" href="order-detail.html">Xem chi tiết</a>
 </td>
@@ -307,8 +253,8 @@
 </section>
 <section class="admin-card customer-orders" id="customer-3">
 <div class="table-header">
-<h2>3. Trần Thị B</h2>
-<strong>Tổng mua: 10.700.000đ</strong>
+<h2>3. Phúc Trương</h2>
+<strong>Tổng mua: 4.700.000đ</strong>
 </div>
 <div class="table-scroll">
 <table>
@@ -323,23 +269,23 @@
 </thead>
 <tbody>
 <tr>
-<td>#TK-301</td>
-<td>10/10/2026</td>
+<td>#KICKS-7634</td>
+<td>20/09/2026</td>
 <td>
 <span class="status-badge status-success">Đã giao thành công</span>
 </td>
-<td>5.300.000đ</td>
+<td>3.200.000đ</td>
 <td>
 <a class="btn-action btn-muted" href="order-detail.html">Xem chi tiết</a>
 </td>
 </tr>
 <tr>
-<td>#TK-302</td>
-<td>11/10/2026</td>
+<td>#KICKS-6512</td>
+<td>15/08/2026</td>
 <td>
 <span class="status-badge status-success">Đã giao thành công</span>
 </td>
-<td>5.400.000đ</td>
+<td>1.500.000đ</td>
 <td>
 <a class="btn-action btn-muted" href="order-detail.html">Xem chi tiết</a>
 </td>
@@ -350,8 +296,8 @@
 </section>
 <section class="admin-card customer-orders" id="customer-4">
 <div class="table-header">
-<h2>4. Lê Văn C</h2>
-<strong>Tổng mua: 8.200.000đ</strong>
+<h2>4. Cao Thị F</h2>
+<strong>Tổng mua: 3.200.000đ</strong>
 </div>
 <div class="table-scroll">
 <table>
@@ -366,23 +312,12 @@
 </thead>
 <tbody>
 <tr>
-<td>#TK-401</td>
-<td>11/10/2026</td>
+<td>#ORD-006</td>
+<td>04/10/2026</td>
 <td>
 <span class="status-badge status-success">Đã giao thành công</span>
 </td>
-<td>4.100.000đ</td>
-<td>
-<a class="btn-action btn-muted" href="order-detail.html">Xem chi tiết</a>
-</td>
-</tr>
-<tr>
-<td>#TK-402</td>
-<td>12/10/2026</td>
-<td>
-<span class="status-badge status-success">Đã giao thành công</span>
-</td>
-<td>4.100.000đ</td>
+<td>3.200.000đ</td>
 <td>
 <a class="btn-action btn-muted" href="order-detail.html">Xem chi tiết</a>
 </td>
@@ -394,7 +329,7 @@
 <section class="admin-card customer-orders" id="customer-5">
 <div class="table-header">
 <h2>5. Đoàn Hữu D</h2>
-<strong>Tổng mua: 6.400.000đ</strong>
+<strong>Tổng mua: 1.800.000đ</strong>
 </div>
 <div class="table-scroll">
 <table>
@@ -409,23 +344,12 @@
 </thead>
 <tbody>
 <tr>
-<td>#TK-501</td>
-<td>12/10/2026</td>
+<td>#ORD-004</td>
+<td>06/10/2026</td>
 <td>
 <span class="status-badge status-success">Đã giao thành công</span>
 </td>
-<td>3.200.000đ</td>
-<td>
-<a class="btn-action btn-muted" href="order-detail.html">Xem chi tiết</a>
-</td>
-</tr>
-<tr>
-<td>#TK-502</td>
-<td>13/10/2026</td>
-<td>
-<span class="status-badge status-success">Đã giao thành công</span>
-</td>
-<td>3.200.000đ</td>
+<td>1.800.000đ</td>
 <td>
 <a class="btn-action btn-muted" href="order-detail.html">Xem chi tiết</a>
 </td>

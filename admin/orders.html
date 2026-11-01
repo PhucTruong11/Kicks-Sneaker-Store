@@ -5,22 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý Đơn hàng - Kicks Admin</title>
     <link rel="stylesheet" href="../css/admin.css?v=20261030-layout-3">
-    <link rel="stylesheet" href="../css/admin-layout.css?v=20261031-1">
+    <link rel="stylesheet" href="../css/admin-layout.css?v=20261101-final">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div id="toast">Thông báo</div>
-    <aside class="sidebar"><a class="sidebar-header" href="index.html">KICKS ADMIN.</a><ul class="sidebar-menu"><li><a href="index.html"><i class="fas fa-chart-pie"></i> Tổng quan</a></li><li><a href="products.html"><i class="fas fa-box"></i> Sản phẩm</a></li><li><a href="orders.html" class="active"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li><li><a href="users.html"><i class="fas fa-users"></i> Người dùng</a></li><li><a href="statistics.html"><i class="fas fa-chart-line"></i> Thống kê</a></li><li class="profile-dropdown"><button class="profile-btn" type="button"><span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down"></i></button><div class="dropdown-content"><div class="dropdown-header"><h4>Phúc Trương</h4><p>phuctruong@kicks.vn</p></div><a href="profile.html">Hồ sơ quản trị</a><a href="login.html">Đăng xuất</a></div></li></ul></aside>
+    <aside class="sidebar">
+<a class="sidebar-header" href="index.html">KICKS ADMIN.</a>
+<ul class="sidebar-menu">
+<li>
+<a href="index.html">
+<i class="fas fa-chart-pie">
+</i> Tổng quan</a>
+</li>
+<li>
+<a href="products.html">
+<i class="fas fa-box">
+</i> Sản phẩm</a>
+</li>
+<li>
+<a href="orders.html" class="active">
+<i class="fas fa-shopping-cart">
+</i> Đơn hàng</a>
+</li>
+<li>
+<a href="users.html">
+<i class="fas fa-users">
+</i> Người dùng</a>
+</li>
+<li>
+<a href="statistics.html">
+<i class="fas fa-chart-line">
+</i> Thống kê</a>
+</li>
+<li class="profile-dropdown">
+<button class="profile-btn" type="button">
+<span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down">
+</i>
+</button>
+<div class="dropdown-content">
+<div class="dropdown-header">
+<h4>Phúc Trương</h4>
+<p>phuctruong@kicks.vn</p>
+</div>
+<a href="profile.html">Hồ sơ quản trị</a>
+<a href="login.html">Đăng xuất</a>
+</div>
+</li>
+</ul>
+</aside>
 
     <main class="main-content">
         <div class="page-content">
             <h1 class="page-title">Quản lý Đơn hàng</h1>
 
-            <form class="filter-panel" action="orders.html" method="get"><div class="form-group"><label>Trạng thái đơn<select class="admin-select"><option>Tất cả trạng thái</option><option>Chưa xác nhận</option><option>Đã xác nhận</option><option>Đã giao thành công</option><option>Đã hủy</option></select></label></div><div class="form-group"><label>Từ ngày<input class="admin-input" type="date" placeholder=""></label></div><div class="form-group"><label>Đến ngày<input class="admin-input" type="date" placeholder=""></label></div><div class="form-group"><label>Tỉnh / Thành phố<select class="admin-select"><option>Tất cả địa điểm</option><option>TP. Hồ Chí Minh</option><option>Hà Nội</option><option>Đà Nẵng</option></select></label></div><div class="form-group"><label>Quận / Huyện<input class="admin-input" type="text" placeholder="Nhập quận hoặc huyện"></label></div><button class="btn-solid-primary" type="submit"><i class="fas fa-filter"></i> Lọc kết quả</button></form><div class="data-table-container">
+            <form class="filter-panel" action="orders.html" method="get">
+<div class="form-group">
+<label>Trạng thái đơn<select class="admin-select">
+<option>Tất cả trạng thái</option>
+<option>Chưa xác nhận</option>
+<option>Đã xác nhận</option>
+<option>Đã giao thành công</option>
+<option>Đã hủy</option>
+</select>
+</label>
+</div>
+<div class="form-group">
+<label>Từ ngày<input class="admin-input" type="date" placeholder="">
+</label>
+</div>
+<div class="form-group">
+<label>Đến ngày<input class="admin-input" type="date" placeholder="">
+</label>
+</div>
+<div class="form-group">
+<label>Tỉnh / Thành phố<select class="admin-select">
+<option>Tất cả địa điểm</option>
+<option>TP. Hồ Chí Minh</option>
+<option>Hà Nội</option>
+<option>Đà Nẵng</option>
+</select>
+</label>
+</div>
+<div class="form-group">
+<label>Quận / Huyện<input class="admin-input" type="text" placeholder="Nhập quận hoặc huyện">
+</label>
+</div>
+<button class="btn-solid-primary" type="submit">
+<i class="fas fa-filter">
+</i> Lọc kết quả</button>
+</form>
+<div class="data-table-container">
                 <div class="table-header">
-                    <h2>Danh sách đơn (Mới nhất)</h2>
+                    <h2>Danh sách đơn (11 đơn hàng)</h2>
                 </div>
-                <div class="table-scroll"><table>
+                <div class="table-scroll">
+<table>
                     <thead>
                         <tr>
                             <th>Sản phẩm</th>
@@ -32,104 +112,193 @@
                             <th>Hành động</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td><img src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ"></td>
-                            <td><strong style="color: var(--accent);">#ORD-001</strong></td>
-                            <td>Nguyễn Văn A</td>
-                            <td>09/10/2026</td>
-                            <td><span class="status-badge status-pending">Chưa xác nhận</span></td>
-                            <td>7.700.000đ</td>
-                            <td>
-                                <a href="order-detail.html" class="btn-action" style="background: var(--accent);">Chi tiết</a>
-                                <button class="btn-action btn-edit" onclick="showToast('Đã duyệt đơn!')">Duyệt</button>
-                                <button class="btn-action btn-delete" onclick="showToast('Đã hủy!')">Hủy</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><img src="../images/shoe2.jpg" alt="Puma Smash Trắng"></td>
-                            <td><strong style="color: var(--accent);">#ORD-002</strong></td>
-                            <td>Trần Thị B</td>
-                            <td>08/10/2026</td>
-                            <td><span class="status-badge status-success">Đã giao thành công</span></td>
-                            <td>8.200.000đ</td>
-                            <td>
-                                <a href="order-detail.html" class="btn-action" style="background: var(--accent);">Chi tiết</a>
-                                <button class="btn-action btn-edit" onclick="showToast('Không thể duyệt lại đơn đã xong!')">Duyệt</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><img src="../images/shoe4.jpg" alt="Nike Air Max 1 Cam"></td>
-                            <td><strong style="color: var(--accent);">#ORD-003</strong></td>
-                            <td>Lê Văn C</td>
-                            <td>07/10/2026</td>
-                            <td><span class="status-badge status-danger">Đã hủy</span></td>
-                            <td>2.100.000đ</td>
-                            <td>
-                                <a href="order-detail.html" class="btn-action" style="background: var(--accent);">Chi tiết</a>
-                                <span class="helper-text">Đơn đã kết thúc</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><img src="../images/shoe5.jpg" alt="Nike Air Force 1 Shadow Pastel"></td>
-                            <td><strong style="color: var(--accent);">#ORD-004</strong></td>
-                            <td>Đoàn Hữu D</td>
-                            <td>06/10/2026</td>
-                            <td><span class="status-badge status-success">Đã giao thành công</span></td>
-                            <td>1.800.000đ</td>
-                            <td>
-                                <a href="order-detail.html" class="btn-action" style="background: var(--accent);">Chi tiết</a>
-                                <button class="btn-action btn-edit" onclick="showToast('Không thể duyệt lại đơn đã xong!')">Duyệt</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><img src="../images/shoe6.jpg" alt="Vans Old Skool Đỏ đô"></td>
-                            <td><strong style="color: var(--accent);">#ORD-005</strong></td>
-                            <td>Trịnh Cảnh E</td>
-                            <td>05/10/2026</td>
-                            <td><span class="status-badge status-pending">Chưa xác nhận</span></td>
-                            <td>5.200.000đ</td>
-                            <td>
-                                <a href="order-detail.html" class="btn-action" style="background: var(--accent);">Chi tiết</a>
-                                <button class="btn-action btn-edit" onclick="showToast('Đã duyệt đơn!')">Duyệt</button>
-                                <button class="btn-action btn-delete" onclick="showToast('Đã hủy!')">Hủy</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><img src="../images/shoe4.jpg" alt="Nike Air Max 1 Cam"></td>
-                            <td><strong style="color: var(--accent);">#ORD-006</strong></td>
-                            <td>Cao Thị F</td>
-                            <td>04/10/2026</td>
-                            <td><span class="status-badge status-success">Đã giao thành công</span></td>
-                            <td>3.200.000đ</td>
-                            <td>
-                                <a href="order-detail.html" class="btn-action" style="background: var(--accent);">Chi tiết</a>
-                                <button class="btn-action btn-edit" onclick="showToast('Không thể duyệt lại đơn đã xong!')">Duyệt</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><img src="../images/shoe2.jpg" alt="Puma Smash Trắng"></td>
-                            <td><strong style="color: var(--accent);">#ORD-007</strong></td>
-                            <td>Phạm Văn G</td>
-                            <td>04/10/2026</td>
-                            <td><span class="status-badge status-success">Đã giao thành công</span></td>
-                            <td>7.700.000đ</td>
-                            <td>
-                                <a href="order-detail.html" class="btn-action" style="background: var(--accent);">Chi tiết</a>
-                                <button class="btn-action btn-edit" onclick="showToast('Không thể duyệt lại đơn đã xong!')">Duyệt</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table></div>
+                    <tbody><tr data-order="KICKS-8922"><td><img src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ"></td><td><a class="order-link" href="order-detail.html">#KICKS-8922</a></td><td>Phúc Trương</td><td>30/10/2026</td><td><span class="status-badge status-pending">Chưa xác nhận</span></td><td>10.700.000đ</td><td><a class="btn-action btn-muted" href="order-detail.html">Chi tiết</a></td></tr>
+<tr data-order="ORD-001">
+<td>
+<img src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ">
+</td>
+<td>
+<a class="order-link" href="order-detail.html">#ORD-001</a>
+</td>
+<td>Nguyễn Văn A</td>
+<td>09/10/2026</td>
+<td>
+<span class="status-badge status-shipping">Đã xác nhận</span>
+</td>
+<td>7.700.000đ</td>
+<td>
+<a class="btn-action btn-muted" href="order-detail.html">Chi tiết</a>
+</td>
+</tr>
+<tr data-order="KICKS-8921">
+<td>
+<img src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ">
+</td>
+<td>
+<a class="order-link" href="order-detail.html">#KICKS-8921</a>
+</td>
+<td>Phúc Trương</td>
+<td>09/10/2026</td>
+<td>
+<span class="status-badge status-shipping">Đã xác nhận</span>
+</td>
+<td>4.500.000đ</td>
+<td>
+<a class="btn-action btn-muted" href="order-detail.html">Chi tiết</a>
+</td>
+</tr>
+<tr data-order="ORD-002">
+<td>
+<img src="../images/shoe5.jpg" alt="Nike Air Force 1 Shadow Pastel">
+</td>
+<td>
+<a class="order-link" href="order-detail.html">#ORD-002</a>
+</td>
+<td>Trần Thị B</td>
+<td>08/10/2026</td>
+<td>
+<span class="status-badge status-success">Đã giao thành công</span>
+</td>
+<td>5.500.000đ</td>
+<td>
+<a class="btn-action btn-muted" href="order-detail.html">Chi tiết</a>
+</td>
+</tr>
+<tr data-order="ORD-003">
+<td>
+<img src="../images/shoe4.jpg" alt="Nike Air Max 1 Cam">
+</td>
+<td>
+<a class="order-link" href="order-detail.html">#ORD-003</a>
+</td>
+<td>Lê Văn C</td>
+<td>07/10/2026</td>
+<td>
+<span class="status-badge status-danger">Đã hủy</span>
+</td>
+<td>1.500.000đ</td>
+<td>
+<a class="btn-action btn-muted" href="order-detail.html">Chi tiết</a>
+</td>
+</tr>
+<tr data-order="ORD-004">
+<td>
+<img src="../images/shoe6.jpg" alt="Vans Old Skool Đỏ đô">
+</td>
+<td>
+<a class="order-link" href="order-detail.html">#ORD-004</a>
+</td>
+<td>Đoàn Hữu D</td>
+<td>06/10/2026</td>
+<td>
+<span class="status-badge status-success">Đã giao thành công</span>
+</td>
+<td>1.800.000đ</td>
+<td>
+<a class="btn-action btn-muted" href="order-detail.html">Chi tiết</a>
+</td>
+</tr>
+<tr data-order="ORD-005">
+<td>
+<img src="../images/adidas-stan-smith.jpg" alt="Adidas Stan Smith Trắng Xanh">
+</td>
+<td>
+<a class="order-link" href="order-detail.html">#ORD-005</a>
+</td>
+<td>Trịnh Cảnh E</td>
+<td>05/10/2026</td>
+<td>
+<span class="status-badge status-pending">Chưa xác nhận</span>
+</td>
+<td>5.200.000đ</td>
+<td>
+<a class="btn-action btn-muted" href="order-detail.html">Chi tiết</a>
+</td>
+</tr>
+<tr data-order="ORD-006">
+<td>
+<img src="../images/shoe2.jpg" alt="Puma Smash Trắng">
+</td>
+<td>
+<a class="order-link" href="order-detail.html">#ORD-006</a>
+</td>
+<td>Cao Thị F</td>
+<td>04/10/2026</td>
+<td>
+<span class="status-badge status-success">Đã giao thành công</span>
+</td>
+<td>3.200.000đ</td>
+<td>
+<a class="btn-action btn-muted" href="order-detail.html">Chi tiết</a>
+</td>
+</tr>
+<tr data-order="ORD-007">
+<td>
+<img src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ">
+</td>
+<td>
+<a class="order-link" href="order-detail.html">#ORD-007</a>
+</td>
+<td>Phạm Văn G</td>
+<td>04/10/2026</td>
+<td>
+<span class="status-badge status-success">Đã giao thành công</span>
+</td>
+<td>7.700.000đ</td>
+<td>
+<a class="btn-action btn-muted" href="order-detail.html">Chi tiết</a>
+</td>
+</tr>
+<tr data-order="KICKS-7634">
+<td>
+<img src="../images/shoe2.jpg" alt="Puma Smash Trắng">
+</td>
+<td>
+<a class="order-link" href="order-detail.html">#KICKS-7634</a>
+</td>
+<td>Phúc Trương</td>
+<td>20/09/2026</td>
+<td>
+<span class="status-badge status-success">Đã giao thành công</span>
+</td>
+<td>3.200.000đ</td>
+<td>
+<a class="btn-action btn-muted" href="order-detail.html">Chi tiết</a>
+</td>
+</tr>
+<tr data-order="KICKS-6512">
+<td>
+<img src="../images/shoe4.jpg" alt="Nike Air Max 1 Cam">
+</td>
+<td>
+<a class="order-link" href="order-detail.html">#KICKS-6512</a>
+</td>
+<td>Phúc Trương</td>
+<td>15/08/2026</td>
+<td>
+<span class="status-badge status-success">Đã giao thành công</span>
+</td>
+<td>1.500.000đ</td>
+<td>
+<a class="btn-action btn-muted" href="order-detail.html">Chi tiết</a>
+</td>
+</tr>
+</tbody>
+                </table>
+</div>
 <nav class="pagination" aria-label="Phân trang danh sách">
 <a href="orders.html" class="active" aria-current="page" aria-label="Trang 1">1</a>
 <a href="orders.html" aria-label="Trang 2">2</a>
 <a href="orders.html" aria-label="Trang 3">3</a>
-<a href="orders.html" aria-label="Trang tiếp theo"><i class="fas fa-chevron-right"></i></a>
+<a href="orders.html" aria-label="Trang tiếp theo">
+<i class="fas fa-chevron-right">
+</i>
+</a>
 </nav>
             </div>
         </div>
     </main>
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js">
+</script>
 </body>
 </html>

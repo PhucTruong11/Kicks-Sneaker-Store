@@ -3,208 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi tiết Đơn hàng #ORD-001 - Kicks Admin</title>
+    <title>Đơn hàng #KICKS-8922 - Kicks Admin</title>
     <link rel="stylesheet" href="../css/admin.css?v=20261030-layout-3">
-    <link rel="stylesheet" href="../css/admin-layout.css?v=20261031-1">
+    <link rel="stylesheet" href="../css/admin-layout.css?v=20261101-final">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../css/order-detail.css?v=20261101-final">
 </head>
 <body>
     <div id="toast">Thông báo</div>
 
     <!-- Admin Dynamic Island Navbar -->
-    <aside class="sidebar"><a class="sidebar-header" href="index.html">KICKS ADMIN.</a><ul class="sidebar-menu"><li><a href="index.html"><i class="fas fa-chart-pie"></i> Tổng quan</a></li><li><a href="products.html"><i class="fas fa-box"></i> Sản phẩm</a></li><li><a href="orders.html" class="active"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li><li><a href="users.html"><i class="fas fa-users"></i> Người dùng</a></li><li><a href="statistics.html"><i class="fas fa-chart-line"></i> Thống kê</a></li><li class="profile-dropdown"><button class="profile-btn" type="button"><span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down"></i></button><div class="dropdown-content"><div class="dropdown-header"><h4>Phúc Trương</h4><p>phuctruong@kicks.vn</p></div><a href="profile.html">Hồ sơ quản trị</a><a href="login.html">Đăng xuất</a></div></li></ul></aside>
+    <aside class="sidebar">
+<a class="sidebar-header" href="index.html">KICKS ADMIN.</a>
+<ul class="sidebar-menu">
+<li>
+<a href="index.html">
+<i class="fas fa-chart-pie">
+</i> Tổng quan</a>
+</li>
+<li>
+<a href="products.html">
+<i class="fas fa-box">
+</i> Sản phẩm</a>
+</li>
+<li>
+<a href="orders.html" class="active">
+<i class="fas fa-shopping-cart">
+</i> Đơn hàng</a>
+</li>
+<li>
+<a href="users.html">
+<i class="fas fa-users">
+</i> Người dùng</a>
+</li>
+<li>
+<a href="statistics.html">
+<i class="fas fa-chart-line">
+</i> Thống kê</a>
+</li>
+<li class="profile-dropdown">
+<button class="profile-btn" type="button">
+<span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down">
+</i>
+</button>
+<div class="dropdown-content">
+<div class="dropdown-header">
+<h4>Phúc Trương</h4>
+<p>phuctruong@kicks.vn</p>
+</div>
+<a href="profile.html">Hồ sơ quản trị</a>
+<a href="login.html">Đăng xuất</a>
+</div>
+</li>
+</ul>
+</aside>
 
     <main class="main-content">
-        <div class="page-content">
-            <!-- Header Actions -->
-            <div class="admin-header-actions">
-                <div>
-                    <a href="orders.html" class="btn-back-link">
-                        <i class="fas fa-arrow-left"></i> Quay lại danh sách đơn hàng
-                    </a>
-                    <div style="display: flex; align-items: center; gap: 12px; margin-top: 10px;">
-                        <h1 class="page-title" style="margin: 0;">Đơn hàng #ORD-001</h1>
-                        <span class="status-badge status-pending">Đã xác nhận</span>
-                    </div>
-                    <p style="font-size: 13px; color: #64748b; margin-top: 4px;">Thời gian đặt: 09/10/2026 lúc 08:30 sáng</p>
-                </div>
-                <div class="order-action-bar">
-                    <button class="btn-order-action btn-order-approve" onclick="showToast('Đã cập nhật đơn hàng: giao thành công!')">
-                        <i class="fas fa-truck"></i> Xác nhận giao thành công
-                    </button>
-                    <button class="btn-order-action btn-order-print" onclick="showToast('Đang kết nối máy in để in hóa đơn...')">
-                        <i class="fas fa-print"></i> In hóa đơn
-                    </button>
-                    <button class="btn-order-action btn-order-cancel" onclick="showToast('Đã chuyển trạng thái đơn hàng sang Đã Hủy!')">
-                        <i class="fas fa-times"></i> Hủy đơn
-                    </button>
-                </div>
-            </div>
+<div class="page-content">
+<a class="order-back" href="orders.html">
+<i class="fas fa-arrow-left">
+</i> Danh sách đơn hàng</a>
+    <div class="order-title-row">
+<div>
+<h1>Chi tiết đơn #KICKS-8922</h1>
+<p>Ngày đặt: <time datetime="2026-10-30">30/10/2026</time> · Thanh toán khi nhận hàng</p>
+</div>
+<span class="order-state pending">Chưa xác nhận</span>
+</div>
+    <div class="order-action-links">
+<label class="order-status-field">Trạng thái tiếp theo
+<select aria-label="Trạng thái tiếp theo">
+<option disabled>Chưa xác nhận (hiện tại)</option>
+<option selected>Đã xác nhận</option>
+<option>Đã giao thành công</option>
+<option>Đã hủy</option>
+</select>
+</label>
+<button class="order-link-button primary" type="button" onclick="showToast('Đã cập nhật trạng thái đơn hàng thành công!')">Cập nhật trạng thái</button>
+</div>
+<div class="order-detail-grid">
+<div>
+    <section class="order-panel"><h2><i class="fas fa-box" aria-hidden="true"></i> Sản phẩm trong đơn (4 đôi)</h2><div class="order-item" data-sku="NK-FR-042">
+<img src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ">
+<div><h3><a href="product-detail.html">Nike Free Run Flyknit Đỏ</a></h3><p>Mã SP: NK-FR-042<br>Size 42 · Số lượng: 1</p></div>
+<div class="order-item-price"><strong>4.500.000đ</strong><small>Đơn giá: 4.500.000đ</small></div>
+</div><div class="order-item" data-sku="PM-SM-040">
+<img src="../images/shoe2.jpg" alt="Puma Smash Trắng">
+<div><h3><a href="product-detail.html">Puma Smash Trắng</a></h3><p>Mã SP: PM-SM-040<br>Size 40 · Số lượng: 1</p></div>
+<div class="order-item-price"><strong>3.200.000đ</strong><small>Đơn giá: 3.200.000đ</small></div>
+</div><div class="order-item" data-sku="NK-AM1-041">
+<img src="../images/shoe4.jpg" alt="Nike Air Max 1 Cam">
+<div><h3><a href="product-detail.html">Nike Air Max 1 Cam</a></h3><p>Mã SP: NK-AM1-041<br>Size 41 · Số lượng: 2</p></div>
+<div class="order-item-price"><strong>3.000.000đ</strong><small>Đơn giá: 1.500.000đ</small></div>
+</div></section>
+    <section class="order-panel">
+<h2>
+<i class="fas fa-location-dot">
+</i> Thông tin nhận hàng</h2>
+<div class="order-contact">
+<strong>Phúc Trương</strong>
+<p>0987 654 321 · phuctruong@gmail.com</p>
+<p>123 Đường Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh</p>
+</div>
+<p class="order-note">Ghi chú: Giao trong giờ hành chính, gọi điện trước khi tới.</p>
+</section>
+</div>
+    <aside>
+<section class="order-panel">
+<h2>
+<i class="fas fa-receipt">
+</i> Thông tin thanh toán</h2>
+<dl class="order-breakdown">
+<div>
+<dt>Tiền hàng</dt>
+<dd>10.700.000đ</dd>
+</div>
+<div>
+<dt>Phí giao hàng</dt>
+<dd>Miễn phí</dd>
+</div>
+<div>
+<dt>Giảm giá</dt>
+<dd>0đ</dd>
+</div>
+<div class="order-grand-total">
+<dt>Tổng cộng</dt>
+<dd data-order-amount="10700000">10.700.000đ</dd>
+</div>
+</dl>
+<p class="order-payment-note">
+<strong>Tiền mặt khi nhận hàng (COD)</strong>
+<br>Chưa thanh toán · Thu tiền khi nhận hàng</p>
+</section>
+<section class="order-panel">
+<h2>
+<i class="fas fa-truck">
+</i> Tình trạng đơn hàng</h2>
+<p class="order-contact">Chưa xác nhận</p>
+</section>
+</aside>
+</div>
+</div>
+</main>
 
-            <!-- 2-Column Content Layout -->
-            <div class="admin-grid-layout">
-                <!-- Left Column -->
-                <div>
-                    <!-- Order Items Card -->
-                    <div class="admin-card">
-                        <div class="admin-card-header">
-                            <h3><i class="fas fa-box-open" style="color: var(--accent);"></i> Sản phẩm trong đơn (2 món)</h3>
-                            <span style="font-size: 13px; color: #64748b;">Mã kiện: PKG-8921</span>
-                        </div>
-                        <div style="display: flex; flex-direction: column; gap: 15px;">
-                            <div class="detail-item-row">
-                                <div class="detail-item-info">
-                                    <img src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ">
-                                    <div>
-                                        <strong style="display: block; font-size: 15px; color: var(--dark);">Nike Free Run Flyknit Đỏ</strong>
-                                        <div style="font-size: 12px; color: #64748b; margin-top: 2px;">
-                                            <span>SKU: NK-FR-042</span> •
-                                            <span style="background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Size: 42</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="text-align: right;">
-                                    <div style="font-weight: 800; color: var(--dark); font-size: 15px;">4.500.000đ</div>
-                                    <div style="font-size: 12px; color: #64748b;">Số lượng: 1</div>
-                                </div>
-                            </div>
-
-                            <div class="detail-item-row">
-                                <div class="detail-item-info">
-                                    <img src="../images/shoe2.jpg" alt="Puma Smash Trắng">
-                                    <div>
-                                        <strong style="display: block; font-size: 15px; color: var(--dark);">Puma Smash Trắng</strong>
-                                        <div style="font-size: 12px; color: #64748b; margin-top: 2px;">
-                                            <span>SKU: PM-SM-040</span> •
-                                            <span style="background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Size: 40</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="text-align: right;">
-                                    <div style="font-weight: 800; color: var(--dark); font-size: 15px;">3.200.000đ</div>
-                                    <div style="font-size: 12px; color: #64748b;">Số lượng: 1</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Payment Summary Card -->
-                    <div class="admin-card">
-                        <div class="admin-card-header">
-                            <h3><i class="fas fa-file-invoice-dollar" style="color: var(--accent);"></i> Thanh toán & Quyết toán</h3>
-                        </div>
-                        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
-                            <div style="display: flex; justify-content: space-between; color: #64748b;">
-                                <span>Tiền hàng (Tạm tính):</span>
-                                <strong style="color: var(--dark);">7.700.000đ</strong>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; color: #64748b;">
-                                <span>Phí vận chuyển:</span>
-                                <span style="color: var(--success); font-weight: 700;">Miễn phí (Hỏa tốc)</span>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; color: #64748b;">
-                                <span>Chiết khấu khuyến mại:</span>
-                                <span>0đ</span>
-                            </div>
-                            <div style="height: 1px; background: #e2e8f0; margin: 8px 0;"></div>
-                            <div style="display: flex; justify-content: space-between; font-size: 18px;">
-                                <strong style="color: var(--dark);">Tổng số tiền thanh toán:</strong>
-                                <strong style="color: var(--accent); font-weight: 900;">7.700.000đ</strong>
-                            </div>
-                            <div style="margin-top: 10px; background: #f8fafc; padding: 12px 16px; border-radius: 8px; font-size: 13px; color: #475569;">
-                                <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                                    <span>Phương thức thanh toán:</span>
-                                    <strong style="color: var(--dark);">COD (Tiền mặt khi nhận)</strong>
-                                </div>
-                                <div style="display: flex; justify-content: space-between;">
-                                    <span>Trạng thái thanh toán:</span>
-                                    <span class="status-badge status-pending" style="font-size: 11px;">Chưa thanh toán (Thu hộ 7.700.000đ)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column -->
-                <div>
-                    <!-- Customer Information Card -->
-                    <div class="admin-card">
-                        <div class="admin-card-header">
-                            <h3><i class="fas fa-user-circle" style="color: var(--accent);"></i> Khách hàng</h3>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-                            <div style="width: 44px; height: 44px; border-radius: 50%; background: #e2e8f0; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #475569;">
-                                NA
-                            </div>
-                            <div>
-                                <strong style="display: block; font-size: 15px; color: var(--dark);">Nguyễn Văn A</strong>
-                                <span style="font-size: 12px; color: var(--success); font-weight: 600;"><i class="fas fa-circle" style="font-size: 8px;"></i> Khách hàng thân thiết</span>
-                            </div>
-                        </div>
-                        <div style="font-size: 13px; display: flex; flex-direction: column; gap: 10px; color: #475569;">
-                            <div><i class="fas fa-phone" style="width: 20px; color: #94a3b8;"></i> <strong>0987 654 321</strong></div>
-                            <div><i class="fas fa-envelope" style="width: 20px; color: #94a3b8;"></i> nguyenvana@gmail.com</div>
-                            <div>
-                                <i class="fas fa-map-marker-alt" style="width: 20px; color: #94a3b8;"></i> 
-                                123 Đường Nguyễn Huệ, P. Bến Nghé, Quận 1, TP. Hồ Chí Minh
-                            </div>
-                        </div>
-                        <div style="margin-top: 15px; padding-top: 12px; border-top: 1px solid #f1f5f9; font-size: 13px;">
-                            <strong style="color: #64748b; font-size: 12px; display: block; margin-bottom: 4px;">GHI CHÚ ĐƠN HÀNG:</strong>
-                            <p style="background: #fffbeb; padding: 10px; border-radius: 6px; border: 1px solid #fef3c7; color: #92400e; font-size: 12px;">
-                                "Giao trong giờ hành chính, liên hệ trước khi đến nhận hàng 15 phút. Kiểm tra đúng size giúp mình nhé!"
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Order Timeline Card -->
-                    <div class="admin-card">
-                        <div class="admin-card-header">
-                            <h3><i class="fas fa-history" style="color: var(--accent);"></i> Tiến trình vận chuyển</h3>
-                        </div>
-                        <div class="timeline">
-                            <div class="timeline-step completed">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <h4>Đặt đơn thành công</h4>
-                                    <p>09/10/2026 - 08:30</p>
-                                </div>
-                            </div>
-                            <div class="timeline-step completed">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <h4>Xác nhận đơn hàng</h4>
-                                    <p>09/10/2026 - 09:15</p>
-                                </div>
-                            </div>
-                            <div class="timeline-step active">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <h4>Đang đóng gói tại kho Kicks</h4>
-                                    <p>09/10/2026 - 11:00</p>
-                                </div>
-                            </div>
-                            <div class="timeline-step">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <h4>Bàn giao đơn vị vận chuyển</h4>
-                                    <p>Dự kiến chiều nay</p>
-                                </div>
-                            </div>
-                            <div class="timeline-step">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <h4>Giao hàng thành công</h4>
-                                    <p>Dự kiến ngày 10/10/2026</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js">
+</script>
 </body>
 </html>

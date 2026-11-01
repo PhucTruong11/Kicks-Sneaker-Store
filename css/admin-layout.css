@@ -1,4 +1,8 @@
 /* Static administration pages */
+#toast { z-index: 1200; }
+.customer-facts dd { overflow-wrap: anywhere; }
+.customer-facts .customer-address { grid-column: 1 / -1; }
+@media (max-width: 600px) { .product-facts.customer-facts { grid-template-columns: minmax(0, 1fr); } }
 .product-name-link:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 .product-overview { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); align-items: start; gap: 26px; }
 .product-overview > * { min-width: 0; }

@@ -1,0 +1,53 @@
+.order-detail-page { padding-top: 125px; }
+.order-back { display: inline-flex; align-items: center; gap: 8px; color: #64748b; font-size: 13px; font-weight: 600; margin-bottom: 24px; }
+.order-title-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 26px; }
+.order-title-row h1 { font-size: 28px; letter-spacing: -.8px; line-height: 1.4; }
+.order-title-row p { margin-top: 8px; font-size: 13px; color: #64748b; }
+.order-state { display: inline-flex; align-items: center; gap: 7px; padding: 9px 13px; border-radius: 24px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.order-state.pending { background: #fef3c7; color: #92400e; }
+.order-state.confirmed { background: #dbeafe; color: #1d4ed8; }
+.order-state.complete { background: #d1fae5; color: #047857; }
+.order-state.cancelled { background: #fee2e2; color: #b91c1c; }
+.order-detail-grid { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); align-items: start; gap: 22px; }
+.order-detail-grid > * { min-width: 0; }
+.order-panel { min-width: 0; background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 24px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(15,23,42,.025); }
+.order-panel h2 { display: flex; align-items: center; gap: 9px; font-size: 16px; margin: 0 0 20px; }
+.order-panel h2 i { color: var(--accent); }
+.order-item { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 14px; align-items: center; padding: 18px 0; border-bottom: 1px solid #edf1f5; }
+.order-item:first-of-type { padding-top: 0; }
+.order-item:last-child { border-bottom: 0; padding-bottom: 0; }
+.order-item img { display: block; width: 64px; height: 64px; border-radius: 9px; object-fit: cover; }
+.order-item h3 { font-size: 14px; line-height: 1.6; overflow-wrap: anywhere; }
+.order-item h3 a:hover { color: var(--accent); }
+.order-item p { margin-top: 5px; color: #64748b; font-size: 11px; line-height: 1.7; }
+.order-item-price { text-align: right; font-size: 13px; white-space: nowrap; }
+.order-item-price small { display: block; color: #64748b; font-size: 10px; margin-top: 7px; }
+.order-contact { color: #475569; font-size: 13px; line-height: 1.9; overflow-wrap: anywhere; }
+.order-contact strong { display: block; color: #1e293b; font-size: 14px; margin-bottom: 6px; }
+.order-contact p + p { margin-top: 4px; }
+.order-note { margin-top: 16px; padding: 13px; background: #f8fafc; border-radius: 8px; color: #64748b; font-size: 12px; line-height: 1.8; }
+.order-breakdown > div { display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; font-size: 13px; line-height: 1.6; border-bottom: 1px solid #edf1f5; }
+.order-breakdown dt { color: #64748b; }
+.order-breakdown dd { text-align: right; font-weight: 600; }
+.order-breakdown .order-grand-total { align-items: baseline; border: 0; padding: 20px 0; }
+.order-grand-total dd { font-size: 25px; color: #0f172a; font-weight: 800; letter-spacing: -.7px; }
+.order-payment-note { padding: 14px; border-radius: 9px; background: #f8fafc; color: #475569; font-size: 12px; line-height: 1.8; }
+.order-action-links { display: flex; align-items: end; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
+.order-status-field { display: grid; gap: 8px; color: #475569; font-size: 12px; font-weight: 600; }
+.order-status-field select { min-height: 40px; padding: 9px 36px 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; color: #334155; background: #fff; font-size: 13px; }
+.order-link-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; padding: 11px 16px; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; color: #334155; font-size: 12px; font-weight: 700; cursor: pointer; }
+.order-link-button.primary { background: #0f172a; color: #fff; border-color: #0f172a; }
+.order-link-button:hover { border-color: var(--accent); color: var(--accent); }
+.order-link-button.primary:hover { background: var(--accent); color: #fff; }
+@media (max-width: 850px) {
+    .order-detail-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+    .order-title-row h1 { font-size: 23px; }
+    .order-panel { padding: 18px; }
+    .order-item { grid-template-columns: 54px minmax(0, 1fr); gap: 8px 12px; }
+    .order-item img { width: 54px; height: 54px; grid-row: span 2; }
+    .order-item-price { grid-column: 2; text-align: left; }
+    .order-item-price small { display: inline; margin-left: 8px; }
+    .order-grand-total dd { font-size: 23px; }
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Kicks</title>
     <link rel="stylesheet" href="../css/admin.css?v=20261030-layout-3">
-    <link rel="stylesheet" href="../css/admin-layout.css?v=20261031-1">
+    <link rel="stylesheet" href="../css/admin-layout.css?v=20261101-final">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -20,31 +20,31 @@
             <div class="card-row">
                 <div class="stat-card">
                     <h3>Tổng Doanh Thu</h3>
-                    <p>125.400.000đ</p>
+                    <p>22.900.000đ</p>
                 </div>
                 <div class="stat-card">
                     <h3>Đơn hàng mới</h3>
-                    <p>42</p>
+                    <p>2</p>
                 </div>
                 <div class="stat-card">
-                    <h3>Đang giao</h3>
-                    <p>15</p>
+                    <h3>Đã xác nhận</h3>
+                    <p>2</p>
                 </div>
                 <div class="stat-card">
                     <h3>Sản phẩm sắp hết</h3>
-                    <p>3</p>
+                    <p>1</p>
                 </div>
             </div>
 
             <!-- Biểu đồ Doanh Thu -->
-            <section class="admin-card"><div class="table-header"><h2>Doanh thu trong tuần</h2><a class="btn-back-link" href="statistics.html">Thống kê khách hàng →</a></div><div class="static-chart" role="img" aria-label="Doanh thu mẫu từ thứ hai đến chủ nhật: 15, 22, 18, 29, 35, 42 và 48 triệu đồng"><div class="chart-column"><span>15tr</span><div class="chart-bar" style="height:45px"></div><small>T2</small></div><div class="chart-column"><span>22tr</span><div class="chart-bar" style="height:66px"></div><small>T3</small></div><div class="chart-column"><span>18tr</span><div class="chart-bar" style="height:54px"></div><small>T4</small></div><div class="chart-column"><span>29tr</span><div class="chart-bar" style="height:87px"></div><small>T5</small></div><div class="chart-column"><span>35tr</span><div class="chart-bar" style="height:105px"></div><small>T6</small></div><div class="chart-column"><span>42tr</span><div class="chart-bar" style="height:126px"></div><small>T7</small></div><div class="chart-column"><span>48tr</span><div class="chart-bar" style="height:144px"></div><small>CN</small></div></div></section>
+            <section class="admin-card"><div class="table-header"><h2>Doanh thu tháng 8–10/2026</h2><a class="btn-back-link" href="statistics.html">Thống kê khách hàng →</a></div><p class="helper-text">Chỉ tính đơn đã giao thành công.</p><div class="static-chart" role="img" aria-label="Tháng 8: 1,5 triệu; tháng 9: 3,2 triệu; tháng 10: 18,2 triệu đồng"><div class="chart-column"><span>1,5tr</span><div class="chart-bar" style="height:17px"></div><small>Tháng 8</small></div><div class="chart-column"><span>3,2tr</span><div class="chart-bar" style="height:35px"></div><small>Tháng 9</small></div><div class="chart-column"><span>18,2tr</span><div class="chart-bar" style="height:200px"></div><small>Tháng 10</small></div></div></section>
 
             <div class="data-table-container">
                 <div class="table-header">
                     <h2>Đơn hàng gần đây</h2>
                     <a href="orders.html" class="btn-action btn-edit" style="text-decoration:none;">Xem tất cả</a>
                 </div>
-                <table>
+                <div class="table-scroll"><table>
                     <thead>
                         <tr>
                             <th>Sản phẩm</th>
@@ -55,65 +55,8 @@
                             <th>Tổng tiền</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td><img src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ"></td>
-                            <td><a class="order-link" href="order-detail.html">#ORD-001</a></td>
-                            <td>Nguyễn Văn A</td>
-                            <td>09/10/2026</td>
-                            <td><span class="status-badge status-pending">Đang xử lý</span></td>
-                            <td>7.700.000đ</td>
-                        </tr>
-                        <tr>
-                            <td><img src="../images/shoe2.jpg" alt="Puma Smash Trắng"></td>
-                            <td><a class="order-link" href="order-detail.html">#ORD-002</a></td>
-                            <td>Trần Thị B</td>
-                            <td>08/10/2026</td>
-                            <td><span class="status-badge status-success">Hoàn thành</span></td>
-                            <td>8.200.000đ</td>
-                        </tr>
-                        <tr>
-                            <td><img src="../images/shoe4.jpg" alt="Nike Air Max 1 Cam"></td>
-                            <td><a class="order-link" href="order-detail.html">#ORD-003</a></td>
-                            <td>Lê Văn C</td>
-                            <td>07/10/2026</td>
-                            <td><span class="status-badge status-danger">Đã hủy</span></td>
-                            <td>2.100.000đ</td>
-                        </tr>
-                        <tr>
-                            <td><img src="../images/shoe5.jpg" alt="Nike Air Force 1 Shadow Pastel"></td>
-                            <td><a class="order-link" href="order-detail.html">#ORD-004</a></td>
-                            <td>Đoàn Hữu D</td>
-                            <td>06/10/2026</td>
-                            <td><span class="status-badge status-success">Hoàn thành</span></td>
-                            <td>1.800.000đ</td>
-                        </tr>
-                        <tr>
-                            <td><img src="../images/shoe6.jpg" alt="Vans Old Skool Đỏ đô"></td>
-                            <td><a class="order-link" href="order-detail.html">#ORD-005</a></td>
-                            <td>Trịnh Cảnh E</td>
-                            <td>05/10/2026</td>
-                            <td><span class="status-badge status-pending">Đang xử lý</span></td>
-                            <td>5.200.000đ</td>
-                        </tr>
-                        <tr>
-                            <td><img src="../images/shoe4.jpg" alt="Nike Air Max 1 Cam"></td>
-                            <td><a class="order-link" href="order-detail.html">#ORD-006</a></td>
-                            <td>Cao Thị F</td>
-                            <td>04/10/2026</td>
-                            <td><span class="status-badge status-success">Hoàn thành</span></td>
-                            <td>3.200.000đ</td>
-                        </tr>
-                        <tr>
-                            <td><img src="../images/shoe2.jpg" alt="Puma Smash Trắng"></td>
-                            <td><a class="order-link" href="order-detail.html">#ORD-007</a></td>
-                            <td>Phạm Văn G</td>
-                            <td>04/10/2026</td>
-                            <td><span class="status-badge status-success">Hoàn thành</span></td>
-                            <td>7.700.000đ</td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <tbody><tr data-order="KICKS-8922"><td><img src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ"></td><td><a class="order-link" href="order-detail.html">#KICKS-8922</a></td><td>Phúc Trương</td><td>30/10/2026</td><td><span class="status-badge status-pending">Chưa xác nhận</span></td><td>10.700.000đ</td></tr><tr data-order="ORD-001"><td><img alt="Nike Free Run Flyknit Đỏ" src="../images/shoe1.jpg"/></td><td><a class="order-link" href="order-detail.html">#ORD-001</a></td><td>Nguyễn Văn A</td><td>09/10/2026</td><td><span class="status-badge status-shipping">Đã xác nhận</span></td><td>7.700.000đ</td></tr><tr data-order="KICKS-8921"><td><img alt="Nike Free Run Flyknit Đỏ" src="../images/shoe1.jpg"/></td><td><a class="order-link" href="order-detail.html">#KICKS-8921</a></td><td>Phúc Trương</td><td>09/10/2026</td><td><span class="status-badge status-shipping">Đã xác nhận</span></td><td>4.500.000đ</td></tr><tr data-order="ORD-002"><td><img alt="Nike Air Force 1 Shadow Pastel" src="../images/shoe5.jpg"/></td><td><a class="order-link" href="order-detail.html">#ORD-002</a></td><td>Trần Thị B</td><td>08/10/2026</td><td><span class="status-badge status-success">Đã giao thành công</span></td><td>5.500.000đ</td></tr><tr data-order="ORD-003"><td><img alt="Nike Air Max 1 Cam" src="../images/shoe4.jpg"/></td><td><a class="order-link" href="order-detail.html">#ORD-003</a></td><td>Lê Văn C</td><td>07/10/2026</td><td><span class="status-badge status-danger">Đã hủy</span></td><td>1.500.000đ</td></tr><tr data-order="ORD-004"><td><img alt="Vans Old Skool Đỏ đô" src="../images/shoe6.jpg"/></td><td><a class="order-link" href="order-detail.html">#ORD-004</a></td><td>Đoàn Hữu D</td><td>06/10/2026</td><td><span class="status-badge status-success">Đã giao thành công</span></td><td>1.800.000đ</td></tr><tr data-order="ORD-005"><td><img alt="Adidas Stan Smith Trắng Xanh" src="../images/adidas-stan-smith.jpg"/></td><td><a class="order-link" href="order-detail.html">#ORD-005</a></td><td>Trịnh Cảnh E</td><td>05/10/2026</td><td><span class="status-badge status-pending">Chưa xác nhận</span></td><td>5.200.000đ</td></tr></tbody>
+                </table></div>
             </div>
         </div>
     </main>

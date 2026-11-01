@@ -27,7 +27,7 @@
 </li>
         </ul>
         <div class="search-bar">
-            <form action="invoice.html" method="get">
+            <form action="search.html" method="get">
                 <input type="text" placeholder="Tìm kiếm sneaker...">
                 <button type="submit">
 <i class="fas fa-search">
@@ -74,7 +74,7 @@
 <h1>Hóa đơn đặt hàng</h1>
 <p>Kiểm tra thông tin nhận hàng trước khi xác nhận đơn.</p>
 </div>
-<span class="invoice-status">Chờ xác nhận</span>
+<span class="invoice-status">Chưa xác nhận</span>
 </div>
 <form onsubmit="event.preventDefault(); showToast('Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Kicks.');">
 <div class="invoice-layout">
@@ -115,8 +115,7 @@
 </label>
 </div>
 </fieldset>
-<label class="invoice-note-label">Ghi chú giao hàng<textarea rows="2" placeholder="Ví dụ: Gọi điện trước khi giao">
-</textarea>
+<label class="invoice-note-label">Ghi chú giao hàng<textarea rows="2" placeholder="Ví dụ: Gọi điện trước khi giao">Giao trong giờ hành chính, gọi điện trước khi tới.</textarea>
 </label>
 </section>
 <section class="invoice-card">
@@ -134,7 +133,7 @@
 </tr>
 </thead>
 <tbody>
-<tr data-unit-price="4500000">
+<tr>
 <td>
 <div class="invoice-product">
 <img src="images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ">
@@ -148,7 +147,7 @@
 <td class="qty-val">1</td>
 <td class="item-subtotal">4.500.000đ</td>
 </tr>
-<tr data-unit-price="3200000">
+<tr>
 <td>
 <div class="invoice-product">
 <img src="images/shoe2.jpg" alt="Puma Smash Trắng">
@@ -162,7 +161,7 @@
 <td class="qty-val">1</td>
 <td class="item-subtotal">3.200.000đ</td>
 </tr>
-<tr data-unit-price="1500000">
+<tr>
 <td>
 <div class="invoice-product">
 <img src="images/shoe4.jpg" alt="Nike Air Max 1 Cam">
@@ -188,7 +187,7 @@
 <p class="invoice-muted">Ngày đặt: 30/10/2026</p>
 <div class="invoice-total-line">
 <span>Tiền hàng</span>
-<strong data-order-subtotal>10.700.000đ</strong>
+<strong>10.700.000đ</strong>
 </div>
 <div class="invoice-total-line">
 <span>Phí giao hàng</span>
@@ -196,7 +195,7 @@
 </div>
 <div class="invoice-grand-total">
 <span>Tổng thanh toán</span>
-<strong data-order-total>10.700.000đ</strong>
+<strong>10.700.000đ</strong>
 </div>
 <fieldset class="payment-options">
 <legend>Phương thức thanh toán</legend>
@@ -208,6 +207,7 @@
 <button type="submit" class="btn-submit">
 <i class="fas fa-check">
 </i> Xác nhận đặt hàng</button>
+<a class="invoice-history-link" href="order-detail.html">Xem chi tiết đơn hàng</a>
 <a class="invoice-history-link" href="profile.html#orders">Xem lịch sử mua hàng</a>
 </section>
 </aside>
@@ -289,6 +289,5 @@
     </footer>
 <script src="js/main.js">
 </script>
-<script src="js/cart.js?v=20261031-2"></script>
 </body>
 </html>

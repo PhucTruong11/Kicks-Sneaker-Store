@@ -5,14 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chỉnh sửa Sản phẩm - Kicks Admin</title>
     <link rel="stylesheet" href="../css/admin.css?v=20261030-layout-3">
-    <link rel="stylesheet" href="../css/admin-layout.css?v=20261031-1">
+    <link rel="stylesheet" href="../css/admin-layout.css?v=20261101-final">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div id="toast">Thông báo</div>
 
     <!-- Admin Dynamic Island Navbar -->
-    <aside class="sidebar"><a class="sidebar-header" href="index.html">KICKS ADMIN.</a><ul class="sidebar-menu"><li><a href="index.html"><i class="fas fa-chart-pie"></i> Tổng quan</a></li><li><a href="products.html" class="active"><i class="fas fa-box"></i> Sản phẩm</a></li><li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li><li><a href="users.html"><i class="fas fa-users"></i> Người dùng</a></li><li><a href="statistics.html"><i class="fas fa-chart-line"></i> Thống kê</a></li><li class="profile-dropdown"><button class="profile-btn" type="button"><span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down"></i></button><div class="dropdown-content"><div class="dropdown-header"><h4>Phúc Trương</h4><p>phuctruong@kicks.vn</p></div><a href="profile.html">Hồ sơ quản trị</a><a href="login.html">Đăng xuất</a></div></li></ul></aside>
+    <aside class="sidebar">
+<a class="sidebar-header" href="index.html">KICKS ADMIN.</a>
+<ul class="sidebar-menu">
+<li>
+<a href="index.html">
+<i class="fas fa-chart-pie">
+</i> Tổng quan</a>
+</li>
+<li>
+<a href="products.html" class="active">
+<i class="fas fa-box">
+</i> Sản phẩm</a>
+</li>
+<li>
+<a href="orders.html">
+<i class="fas fa-shopping-cart">
+</i> Đơn hàng</a>
+</li>
+<li>
+<a href="users.html">
+<i class="fas fa-users">
+</i> Người dùng</a>
+</li>
+<li>
+<a href="statistics.html">
+<i class="fas fa-chart-line">
+</i> Thống kê</a>
+</li>
+<li class="profile-dropdown">
+<button class="profile-btn" type="button">
+<span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down">
+</i>
+</button>
+<div class="dropdown-content">
+<div class="dropdown-header">
+<h4>Phúc Trương</h4>
+<p>phuctruong@kicks.vn</p>
+</div>
+<a href="profile.html">Hồ sơ quản trị</a>
+<a href="login.html">Đăng xuất</a>
+</div>
+</li>
+</ul>
+</aside>
 
     <main class="main-content">
         <div class="page-content">
@@ -20,7 +63,8 @@
             <div class="admin-header-actions">
                 <div>
                     <a href="products.html" class="btn-back-link">
-                        <i class="fas fa-arrow-left"></i> Quay lại danh sách sản phẩm
+                        <i class="fas fa-arrow-left">
+</i> Quay lại danh sách sản phẩm
                     </a>
                     <div style="display: flex; align-items: center; gap: 12px; margin-top: 10px;">
                         <h1 class="page-title" style="margin: 0;">Sửa: Nike Free Run Flyknit Đỏ</h1>
@@ -28,12 +72,16 @@
                     </div>
                 </div>
                 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    <a class="btn-order-action btn-order-print" href="product-detail.html"><i class="fas fa-eye"></i> Xem chi tiết</a>
-                    <button type="button" class="btn-outline-danger" onclick="showToast('Sản phẩm đã được bán: đã ẩn sản phẩm thành công!')">
-                        <i class="fas fa-eye-slash"></i> Ẩn sản phẩm
+                    <a class="btn-order-action btn-order-print" href="product-detail.html">
+<i class="fas fa-eye">
+</i> Xem chi tiết</a>
+                    <button type="button" class="btn-outline-danger" onclick="showToast('Đã ẩn sản phẩm thành công!')">
+                        <i class="fas fa-eye-slash">
+</i> Ẩn sản phẩm
                     </button>
                     <button type="button" class="btn-solid-primary" onclick="showToast('Đã lưu thông tin sản phẩm thành công!')">
-                        <i class="fas fa-save"></i> Cập nhật thay đổi
+                        <i class="fas fa-save">
+</i> Cập nhật thay đổi
                     </button>
                 </div>
             </div>
@@ -44,7 +92,9 @@
                     <div>
                         <div class="admin-card">
                             <div class="admin-card-header">
-                                <h3><i class="fas fa-edit" style="color: var(--accent);"></i> Cập nhật thông tin chi tiết</h3>
+                                <h3>
+<i class="fas fa-edit" style="color: var(--accent);">
+</i> Cập nhật thông tin chi tiết</h3>
                             </div>
                             
                             <div class="form-group">
@@ -74,11 +124,11 @@
                             <div class="form-grid-2">
                                 <div class="form-group">
                                     <label>Giá bán niêm yết (VNĐ) *</label>
-                                    <input type="number" class="admin-input" value="4500000" required>
+                                    <input type="text" inputmode="numeric" data-money-input class="admin-input" value="4500000" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Giá khuyến mãi (Nếu có)</label>
-                                    <input type="number" class="admin-input" placeholder="Để trống nếu không giảm">
+                                    <input type="text" inputmode="numeric" data-money-input class="admin-input" placeholder="Để trống nếu không giảm">
                                 </div>
                             </div>
 
@@ -100,58 +150,128 @@
                             <div class="form-group">
                                 <label>Các kích cỡ (Size giày có sẵn)</label>
                                 <div class="size-chips">
-                                    <label class="size-chip-label">
-                                        <input type="checkbox" checked>
-                                        <span>Size 38</span>
-                                    </label>
-                                    <label class="size-chip-label">
-                                        <input type="checkbox" checked>
-                                        <span>Size 39</span>
-                                    </label>
-                                    <label class="size-chip-label">
-                                        <input type="checkbox" checked>
-                                        <span>Size 40</span>
-                                    </label>
-                                    <label class="size-chip-label">
-                                        <input type="checkbox" checked>
-                                        <span>Size 41</span>
-                                    </label>
-                                    <label class="size-chip-label">
-                                        <input type="checkbox" checked>
-                                        <span>Size 42</span>
-                                    </label>
-                                    <label class="size-chip-label">
-                                        <input type="checkbox" checked>
-                                        <span>Size 43</span>
-                                    </label>
-                                    <label class="size-chip-label">
-                                        <input type="checkbox">
-                                        <span>Size 44</span>
-                                    </label>
-                                </div>
+<label class="size-chip-label">
+<input type="checkbox">
+<span>Size 36</span>
+</label>
+<label class="size-chip-label">
+<input type="checkbox">
+<span>Size 37</span>
+</label>
+<label class="size-chip-label">
+<input type="checkbox">
+<span>Size 38</span>
+</label>
+<label class="size-chip-label">
+<input type="checkbox" checked>
+<span>Size 39</span>
+</label>
+<label class="size-chip-label">
+<input type="checkbox" checked>
+<span>Size 40</span>
+</label>
+<label class="size-chip-label">
+<input type="checkbox" checked>
+<span>Size 41</span>
+</label>
+<label class="size-chip-label">
+<input type="checkbox" checked>
+<span>Size 42</span>
+</label>
+<label class="size-chip-label">
+<input type="checkbox">
+<span>Size 43</span>
+</label>
+<label class="size-chip-label">
+<input type="checkbox">
+<span>Size 44</span>
+</label>
+</div>
                             </div>
 
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label>Mô tả chi tiết sản phẩm</label>
-                                <textarea rows="5" class="admin-textarea">Nike Free Run Flyknit phối đỏ, thân giày dệt thoáng khí và đế linh hoạt cho vận động hằng ngày.</textarea>
+                                <textarea rows="5" class="admin-textarea">Nike Free Run Flyknit phối đỏ với thân giày dệt thoáng khí, kiểu dáng thấp cổ và đế giày linh hoạt. Phù hợp để đi bộ, vận động nhẹ và phối đồ hằng ngày.</textarea>
                             </div>
                         </div>
                     </div>
 
                     <!-- Right Column: Images & Status -->
                     <div>
-                        <!-- Image Upload Card -->
+                        <div class="admin-card">
+<div class="admin-card-header">
+<h3>
+<i class="fas fa-store">
+</i> Thông tin hiển thị tại cửa hàng</h3>
+</div>
+<div class="form-grid-2">
+<div class="form-group">
+<label>Màu sắc<input class="admin-input" type="text" value="Đỏ / Trắng" placeholder="Nhập màu sắc">
+</label>
+</div>
+<div class="form-group">
+<label>Loại sản phẩm<input class="admin-input" type="text" value="Sneaker" placeholder="Nhập loại sản phẩm">
+</label>
+</div>
+<div class="form-group">
+<label>Kho hàng<input class="admin-input" type="text" value="Kho HCM" placeholder="Nhập kho hàng">
+</label>
+</div>
+</div>
+<div class="form-group">
+<label>Cam kết chính hãng<textarea class="admin-textarea" rows="2">100% Chính hãng · Cam kết Authentic, Fullbox đầy đủ phụ kiện</textarea>
+</label>
+</div>
+<div class="form-group">
+<label>Giao hàng<textarea class="admin-textarea" rows="2">Giao hỏa tốc 2H · Nội thành TP.HCM &amp; HN nhận trong ngày</textarea>
+</label>
+</div>
+<div class="form-group">
+<label>Đổi trả<textarea class="admin-textarea" rows="2">Đổi trả 30 ngày · Đổi size tận nhà miễn phí nếu không vừa</textarea>
+</label>
+</div>
+<div class="form-group">
+<label>Bảo hành<textarea class="admin-textarea" rows="2">Bảo hành 12 tháng · Bảo hành keo chỉ, lỗi đế nhà sản xuất</textarea>
+</label>
+</div>
+</div>
+<div class="admin-card">
+<div class="admin-card-header">
+<h3>
+<i class="fas fa-tag">
+</i> Thẻ sản phẩm trang chủ</h3>
+</div>
+<div class="form-group">
+<label>Nhãn thẻ trang chủ<input class="admin-input" type="text" value="Bán chạy" placeholder="Ví dụ: Bán chạy">
+</label>
+</div>
+<div class="form-group">
+<label>Mô tả ngắn trang chủ<input class="admin-input" type="text" value="Thể thao · Phối đỏ" placeholder="Ví dụ: Thể thao · Phối đỏ">
+</label>
+</div>
+</div>
+<!-- Image Upload Card -->
                         <div class="admin-card">
                             <div class="admin-card-header">
-                                <h3><i class="fas fa-image" style="color: var(--accent);"></i> Hình ảnh sản phẩm</h3>
+                                <h3>
+<i class="fas fa-image" style="color: var(--accent);">
+</i> Hình ảnh sản phẩm</h3>
                             </div>
-                            <div class="image-preview-box"><img id="previewImg" src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ"><p>Ảnh sản phẩm xem trước</p><label class="upload-label" for="fileInput">Chọn ảnh sản phẩm</label><input type="file" id="fileInput" accept="image/png,image/jpeg,image/webp" onchange="showToast('Đã chọn ảnh sản phẩm thành công!')"><p class="helper-text">PNG, JPG hoặc WEBP. Ảnh xem trước là ảnh mẫu có sẵn.</p></div>
+                            <div class="image-preview-box">
+<img id="previewImg" src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ">
+<p>Ảnh sản phẩm xem trước</p>
+<label class="upload-label" for="fileInput">Chọn ảnh sản phẩm</label>
+<input type="file" id="fileInput" accept="image/png,image/jpeg,image/webp" onchange="showToast('Đã chọn ảnh sản phẩm thành công!')">
+<p class="helper-text">PNG, JPG hoặc WEBP. Ảnh xem trước là ảnh mẫu có sẵn.</p>
+</div>
                         </div>
 
                         <!-- Visibility & Status Card -->
                         <div class="admin-card">
                             <div class="admin-card-header">
-                                <h3><i class="fas fa-sliders-h" style="color: var(--accent);"></i> Trạng thái & Phân phối</h3>
+                                <h3>
+<i class="fas fa-sliders-h" style="color: var(--accent);">
+</i> Trạng thái & Phân phối</h3>
                             </div>
                             <div class="form-group">
                                 <label>Trạng thái bán</label>
@@ -164,8 +284,8 @@
                             <div class="form-group">
                                 <label>Nhãn nổi bật (Badge)</label>
                                 <select class="admin-select">
-                                    <option selected>Hàng Mới Về (New Arrival)</option>
-                                    <option>Bán Chạy Nhất (Best Seller)</option>
+                                    <option>Hàng Mới Về (New Arrival)</option>
+                                    <option selected>Bán Chạy Nhất (Best Seller)</option>
                                     <option>Phiên Bản Giới Hạn (Limited)</option>
                                     <option>Không có nhãn</option>
                                 </select>
@@ -181,6 +301,8 @@
         </div>
     </main>
 
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js">
+</script>
+<script src="../js/price-format.js?v=20261101-1"></script>
 </body>
 </html>

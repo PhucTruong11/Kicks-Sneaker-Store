@@ -5,35 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi tiết sản phẩm - Kicks Admin</title>
     <link rel="stylesheet" href="../css/admin.css?v=20261030-layout-3">
-    <link rel="stylesheet" href="../css/admin-layout.css?v=20261031-1">
+    <link rel="stylesheet" href="../css/admin-layout.css?v=20261101-final">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div id="toast" role="status" aria-live="polite">Thông báo</div>
-    <aside class="sidebar"><a class="sidebar-header" href="index.html">KICKS ADMIN.</a><ul class="sidebar-menu"><li><a href="index.html"><i class="fas fa-chart-pie"></i> Tổng quan</a></li><li><a href="products.html" class="active"><i class="fas fa-box"></i> Sản phẩm</a></li><li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li><li><a href="users.html"><i class="fas fa-users"></i> Người dùng</a></li><li><a href="statistics.html"><i class="fas fa-chart-line"></i> Thống kê</a></li><li class="profile-dropdown"><button class="profile-btn" type="button"><span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down"></i></button><div class="dropdown-content"><div class="dropdown-header"><h4>Phúc Trương</h4><p>phuctruong@kicks.vn</p></div><a href="profile.html">Hồ sơ quản trị</a><a href="login.html">Đăng xuất</a></div></li></ul></aside>
+    <aside class="sidebar">
+<a class="sidebar-header" href="index.html">KICKS ADMIN.</a>
+<ul class="sidebar-menu">
+<li>
+<a href="index.html">
+<i class="fas fa-chart-pie">
+</i> Tổng quan</a>
+</li>
+<li>
+<a href="products.html" class="active">
+<i class="fas fa-box">
+</i> Sản phẩm</a>
+</li>
+<li>
+<a href="orders.html">
+<i class="fas fa-shopping-cart">
+</i> Đơn hàng</a>
+</li>
+<li>
+<a href="users.html">
+<i class="fas fa-users">
+</i> Người dùng</a>
+</li>
+<li>
+<a href="statistics.html">
+<i class="fas fa-chart-line">
+</i> Thống kê</a>
+</li>
+<li class="profile-dropdown">
+<button class="profile-btn" type="button">
+<span class="admin-avatar-mono">PT</span> Phúc Trương <i class="fas fa-chevron-down">
+</i>
+</button>
+<div class="dropdown-content">
+<div class="dropdown-header">
+<h4>Phúc Trương</h4>
+<p>phuctruong@kicks.vn</p>
+</div>
+<a href="profile.html">Hồ sơ quản trị</a>
+<a href="login.html">Đăng xuất</a>
+</div>
+</li>
+</ul>
+</aside>
     <main class="main-content">
         <div class="page-content">
             <div class="admin-header-actions">
                 <div>
-                    <a class="btn-back-link" href="products.html"><i class="fas fa-arrow-left"></i> Danh sách sản phẩm</a>
+                    <a class="btn-back-link" href="products.html">
+<i class="fas fa-arrow-left">
+</i> Danh sách sản phẩm</a>
                     <h1 class="page-title">Chi tiết sản phẩm</h1>
                 </div>
                 <div class="table-actions">
-                    <a class="btn-solid-primary" href="product-edit.html"><i class="fas fa-pen"></i> Chỉnh sửa sản phẩm</a>
+                    <a class="btn-solid-primary" href="product-edit.html">
+<i class="fas fa-pen">
+</i> Chỉnh sửa sản phẩm</a>
                 </div>
             </div>
             <section class="product-overview" aria-labelledby="product-name">
                 <div>
                     <div class="admin-card product-photo-card">
                         <img class="admin-product-photo" src="../images/shoe1.jpg" alt="Nike Free Run Flyknit Đỏ">
-                        <div class="product-photo-caption"><span>Ảnh sản phẩm</span><strong>NIKE / FREE RUN FLYKNIT</strong></div>
+                        <div class="product-photo-caption">
+<span>Ảnh sản phẩm</span>
+<strong>NIKE / NK-FR-042</strong>
+</div>
                     </div>
                     <section class="admin-card">
-                        <div class="admin-card-header"><h3><i class="fas fa-layer-group"></i> Hiển thị trên cửa hàng</h3></div>
+                        <div class="admin-card-header">
+<h3>
+<i class="fas fa-layer-group">
+</i> Hiển thị trên cửa hàng</h3>
+</div>
                         <dl class="product-visibility">
-                            <div><dt>Trạng thái</dt><dd><span class="status-badge status-success">Đang bán</span></dd></div>
-                            <div><dt>Trang chủ</dt><dd>Sản phẩm nổi bật</dd></div>
-                            <div><dt>Phân loại</dt><dd>Sneaker · Unisex</dd></div>
+                            <div>
+<dt>Trạng thái</dt>
+<dd>
+<span class="status-badge status-success">Đang bán</span>
+</dd>
+</div>
+                            <div>
+<dt>Trang chủ</dt>
+<dd>Sản phẩm nổi bật</dd>
+</div>
+                            <div>
+<dt>Phân loại</dt>
+<dd>Sneaker · Unisex</dd>
+</div>
                         </dl>
                     </section>
                 </div>
@@ -43,26 +108,89 @@
                     <p class="product-detail-sku">Mã sản phẩm: NK-FR-042</p>
                     <p class="admin-detail-price">4.500.000đ</p>
                     <dl class="product-facts">
-                        <div><dt>Thương hiệu</dt><dd>Nike</dd></div>
-                        <div><dt>Đối tượng</dt><dd>Unisex (Nam &amp; Nữ)</dd></div>
-                        <div><dt>Giá niêm yết</dt><dd>4.500.000đ</dd></div>
-                        <div><dt>Giá khuyến mãi</dt><dd>Không áp dụng</dd></div>
-                        <div><dt>Tồn kho</dt><dd>120 đôi</dd></div>
-                        <div><dt>Màu sắc</dt><dd>Đỏ / Trắng</dd></div>
+                        <div>
+<dt>Thương hiệu</dt>
+<dd>Nike</dd>
+</div>
+                        <div>
+<dt>Đối tượng</dt>
+<dd>Unisex (Nam &amp; Nữ)</dd>
+</div>
+                        <div>
+<dt>Giá niêm yết</dt>
+<dd>4.500.000đ</dd>
+</div>
+                        <div>
+<dt>Giá khuyến mãi</dt>
+<dd>Không áp dụng</dd>
+</div>
+                        <div>
+<dt>Tồn kho</dt>
+<dd>120 đôi</dd>
+</div>
+                        <div>
+<dt>Kho hàng</dt>
+<dd>Kho HCM</dd>
+</div>
+<div>
+<dt>Nhãn nổi bật</dt>
+<dd>Bán Chạy Nhất (Best Seller)</dd>
+</div>
+<div>
+<dt>Nhãn thẻ trang chủ</dt>
+<dd>Bán chạy</dd>
+</div>
+<div>
+<dt>Mô tả ngắn trang chủ</dt>
+<dd>Thể thao · Phối đỏ</dd>
+</div>
+<div>
+<dt>Màu sắc</dt>
+<dd>Đỏ / Trắng</dd>
+</div>
                     </dl>
                     <section class="product-detail-section">
                         <h3>Kích cỡ đang bán</h3>
-                        <div class="product-size-list" aria-label="Size 38, 39, 40, 41 và 42"><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span></div>
+                        <div class="product-size-list" aria-label="Kích cỡ đang bán">
+<span>39</span>
+<span>40</span>
+<span>41</span>
+<span>42</span>
+</div>
                     </section>
                     <section class="product-detail-section">
                         <h3>Mô tả sản phẩm</h3>
                         <p>Nike Free Run Flyknit phối đỏ với thân giày dệt thoáng khí, kiểu dáng thấp cổ và đế giày linh hoạt. Phù hợp để đi bộ, vận động nhẹ và phối đồ hằng ngày.</p>
                     </section>
-                    <a class="btn-back-link" href="product-edit.html">Chỉnh sửa thông tin <i class="fas fa-arrow-right"></i></a>
+                    <section class="product-detail-section">
+<h3>Chính sách hiển thị cho khách hàng</h3>
+<dl class="product-visibility">
+<div>
+<dt>Cam kết chính hãng</dt>
+<dd>100% Chính hãng · Cam kết Authentic, Fullbox đầy đủ phụ kiện</dd>
+</div>
+<div>
+<dt>Giao hàng</dt>
+<dd>Giao hỏa tốc 2H · Nội thành TP.HCM & HN nhận trong ngày</dd>
+</div>
+<div>
+<dt>Đổi trả</dt>
+<dd>Đổi trả 30 ngày · Đổi size tận nhà miễn phí nếu không vừa</dd>
+</div>
+<div>
+<dt>Bảo hành</dt>
+<dd>Bảo hành 12 tháng · Bảo hành keo chỉ, lỗi đế nhà sản xuất</dd>
+</div>
+</dl>
+</section>
+<a class="btn-back-link" href="product-edit.html">Chỉnh sửa thông tin <i class="fas fa-arrow-right">
+</i>
+</a>
                 </div>
             </section>
         </div>
     </main>
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js">
+</script>
 </body>
 </html>
